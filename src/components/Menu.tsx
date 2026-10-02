@@ -67,6 +67,21 @@ export default function Menu() {
   const [active, setActive] = useState<CategoryId>("asosiy");
   const [query, setQuery] = useState("");
   const tabsRef = useRef<HTMLDivElement>(null);
+  const [moreRight, setMoreRight] = useState(false);
+
+  // Show the edge fade only while more tabs are hidden to the right.
+  useEffect(() => {
+    const row = tabsRef.current;
+    if (!row) return;
+    const update = () => setMoreRight(row.scrollLeft + row.clientWidth < row.scrollWidth - 4);
+    update();
+    row.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    return () => {
+      row.removeEventListener("scroll", update);
+      window.removeEventListener("resize", update);
+    };
+  }, []);
 
   useEffect(() => {
     const onSelect = (e: Event) => {
@@ -105,7 +120,7 @@ export default function Menu() {
       {/* Sticky category bar */}
       <div className="sticky top-[72px] z-30 mt-10 border-y border-green-800/10 bg-green-50/95 backdrop-blur-md">
         <div className="container flex items-center gap-3 py-3">
-          <div ref={tabsRef} role="tablist" aria-label="Menyu kategoriyalari" className="no-scrollbar relative -mx-1 flex min-w-0 flex-1 snap-x gap-1.5 overflow-x-auto px-1 pr-10 [mask-image:linear-gradient(to_right,#000_calc(100%-48px),transparent)]">
+          <div ref={tabsRef} role="tablist" aria-label="Menyu kategoriyalari" className={`no-scrollbar relative -mx-1 flex min-w-0 flex-1 snap-x gap-1.5 overflow-x-auto px-1 ${moreRight ? "pr-10 [mask-image:linear-gradient(to_right,#000_calc(100%-48px),transparent)]" : ""}`}>
             {categories.map((c) => {
               const on = !q && c.id === active;
               return (

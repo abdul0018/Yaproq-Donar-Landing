@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { branches, contacts, facts, directionsUrl, distanceKm, hasLocation, isOpenNow, telHref, toMap, yandexUrl, type Branch } from "@/data/site";
+import { branches, contacts, facts, directionsUrl, distanceKm, hasLocation, isOpenNow, telHref, yandexUrl, type Branch } from "@/data/site";
 import SectionHeading from "./SectionHeading";
 import Reveal from "./Reveal";
 import { IconArrowUpRight, IconClock, IconClose, IconLocate, IconNavigate, IconPhone, IconPin } from "./icons";
@@ -22,46 +22,57 @@ function OpenBadge({ b, mounted }: { b: Branch; mounted: boolean }) {
   );
 }
 
-function CityMap({ selected, onSelect, user }: { selected: string; onSelect: (id: string) => void; user?: { lat: number; lng: number } }) {
-  const u = user ? toMap(user.lat, user.lng) : null;
+/**
+ * Real street map of the selected branch: a static OpenStreetMap render (zoom 16) centred on the
+ * branch's official coordinates, so the pin sits at the exact centre. Data © OpenStreetMap contributors.
+ */
+function BranchMap({ selected, onSelect }: { selected: string; onSelect: (id: string) => void }) {
+  const b = located.find((x) => x.id === selected) ?? located[0];
   return (
-    <div className="relative h-full min-h-[320px] overflow-hidden rounded-3xl bg-green-100">
-      {/* Plain field: only the pins' relative positions are real (from coordinates); no streets are drawn. */}
-      <div aria-hidden className="absolute inset-0 [background-image:radial-gradient(#115A2E26_1.2px,transparent_1.2px)] [background-size:22px_22px]" />
-
-      {u && (
-        <span className="absolute z-10 -translate-x-1/2 -translate-y-1/2" style={{ left: `${u.x}%`, top: `${u.y}%` }}>
-          <span className="absolute inset-0 animate-ping-soft rounded-full bg-[#2F7DE1]" />
-          <span className="relative block h-4 w-4 rounded-full border-[3px] border-white bg-[#2F7DE1] shadow" />
-          <span className="sr-only">Sizning joylashuvingiz</span>
+    <div className="relative h-full overflow-hidden rounded-3xl bg-green-100">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        key={b.id}
+        src={`/images/map/${b.id}.webp`}
+        alt={`${b.name} filiali joylashgan hudud xaritasi: ${b.address}`}
+        width={1200}
+        height={800}
+        loading="lazy"
+        className="h-full w-full object-cover [filter:saturate(.75)]"
+      />
+      <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-full" aria-hidden>
+        <span className="flex items-center gap-2 whitespace-nowrap rounded-full bg-green-800 py-1.5 pl-1.5 pr-3.5 text-[13px] font-bold text-white shadow-[0_10px_24px_-8px_rgba(0,0,0,0.5)]">
+          <span className="grid h-6 w-6 place-items-center rounded-full bg-yellow text-green-950"><IconPin className="h-3.5 w-3.5" /></span>
+          YAPROQ {b.name}
         </span>
-      )}
-
-      {located.map((b) => {
-        const p = toMap(b.lat, b.lng);
-        const on = b.id === selected;
-        return (
-          <button
-            key={b.id}
-            type="button"
-            onClick={() => onSelect(b.id)}
-            className={`absolute z-20 -translate-x-1/2 -translate-y-full transition-transform duration-500 ease-out ${on ? "scale-110" : "hover:scale-105"}`}
-            style={{ left: `${p.x}%`, top: `${p.y}%` }}
-            aria-label={`${b.name} filiali`}
-            aria-pressed={on}
-          >
-            <span className={`flex items-center gap-2 whitespace-nowrap rounded-full py-1.5 pl-1.5 pr-3.5 text-[13px] font-bold shadow-[0_10px_24px_-10px_rgba(0,0,0,0.45)] transition-colors ${on ? "bg-yellow text-green-950" : "bg-green-800 text-white"}`}>
-              <span className={`grid h-6 w-6 place-items-center rounded-full ${on ? "bg-green-900/10" : "bg-white/15"}`}>
-                <IconPin className="h-3.5 w-3.5" />
-              </span>
-              {b.name}
-            </span>
-            <span className={`mx-auto block h-2.5 w-2.5 -translate-y-1 rotate-45 ${on ? "bg-yellow" : "bg-green-800"}`} />
-          </button>
-        );
-      })}
-
-      <p className="absolute bottom-3 left-4 right-4 text-[12px] font-semibold text-green-900/60">Filiallarning o‘zaro joylashuvi. Aniq yo‘l uchun «Yo‘lni ko‘rsatish»ni bosing.</p>
+        <span className="mx-auto block h-3 w-3 -translate-y-1.5 rotate-45 bg-green-800" />
+      </span>
+      <div className="absolute left-3 top-3 flex gap-2" role="group" aria-label="Xaritadagi filial">
+        {located.map((x) => {
+          const on = x.id === b.id;
+          return (
+            <button
+              key={x.id}
+              type="button"
+              onClick={() => onSelect(x.id)}
+              aria-pressed={on}
+              className={`flex items-center gap-1.5 rounded-full px-3.5 py-2 text-[13px] font-bold shadow-[0_8px_20px_-10px_rgba(0,0,0,0.5)] transition-colors ${on ? "bg-yellow text-green-950" : "bg-white text-green-900 hover:bg-green-50"}`}
+            >
+              <IconPin className="h-3.5 w-3.5" /> {x.name}
+            </button>
+          );
+        })}
+      </div>
+      <a href={directionsUrl(b)} target="_blank" rel="noopener noreferrer" className="btn-primary absolute bottom-3 right-3 h-11 min-h-0 px-5 text-[14px]">
+        <IconNavigate className="h-4 w-4" /> Yo‘lni ko‘rsatish
+      </a>
+      <p className="absolute bottom-0 left-0 rounded-tr-lg bg-white/85 px-2 py-0.5 text-[11px] text-ink-700">
+        ©{" "}
+        <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer" className="underline">
+          OpenStreetMap
+        </a>{" "}
+        mualliflari
+      </p>
     </div>
   );
 }
@@ -223,8 +234,8 @@ export default function Branches() {
             })}
           </ul>
 
-          <Reveal delay={120} className="order-first h-[340px] sm:h-[440px] lg:order-none lg:col-span-7 lg:h-auto">
-            <CityMap selected={selected} onSelect={setSelected} user={geo.pos} />
+          <Reveal className="order-first h-[300px] sm:h-[380px] lg:sticky lg:top-28 lg:order-none lg:col-span-7 lg:h-[520px] lg:self-start">
+            <BranchMap selected={selected} onSelect={setSelected} />
           </Reveal>
         </div>
       </div>

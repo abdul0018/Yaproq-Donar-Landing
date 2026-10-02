@@ -81,12 +81,6 @@ export const navLinks = [
   { href: "#aloqa", label: "Aloqa" },
 ];
 
-/** Projects a coordinate onto the schematic Tashkent map (0–100 on both axes). */
-export const toMap = (lat: number, lng: number) => ({
-  x: Math.min(95, Math.max(5, ((lng - 69.13) / 0.27) * 100)),
-  y: Math.min(95, Math.max(5, ((41.4 - lat) / 0.16) * 100)),
-});
-
 /** Great-circle distance in km. */
 export function distanceKm(a: { lat: number; lng: number }, b: { lat: number; lng: number }) {
   const R = 6371;
