@@ -76,7 +76,7 @@ export default function WhyUs() {
   const Icon = w.icon;
 
   return (
-    <section aria-labelledby="ways-title" className="relative bg-green-900 py-20 text-white sm:py-28">
+    <section aria-labelledby="ways-title" className="relative bg-green-900 py-20 text-paper sm:py-28">
       <TornEdge className="text-green-900" seed={6} />
       <div className="container">
         <SectionHeading
@@ -103,7 +103,7 @@ export default function WhyUs() {
                   >
                     <XIcon className={`h-7 w-7 shrink-0 transition-colors ${on ? "text-yellow" : "text-green-200"}`} />
                     <span className="min-w-0 flex-1">
-                      <span className={`block font-display text-[28px] leading-none transition-colors duration-300 sm:text-[38px] ${on ? "text-white" : "text-green-100 group-hover:text-white"}`}>
+                      <span className={`block font-display text-[28px] leading-none transition-colors duration-300 sm:text-[38px] ${on ? "text-paper" : "text-green-100 group-hover:text-paper"}`}>
                         {x.title}
                       </span>
                       <span className="tabular mt-2 block text-[14.5px] text-green-100">{x.short}</span>

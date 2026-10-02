@@ -14,7 +14,7 @@ import TornEdge from "./TornEdge";
 function LeadDish({ dish }: { dish: Dish }) {
   const [v, setV] = useState(dish.variants[0]);
   return (
-    <Reveal as="article" className="group relative overflow-hidden rounded-3xl bg-green-800 text-white lg:col-span-7">
+    <Reveal as="article" className="group relative overflow-hidden rounded-3xl bg-green-800 text-paper lg:col-span-7">
       <div className="grid h-full sm:grid-cols-[1.15fr_1fr] lg:grid-cols-1 xl:grid-cols-[1.15fr_1fr]">
         <div className="p-3 sm:p-4">
           <div className="relative aspect-[4/3] overflow-hidden rounded-[22px] bg-studio sm:aspect-auto sm:h-full sm:min-h-[300px] lg:aspect-[16/10] lg:h-auto xl:aspect-auto xl:h-full">
@@ -46,8 +46,8 @@ function SideDish({ dish, delay }: { dish: Dish; delay: number }) {
   const [v, setV] = useState(dish.variants[0]);
   return (
     <Reveal as="li" delay={delay} className="group grid grid-cols-[112px_1fr] items-start gap-5 rounded-3xl bg-white p-4 sm:grid-cols-[180px_1fr] lg:rounded-none lg:bg-transparent lg:px-0 lg:py-6 lg:first:pt-0 lg:last:pb-0">
-      <div className="aspect-square overflow-hidden rounded-2xl bg-studio sm:aspect-[4/3]">
-        <DishVisual dish={dish} className="transition-transform duration-700 ease-out group-hover:scale-110" />
+      <div className={`aspect-square overflow-hidden rounded-2xl ${delay % 180 ? "bg-paper-deep" : "bg-sage"} sm:aspect-[4/3]`}>
+        <DishVisual dish={dish} onTile className="transition-transform duration-700 ease-out group-hover:scale-110" />
       </div>
       <div className="flex min-w-0 flex-col gap-3">
         <div>

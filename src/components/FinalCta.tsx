@@ -12,7 +12,7 @@ export default function FinalCta() {
       <div className="container">
         <Reveal className="relative overflow-hidden rounded-[36px] bg-yellow px-6 py-14 text-green-950 sm:px-12 sm:py-20 lg:px-16">
           <div aria-hidden className="pointer-events-none absolute -bottom-36 -right-24 aspect-square w-[320px] sm:-bottom-24 sm:-right-12 sm:w-[420px] lg:bottom-auto lg:right-14 lg:top-1/2 lg:w-[420px] lg:-translate-y-1/2">
-            <div className="h-full w-full overflow-hidden rounded-[50%_0_50%_50%] bg-studio shadow-[0_40px_70px_-30px_rgba(11,61,31,0.55)] ring-[10px] ring-green-800">
+            <div className="h-full w-full overflow-hidden rounded-[50%_0_50%_50%] bg-studio shadow-[0_34px_60px_-30px_rgba(150,110,10,0.55)] ring-[10px] ring-green-800">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/images/menu/pilav-ustu-donar.webp" alt="" width={600} height={450} loading="lazy" className="h-full w-full scale-[1.12] object-cover" />
             </div>

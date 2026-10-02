@@ -14,8 +14,8 @@ export default function Hero() {
   const base = dish.variants[0];
 
   return (
-    <section id="asosiy" className="relative overflow-hidden bg-green-900 text-white">
-      <div aria-hidden className="pointer-events-none absolute -right-48 -top-40 h-[760px] w-[760px] rounded-full bg-green-800 blur-[2px]" />
+    <section id="asosiy" className="relative overflow-hidden bg-green-900 text-paper">
+      <div aria-hidden className="pointer-events-none absolute -right-48 -top-40 hidden h-[760px] w-[760px] rounded-full bg-green-800 blur-[2px] lg:block" />
 
       <div className="container relative grid min-h-[100svh] items-center gap-10 pb-12 pt-28 lg:grid-cols-12 lg:gap-6 lg:pb-16 lg:pt-28">
         <div className="relative z-10 lg:col-span-6">

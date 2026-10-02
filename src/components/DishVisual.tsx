@@ -1,7 +1,11 @@
 import type { Dish } from "@/data/menu";
 
 /** The official product photo, or a name tile for the rare item without one. Fills its parent. */
-export default function DishVisual({ dish, className = "", priority }: { dish: Dish; className?: string; priority?: boolean }) {
+/**
+ * `onTile`: the photo is multiplied onto its tile colour and lifted slightly, so the grey studio
+ * backdrop becomes the tile (sage or paper) while the food keeps its colour.
+ */
+export default function DishVisual({ dish, className = "", priority, onTile }: { dish: Dish; className?: string; priority?: boolean; onTile?: boolean }) {
   if (dish.image) {
     return (
       // eslint-disable-next-line @next/next/no-img-element
@@ -12,7 +16,7 @@ export default function DishVisual({ dish, className = "", priority }: { dish: D
         height={450}
         loading={priority ? "eager" : "lazy"}
         decoding="async"
-        className={`h-full w-full object-cover ${className}`}
+        className={`h-full w-full object-cover ${onTile ? "mix-blend-multiply brightness-[1.08] contrast-[1.03]" : ""} ${className}`}
       />
     );
   }

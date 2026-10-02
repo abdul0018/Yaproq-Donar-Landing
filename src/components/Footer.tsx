@@ -5,7 +5,7 @@ import TornEdge from "./TornEdge";
 
 export default function Footer() {
   return (
-    <footer id="aloqa" className="relative bg-green-950 pb-28 pt-16 text-white lg:pb-10">
+    <footer id="aloqa" className="relative bg-green-950 pb-28 pt-16 text-paper lg:pb-10">
       <TornEdge className="text-green-950" seed={8} />
       <div className="container">
         <div className="grid gap-12 lg:grid-cols-12">

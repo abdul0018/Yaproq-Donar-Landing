@@ -20,7 +20,7 @@ const pillars = [
 
 export default function About() {
   return (
-    <section id="biz-haqimizda" aria-labelledby="about-title" className="relative bg-paper py-20 sm:py-28">
+    <section id="biz-haqimizda" aria-labelledby="about-title" className="relative overflow-x-clip bg-paper py-20 sm:py-28">
       <TornEdge className="text-paper" seed={5} />
       <div className="container grid gap-12 lg:grid-cols-12 lg:gap-10">
         <div className="lg:col-span-7">
@@ -46,13 +46,14 @@ export default function About() {
         <Reveal delay={120} className="lg:col-span-5">
           <figure className="mx-auto max-w-md lg:max-w-none">
             <div className="relative p-3 sm:p-4">
-            <div aria-hidden className="absolute inset-0 rounded-[50%_0_50%_50%] bg-yellow" />
-            <div className="relative aspect-square overflow-hidden rounded-[50%_0_50%_50%] bg-studio">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img aria-hidden src="/images/paint/splash-sage.png" alt="" width={900} height={876} loading="lazy" className="pointer-events-none absolute -left-[22%] -top-[16%] h-[132%] w-[132%] max-w-none rotate-[-10deg] object-contain" />
+            <div className="relative aspect-square overflow-hidden rounded-[50%_0_50%_50%] bg-studio ring-[10px] ring-yellow">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/images/menu/iskender-kabob.webp" alt="Iskender kabob: mol go‘shti, tomat qaylasi va suzma" width={600} height={450} loading="lazy" className="h-full w-full scale-110 object-cover" />
             </div>
             </div>
-            <figcaption className="mt-5 text-center font-hand text-[24px] font-bold leading-snug text-green-800">Iskender kabob — mol go‘shti, tomat qaylasi, iskender noni va suzma</figcaption>
+            <figcaption className="relative z-10 mt-5 text-center font-hand text-[24px] font-bold leading-snug text-green-800">Iskender kabob — mol go‘shti, tomat qaylasi, iskender noni va suzma</figcaption>
           </figure>
         </Reveal>
       </div>
