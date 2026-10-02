@@ -1,76 +1,86 @@
 ---
 name: YAPROQ DONAR
-description: The official YAPROQ campaign world on the web. Deep brand-green fields, brand-yellow actions and drop shapes, heavy geometric headlines, real studio photography.
+description: Painted restaurant poster in YAPROQ's pinned yellow and greens. Deep green fields torn by brush edges into warm grained paper, a soft heavy serif, and real food on colour tiles.
 colors:
   logo-green: "#115A2E"
   forest-deep: "#0B3D1F"
   forest-night: "#072813"
   leaf-hover: "#1A6B39"
-  sprout-green: "#2E7A45"
   brand-olive: "#3E5F21"
-  mist-green: "#F1F6EE"
+  sprout-green: "#2E7A45"
   pale-sage: "#E2ECDC"
   brand-yellow: "#EDCD49"
   yellow-hover: "#F2D86E"
   yellow-shade: "#B8961A"
+  paper: "#F6F0E1"
+  paper-deep: "#ECE1C8"
+  sage-tile: "#DCE5D0"
+  studio-grey: "#ECEBE7"
   ink: "#0F2417"
   ink-soft: "#2B3D31"
   ink-muted: "#45574B"
   ink-quiet: "#5E6E63"
-  paper: "#F5F7F1"
-  studio-grey: "#ECEBE7"
   white: "#FFFFFF"
 typography:
   display:
-    fontFamily: "Urbanist, system-ui, sans-serif"
-    fontSize: "clamp(2.9rem, 7.2vw, 6rem)"
-    fontWeight: 900
-    lineHeight: 0.92
-    letterSpacing: "-0.035em"
-  headline:
-    fontFamily: "Urbanist, system-ui, sans-serif"
-    fontSize: "clamp(2.2rem, 4.8vw, 4rem)"
-    fontWeight: 900
-    lineHeight: 0.98
-    letterSpacing: "-0.03em"
-  title-lg:
-    fontFamily: "Urbanist, system-ui, sans-serif"
-    fontSize: "clamp(1.6rem, 2.8vw, 2.4rem)"
-    fontWeight: 900
-    lineHeight: 1.05
-    letterSpacing: "-0.02em"
-  title:
-    fontFamily: "Urbanist, system-ui, sans-serif"
-    fontSize: "30px"
-    fontWeight: 900
+    fontFamily: "Young Serif, Georgia, serif"
+    fontSize: "clamp(2.8rem, 6.6vw, 5.6rem)"
+    fontWeight: 400
     lineHeight: 1
+    letterSpacing: "-0.005em"
+    fontFeature: "\"kern\", \"liga\""
+  headline:
+    fontFamily: "Young Serif, Georgia, serif"
+    fontSize: "clamp(2.1rem, 4.4vw, 3.6rem)"
+    fontWeight: 400
+    lineHeight: 1.05
+    letterSpacing: "-0.005em"
+    fontFeature: "\"kern\", \"liga\""
+  title-lg:
+    fontFamily: "Young Serif, Georgia, serif"
+    fontSize: "clamp(1.6rem, 2.6vw, 2.2rem)"
+    fontWeight: 400
+    lineHeight: 1.1
+    letterSpacing: "-0.005em"
+  title:
+    fontFamily: "Young Serif, Georgia, serif"
+    fontSize: "30px"
+    fontWeight: 400
+    lineHeight: 1
+    letterSpacing: "-0.005em"
   title-sm:
-    fontFamily: "Urbanist, system-ui, sans-serif"
+    fontFamily: "Young Serif, Georgia, serif"
     fontSize: "22px"
-    fontWeight: 800
+    fontWeight: 400
+    lineHeight: 1.25
+    letterSpacing: "-0.005em"
+  hand:
+    fontFamily: "Caveat, cursive"
+    fontSize: "24px"
+    fontWeight: 700
     lineHeight: 1.25
   lead:
-    fontFamily: "Manrope, system-ui, sans-serif"
+    fontFamily: "Figtree, system-ui, sans-serif"
     fontSize: "17px"
     fontWeight: 400
     lineHeight: 1.625
   body:
-    fontFamily: "Manrope, system-ui, sans-serif"
+    fontFamily: "Figtree, system-ui, sans-serif"
     fontSize: "15px"
     fontWeight: 400
     lineHeight: 1.5
   body-sm:
-    fontFamily: "Manrope, system-ui, sans-serif"
+    fontFamily: "Figtree, system-ui, sans-serif"
     fontSize: "14px"
     fontWeight: 400
     lineHeight: 1.375
   label:
-    fontFamily: "Manrope, system-ui, sans-serif"
+    fontFamily: "Figtree, system-ui, sans-serif"
     fontSize: "15px"
     fontWeight: 700
     lineHeight: 1.2
   price:
-    fontFamily: "Manrope, system-ui, sans-serif"
+    fontFamily: "Figtree, system-ui, sans-serif"
     fontSize: "17px"
     fontWeight: 800
     lineHeight: 1.2
@@ -78,13 +88,18 @@ typography:
 rounded:
   segment: "14px"
   tile: "20px"
+  tile-lg: "22px"
   card: "28px"
   panel: "36px"
   pill: "9999px"
   drop: "50% 0 50% 50%"
 spacing:
   card-pad: "24px"
-  gutter: "20px"
+  grid-gap: "20px"
+  grid-gap-x: "24px"
+  grid-gap-y: "48px"
+  torn-edge-mobile: "40px"
+  torn-edge: "64px"
   section-y-mobile: "80px"
   section-y: "112px"
   container-max: "1320px"
@@ -117,11 +132,15 @@ components:
   button-outline-hover:
     backgroundColor: "{colors.logo-green}"
     textColor: "{colors.white}"
-  dish-tile:
-    backgroundColor: "{colors.mist-green}"
-  dish-photo:
+  food-tile-sage:
+    backgroundColor: "{colors.sage-tile}"
+    rounded: "{rounded.tile-lg}"
+  food-tile-paper:
+    backgroundColor: "{colors.paper-deep}"
+    rounded: "{rounded.tile-lg}"
+  studio-photo-well:
     backgroundColor: "{colors.studio-grey}"
-    rounded: "{rounded.tile}"
+    rounded: "{rounded.tile-lg}"
   size-switch:
     rounded: "{rounded.tile}"
     padding: "4px"
@@ -136,6 +155,10 @@ components:
     rounded: "{rounded.pill}"
     height: "44px"
     padding: "0 16px"
+  category-ribbon:
+    backgroundColor: "{colors.brand-yellow}"
+    textColor: "{colors.forest-deep}"
+    typography: "{typography.title}"
   search-input:
     backgroundColor: "{colors.white}"
     textColor: "{colors.ink}"
@@ -147,10 +170,14 @@ components:
     rounded: "{rounded.pill}"
     padding: "4px 10px"
   feature-card-green:
-    backgroundColor: "{colors.forest-deep}"
-    textColor: "{colors.white}"
+    backgroundColor: "{colors.logo-green}"
+    textColor: "{colors.paper}"
     rounded: "{rounded.card}"
     padding: "{spacing.card-pad}"
+  promo-card:
+    backgroundColor: "{colors.forest-deep}"
+    textColor: "{colors.paper}"
+    rounded: "{rounded.card}"
   closing-panel:
     backgroundColor: "{colors.brand-yellow}"
     textColor: "{colors.forest-night}"
@@ -161,168 +188,186 @@ components:
 
 ## Overview
 
-**Creative North Star: "The Campaign Poster, Served Hot"**
+**Creative North Star: "The Painted Menu Board"**
 
-This is the brand's own campaign artwork carried onto the web: deep green fields that read as the YAPROQ identity before a single word is read, brand yellow reserved for the things a hungry visitor should press, and heavy geometric headlines that sit like banner lettering. Food is always the real studio photograph on its grey studio backdrop, never an illustration. The page alternates full-bleed fields (forest green, paper, mist green, solid yellow, white) so each section is a distinct poster panel rather than a stack of cards on one ground.
+The site reads like a set of painted restaurant posters, the kind the user brought as references, re-inked in YAPROQ's own pinned colours. Deep green fields carry big, soft serif headlines in cream; where a field ends it does not stop on a ruler line but tears into the next colour along a dry-brush edge. Below the fold the ground is warm, finely grained paper, and the food sits on flat sage and deeper-paper tiles as clean cutouts with a soft warm shadow, like plates set down on a coloured board. Brand yellow is the ink of action and of offers.
 
-Density is generous at section level (80px mobile, 112px desktop vertical rhythm) and compact inside commerce surfaces: dish tiles, size switches, and cart rows pack weight, price, and action tightly so ordering stays fast. Motion is quiet and eased (a single expo-out curve); the hero's leaf-in is the one authored entrance, everything else is a short fade-up reveal that respects reduced motion.
+The page is a sequence of colour fields: forest hero, yellow category ribbon, paper menu, yellow offers, paper story, forest "ways to order", paper branches and reviews, a yellow closing panel, a night-green footer. Density is generous between sections (80px mobile, 112px desktop) and compact inside commerce: tiles, size switches and cart rows keep weight, price and action together. Motion is quiet and eased on one expo-out curve; the hero's leaf-in is the single authored entrance.
 
-The world replaced an earlier cream, italic-serif, terracotta restaurant build. That default is rejected: no serif display, no cream ground, no terracotta.
+The world replaces a flat, plain-sans template pass that the user rejected as "simple fonts". The display voice is always the soft serif; sans is for reading and tapping only.
 
 **Key Characteristics:**
-- Green field plus yellow action: green carries identity, yellow carries intent.
-- The brand drop shape (one square corner, three round) frames hero, about, and closing photos.
-- Urbanist 900 headlines, tight and negative-tracked; Manrope for everything read or tapped.
-- Real studio product photography on studio grey; real OpenStreetMap streets for branches.
+- Forest-green and yellow fields meet warm grained paper along painted, brush-torn edges.
+- One soft, heavy serif (Young Serif 400) for every heading; cream on green, forest on paper and yellow.
+- Food as alpha cutouts on flat sage or paper-deep tiles; studio photos only for hero, lead card, promos and closing panel.
+- The brand drop shape (one square corner, three round) frames the hero and closing photos over yellow.
 - Pills for every control; large soft radii (20 to 36px) for every container.
-- Soft, green-tinted ambient shadows only; no hard edges of depth.
+- Caveat hand-lettering appears as a rare margin note, never as a heading.
 
 ## Colors
 
-Two owner-pinned brand hues, green and yellow, carry the whole system over a green-tinted neutral family; there is no third accent.
+Two owner-pinned brand hues, green and yellow, on a warm paper ground; the greens carry identity, the yellow carries intent.
 
 ### Primary
-- **Logo Green** (#115A2E): the brand's logo colour and the workhorse action green. Secondary buttons, the active category tab, the selected size segment, add-to-cart on light grounds, map pin, icon strokes on light grounds, focus ring on light grounds, browser theme colour.
-- **Forest Deep** (#0B3D1F): the hero field, the "ways to order" field, promo cards, and the default colour of every headline on a light ground.
-- **Forest Night** (#072813): the footer field and the text colour on yellow (about 11:1 contrast). Also the selection text colour.
-- **Leaf Hover** (#1A6B39): hover state of every green fill.
+- **Logo Green** (#115A2E): the brand's logo colour and the workhorse action green. Secondary buttons, the active category tab, the selected size segment, add-to-cart on light grounds, the lead dish card, the map pin, icons on light grounds, the ring around the closing photo, focus ring on light grounds, browser theme colour.
+- **Forest Deep** (#0B3D1F): the hero and "ways to order" fields, promo cards, and every headline on paper or yellow.
+- **Forest Night** (#072813): the footer field and all text on yellow.
+- **Leaf Hover** (#1A6B39): hover of every green fill.
+- **Brand Olive** (#3E5F21): owner-pinned official site green. The single accent word inside a headline on paper ("yeymiz?", "YAPROQ") and the hover colour for ribbon items and text links.
 - **Sprout Green** (#2E7A45): the open-now dot only.
-- **Brand Olive** (#3E5F21): owner-pinned official site green. The accent word inside a headline on light grounds ("yeymiz?", "YAPROQ") and hover colour for text links and ribbon items. About 6.7:1 on Paper.
+- **Pale Sage** (#E2ECDC): secondary copy on green fields.
 
 ### Secondary
-- **Brand Yellow** (#EDCD49): owner-pinned. Primary action fill, the accent word in the hero H1, full section fields (promotions, closing CTA), the drop-shape backing behind hero and about photos, "Yangi" tags and discount badges, the active size segment on dark grounds, the global focus ring and text selection.
+- **Brand Yellow** (#EDCD49): owner-pinned. Primary action fill, the accent word in headlines on green fields ("yangicha", "buyurtma"), full fields (category ribbon, promotions, closing panel), the drop backing behind the hero photo, tags and discount badges, the hand-lettered notes on green, the active size segment on dark grounds, global focus ring and text selection.
 - **Yellow Hover** (#F2D86E): hover of every yellow fill.
-- **Yellow Shade** (#B8961A): only as the tint of the primary button's glow shadow.
+- **Yellow Shade** (#B8961A): only as the tint of the primary button's glow.
 
 ### Neutral
-- **Ink** (#0F2417): body text on light grounds; a green-black, never pure black.
-- **Ink Soft** (#2B3D31): secondary body text in cards and branch details.
-- **Ink Muted** (#45574B): leads and descriptions on light grounds, price-from lines.
-- **Ink Quiet** (#5E6E63): counts, placeholders, portion weights.
-- **Paper** (#F5F7F1): page ground, scrolled header, cart drawer.
-- **Mist Green** (#F1F6EE): the menu section field.
-- **Pale Sage** (#E2ECDC): body copy on green fields (as `green-100`) and the map panel's loading ground.
-- **Studio Grey** (#ECEBE7): the backdrop of every product photo container, matched to the official studio shots so photos sit seamlessly.
-- **White** (#FFFFFF): branch cards, dialogs, reviews and closing section grounds.
+- **Paper** (#F6F0E1): the page ground, always with a fine warm fractal grain (about 9% opacity, 180px tile). Also the display colour on green fields.
+- **Paper Deep** (#ECE1C8): every second food tile.
+- **Sage Tile** (#DCE5D0): every other food tile; the watercolour splash behind the About plate is the same sage.
+- **Studio Grey** (#ECEBE7): the well behind uncut studio photographs (hero, lead card, promos, closing panel).
+- **Ink** (#0F2417), **Ink Soft** (#2B3D31), **Ink Muted** (#45574B), **Ink Quiet** (#5E6E63): green-black body text, secondary copy, descriptions, and counts and placeholders, in that order.
+- **White** (#FFFFFF): raised surfaces only: the hero price chip, selected branch card, dialogs, cart rows, search fields, map chips.
 
 ### Named Rules
-**The Yellow Means Go Rule.** Yellow fills are for the action a visitor should take next, for offers, and for the drop backing behind photos. Text on yellow is always Forest Night, never white.
+**The Pinned Palette Rule.** #EDCD49, #115A2E and #3E5F21 are owner-pinned. Never shift, desaturate or substitute them; derive states only from the defined hover steps.
 
-**The Pinned Palette Rule.** #EDCD49, #115A2E and #3E5F21 are owner-pinned. Never shift, desaturate, or substitute them; derive states from the defined hover steps only.
+**The Yellow Means Go Rule.** Yellow fills mark the next action, an offer, or the drop behind a photo. Text on yellow is always Forest Night, never white.
 
-**The Green Neutrals Rule.** Every neutral leans green (ink, paper, mist). No warm cream, no pure grey except the studio photo backdrop.
+**The Cream On Green Rule.** Display type on a green field is Paper (#F6F0E1), not pure white; body copy on green is Pale Sage.
+
+**The Alternating Tiles Rule.** Food tiles alternate Sage Tile and Paper Deep in sequence; never a third tile colour, never white.
 
 ## Typography
 
-**Display Font:** Urbanist 700/800/900 (with system-ui, sans-serif)
-**Body Font:** Manrope (with system-ui, sans-serif)
+**Display Font:** Young Serif 400 (with Georgia, serif)
+**Body Font:** Figtree (with system-ui, sans-serif)
+**Hand Font:** Caveat 700 (with cursive)
 
-**Character:** Urbanist at 900 with negative tracking echoes the lettering in YAPROQ's campaign banners; Manrope is a calm, wide-aperture grotesk that keeps prices, weights, and Uzbek Latin diacritics (o‘, g‘) legible at small sizes.
+**Character:** Young Serif is soft, round-terminaled and heavy at its only weight, the warm poster headline of the references. Figtree is a friendly, open sans that keeps prices, weights and Uzbek Latin diacritics (o‘, g‘) clear at small sizes. Caveat adds a chalkboard-style margin note.
 
 ### Hierarchy
-- **Display** (900, clamp(2.9rem, 7.2vw, 6rem), 0.92): the hero H1 only. One accent word may switch to Brand Yellow.
-- **Headline** (900, clamp(2.2rem, 4.8vw, 4rem), 0.98): every section H2. One accent word may switch to Brand Olive on light grounds.
-- **Title Large** (900, clamp(1.6rem, 2.8vw, 2.4rem), 1.05): the featured dish name in the signature card.
-- **Title** (900, 30px, 1): branch names, promo set names, large prices, offer rows (up to 34px).
-- **Title Small** (800, 20 to 22px, 1.25): dish tile names, about pillars, hero price chip.
-- **Lead** (400, 17px, 1.625): the paragraph under a section headline, max 60ch.
-- **Body** (400, 15px, 1.5): branch details, card copy, dialog content.
-- **Body Small** (400, 14px, 1.375): dish descriptions and meta lines.
-- **Label** (700, 15px; 13 to 14px in compact buttons): buttons, nav links, chips. Sentence case.
-- **Price** (800, 16 to 17px, tabular figures): every price, weight, phone number, distance and count.
+- **Display** (400, clamp(2.8rem, 6.6vw, 5.6rem), 1): the hero H1 only, cream on forest with one yellow word.
+- **Headline** (400, clamp(2.1rem, 4.4vw, 3.6rem), 1.05): every section H2; one accent word allowed: Brand Olive on paper, Brand Yellow on green.
+- **Title Large** (400, clamp(1.6rem, 2.6vw, 2.2rem), 1.1): the lead dish name.
+- **Title** (400, 26 to 40px, 1): branch names, set names, large prices, offer rows, ribbon categories, ordering-channel names.
+- **Title Small** (400, 20 to 26px, 1.25): dish names on tiles, About pillars, hero price chip.
+- **Hand** (Caveat 700, 24px, 1.25): margin notes only (see rule).
+- **Lead** (400, 17px, 1.625): paragraph under a headline, max 60ch.
+- **Body** (400, 15px, 1.5) and **Body Small** (400, 14px, 1.375): card copy, branch details, dish descriptions.
+- **Label** (700, 15px; 13 to 14px compact): buttons, nav links, chips. Sentence case.
+- **Price** (800, 16 to 17px, tabular figures): every price, weight, phone number, distance and count in sans contexts.
 
 ### Named Rules
-**The Heavy Headline Rule.** Every heading uses Urbanist at 800 or 900. Never a lighter display weight, never a serif, never italic.
+**The One Weight Rule.** Young Serif ships one weight. Every display element is set at 400 with font synthesis off, -0.005em tracking and kerning on; never fake bold or italic, and never bring in a sans as a display face.
 
-**The Tabular Numbers Rule.** Prices, weights, phone numbers, hours and distances always use tabular figures so columns of prices align.
+**The Three Notes Rule.** Caveat appears only as a short hand-lettered note: the hero perk line, the "Yangi · tovuqli" set tag, the About photo caption. It never carries a heading, a price, an action, or body copy.
+
+**The Tabular Numbers Rule.** Prices, weights, phone numbers, hours and distances always use tabular figures.
 
 **The No Eyebrow Rule.** Headlines carry their own weight. No small uppercase label above a section heading.
 
 ## Layout
 
-A centred container that caps at 1320px, with side padding of 16px (mobile), 24px (from 640px) and 40px (from 1024px). Sections are full-bleed colour fields with 80px vertical padding on mobile and 112px from 640px; each section switches field colour so the page reads as a sequence of panels.
+A centred container capped at 1320px with 16px, 24px (from 640px) and 40px (from 1024px) side padding. Sections are full-bleed colour fields with 80px vertical padding on mobile and 112px from 640px.
 
-Desktop composition uses a 12-column grid: the hero splits 6/6 (copy left, drop photo right) with a full-width fact row underneath; branches split 5/7 (card list left, sticky map right); the signature section splits 7/5. Dish grids step 1, 2, 3, 4 columns at 0, 640, 1024 and 1280px with 20px gaps on mobile, then 24px across and 48px down from 640px. On mobile, dish tiles switch to a horizontal row (104px photo beside text) to keep the menu scannable, and the map moves above the branch list.
+Desktop uses a 12-column grid: the hero splits 6/6 (copy left, drop photo right) with a full-width fact row underneath; the signature section splits 7/5 (lead card, side list); About splits copy against a 5-column plate; branches split 5/7 (card list, sticky map). The menu grid steps 1, 2, 3, 4 columns at 0, 640, 1024 and 1280px with 20px gaps on mobile, 24px across and 48px down from 640px. On mobile, menu tiles become rows (104px tile beside text) separated by a 1px 10% green rule, and the map moves above the branch list.
 
-The header is fixed at 72px, transparent over the hero and Paper with blur once scrolled; the menu's category bar sticks directly under it. Anchor scrolling offsets by 5.5rem so headings land clear of the header.
+The header is fixed at 72px, transparent over the hero and paper with blur once scrolled; the menu's category tabs stick under it. A yellow category ribbon scrolls as an endless marquee (45s, pauses on hover and focus) between the hero and the menu.
 
 ## Elevation & Depth
 
-Depth is mostly tonal: colour fields and white branch cards and dialogs on tinted grounds do the layering, while dish photos lift straight off the menu ground. Shadows are soft, long, negatively spread and tinted green or black at low opacity, used to lift a photo, the selected card, or a floating chip. There are no hard or offset shadows.
+Depth comes from colour fields, painted edges and food that casts its own shadow. Plates and cutouts carry warm brown drop shadows that follow their alpha; photos and floating chips carry soft, long, negatively spread shadows. Nothing uses a hard or offset shadow.
 
 ### Shadow Vocabulary
+- **Plate Shadow** (`filter: drop-shadow(0 14px 14px rgba(60,45,20,0.22))`): every cutout on a food tile; the About plate uses the larger `drop-shadow(0 22px 20px rgba(60,45,20,0.3))`.
 - **Yellow Glow** (`box-shadow: 0 10px 24px -12px rgba(184,150,26,0.9)`): under the primary yellow button only.
-- **Card Lift** (`box-shadow: 0 18px 36px -28px rgba(11,61,31,0.6)`, deepening to `0 26px 44px -26px rgba(11,61,31,0.65)` on hover): dish photo wells; a slightly tighter variant (-30px, 0.55) marks the selected branch card.
-- **Photo Drop** (`box-shadow: 0 40px 70px -30px rgba(0,0,0,0.6)`): drop-shaped hero and closing photos.
-- **Floating Chip** (`box-shadow: 0 24px 50px -24px rgba(0,0,0,0.55)`): the hero price chip; map pins and map chips use the smaller `0 10px 24px -8px rgba(0,0,0,0.5)`.
+- **Photo Drop** (`box-shadow: 0 40px 70px -30px rgba(0,0,0,0.6)`): the hero drop photo on green.
+- **Ochre Drop** (`box-shadow: 0 34px 60px -30px rgba(150,110,10,0.55)`): the closing drop photo on yellow.
+- **Selected Card** (`box-shadow: 0 22px 44px -30px rgba(11,61,31,0.55)`): the selected branch card.
+- **Floating Chip** (`box-shadow: 0 24px 50px -24px rgba(0,0,0,0.55)`): the hero price chip; map chips and pin use `0 8px 20px -10px` to `0 10px 24px -8px rgba(0,0,0,0.5)`.
 - **Header Hairline** (`box-shadow: 0 1px 0 rgba(15,36,23,0.08)`): scrolled header edge.
 
 ### Named Rules
-**The Soft Lift Rule.** Shadows are diffuse and negatively spread, so they read as light under an object, never as an outline. Nothing at rest on a coloured field gets a shadow.
+**The Warm Shadow Rule.** Shadows on food are warm brown and follow the plate's outline; shadows on yellow are ochre; nothing on a coloured field gets a neutral grey shadow.
 
 ## Shapes
 
-Two shape families. Controls are full pills (buttons, tabs, chips, inputs, badges, icon buttons). Containers are large soft rectangles: 14px for size-switch segments, 20px for photo wells and cart rows, 28px for cards, the map panel and dialogs, 36px for the closing CTA panel.
+Three families. Controls are full pills. Containers are large soft rectangles: 14px size-switch segments, 20px tiles on mobile, 22px tiles and photo wells from 640px, 28px cards, the map panel and dialogs, 36px for the closing panel.
 
-The signature silhouette is the **brand drop**: border-radius 50% 0 50% 50%, a circle with its top-right corner squared, taken from the YAPROQ campaign artwork. It frames hero, about and closing photos, usually over a slightly larger yellow drop as backing. The "ways to order" detail panel uses its rectangular cousin (40px 0 40px 40px). The sprout-leaf glyph from the campaign art is the one decorative mark.
+The **brand drop** (border-radius 50% 0 50% 50%, a circle with its top-right corner squared, from YAPROQ's campaign art) frames the hero photo over a yellow drop and the closing photo inside a 10px Logo Green ring. The "ways to order" detail panel uses its rectangular cousin (40px 0 40px 40px).
 
-Borders are 2px and translucent green (10 to 20% Logo Green) on light grounds, 15 to 30% white on green. Dividers are 1 to 2px at the same opacities.
+The **painted edge** is the third family: a 40px (64px from 640px) strip filled with the incoming section's colour and cut by one of three dry-brush raster masks, mirrored on alternate uses. It sits on top of every section that changes the field colour, rising into the section above. A sage watercolour splash behind the About plate is the only other painted mark; the sprout-leaf glyph separates ribbon items.
+
+Borders are 2px at 10 to 20% Logo Green on light grounds and 15 to 30% white on green; dividers are 1 to 2px at the same opacities.
 
 ### Named Rules
-**The Drop Is For Food Rule.** The 50% 0 50% 50% drop frames real dish photography. It is a frame, not a decoration on empty space.
+**The Torn Seam Rule.** Where two field colours meet, the boundary is a painted brush edge in the lower section's colour, never a straight line or a wave SVG. Same-colour neighbours get no edge.
+
+**The Drop Is For Food Rule.** The 50% 0 50% 50% drop frames real dish photography only, never empty decoration.
 
 ## Components
 
 ### Buttons
-Confident, round and thumb-sized.
-- **Shape:** full pill, min height 48px (hero CTAs 56px; compact in-card buttons 44px), 24px side padding, 8px icon gap.
-- **Primary:** Brand Yellow with Forest Night text and the Yellow Glow shadow. Hover to Yellow Hover.
-- **Green:** Logo Green with white text; hover to Leaf Hover. Used for secondary actions on light grounds and as the primary action on yellow fields.
-- **Outline:** 2px border at 20% Logo Green, Forest Deep text; hover fills Logo Green with white text. On green fields the outline-light variant uses a 30% white border and fills white on hover.
-- **States:** all buttons scale to 0.97 on press, transition 300ms expo-out, and show the 3px yellow focus ring (green on light grounds) with 3px offset.
+Round, warm and thumb-sized.
+- **Shape:** full pill, min height 48px (hero and closing CTAs 56px; in-card buttons 44px), 24px side padding, 8px icon gap.
+- **Primary:** Brand Yellow with Forest Night text and the Yellow Glow; hover to Yellow Hover.
+- **Green:** Logo Green with white text; hover to Leaf Hover. The primary action on yellow fields.
+- **Outline:** 2px border at 20% Logo Green, Forest Deep text; fills Logo Green on hover. On green fields the light variant uses a 30% white border and fills white.
+- **States:** press scales to 0.97, transitions are 300ms expo-out, focus is a 3px yellow ring (Logo Green on paper) with 3px offset.
 
 ### Chips and Tags
-- **Tags:** pill, 12px bold. "Yangi" is yellow with Forest Night; "Bepul" is Logo Green with white. Discount badges are yellow, Urbanist 900 at 18px.
-- **Open badge:** pill at 10% Logo Green with a 6px Sprout Green dot; closed state is 5% ink with an Ink Quiet dot.
+- **Tags:** pill, 12px bold. "Yangi" yellow with Forest Night, "Bepul" Logo Green with white. Discount badges are yellow pills in Young Serif 18px.
+- **Open badge:** pill at 10% Logo Green with a 6px Sprout Green dot; closed is 5% ink with an Ink Quiet dot.
+
+### Category Ribbon (signature)
+A yellow field topped by a painted edge, carrying category names in Young Serif 26 to 30px Forest Deep, separated by Logo Green sprout-leaf glyphs, scrolling as an endless marquee. Each name jumps to that menu category; hover turns it Brand Olive.
 
 ### Category Tabs
-- Pill tabs 44px tall in a horizontally scrolling, sticky bar on a translucent Mist Green ground. Active: Logo Green fill, white label, count in yellow. Inactive: Ink Muted, hover 5% green wash. A right-edge mask fade appears only while more tabs are hidden.
+Pill tabs 44px tall in a sticky, horizontally scrolling bar. Active: Logo Green, white label, yellow count. Inactive: Ink Muted with a 5% green hover wash. A right-edge mask fade shows only while tabs are hidden.
 
 ### Size Switch (signature)
-A segmented control for official dish sizes: a 20px-radius well at 7% Logo Green (10% white on dark), 4px inner padding, equal-width 14px-radius segments at least 44px tall. The weight leads in 14px/800; the official size name sits under it at 12px tabular. Selected segment is Logo Green with white on light grounds, Brand Yellow with Forest Night on dark. Changing it updates price and cart line.
+Segmented control for official dish sizes: a 20px well at 7% Logo Green (10% white on dark), 4px padding, equal 14px segments at least 44px tall. Weight leads at 14px/800; the official size name sits under it at 12px tabular. Selected is Logo Green with white on light grounds, yellow with Forest Night on dark. It updates price and cart line.
+
+### Food Tiles
+- **Menu and side tiles:** a Sage Tile or Paper Deep tile (alternating), square on mobile and 4:3 with 22px radius from 640px, holding the dish cutout inset 9% with the Plate Shadow; the cutout scales to 105% on hover. Name, description, size switch and price/action sit on the paper ground below; there is no card around the tile.
+- **Studio wells:** the hero, lead card, promos and closing panel keep the uncut studio photo on Studio Grey.
 
 ### Cards / Containers
-- **Dish tile:** no card. The Studio Grey photo well (20px radius on mobile, 22px from sm, 4:3 from sm) sits directly on the Mist Green menu ground with a soft green Card Lift that deepens on hover, and the photo scales to 105%. Name, description, size switch and price/action follow on the ground. On mobile, tiles are rows separated by a 1px 10% green rule.
-- **Feature card (on light):** Logo Green or Forest Deep field, white text, 28px radius, photo well inset at 22px radius.
-- **Branch card:** white at 60% with a 2px 10% green border; selected becomes solid white with a Logo Green border and lift. 24px padding.
-- **Promo card:** Forest Deep, 28px radius, photo half on Studio Grey, yellow discount badge.
+- **Lead dish card:** Logo Green, cream type, 28px radius, studio photo well inset at 22px.
+- **Promo card:** Forest Deep, 28px radius, studio photo half with a yellow discount badge and a yellow hand-lettered tag.
+- **Branch card:** 2px border at 10% Logo Green on 60% white; selected becomes white with a Logo Green border and the Selected Card shadow. 24px padding.
+- **Closing panel:** yellow, 36px radius, drop photo in a Logo Green ring with the Ochre Drop.
 
 ### Inputs / Fields
-- **Search:** pill, 44px (48px on mobile), white fill, 1px border at 15% Logo Green, leading search icon in Ink Quiet. Focus shifts the border to Logo Green and the desktop field widens from 192 to 256px.
+- **Search:** pill, 44px (48px on mobile), white, 1px border at 15% Logo Green, leading icon in Ink Quiet. Focus turns the border Logo Green; the desktop field widens from 192 to 256px.
 
 ### Navigation
-- Fixed 72px header with the official logo SVG in currentColor (white over the hero, Logo Green once scrolled). Nav links are 15px/600 pills; the in-view section gets a 15% white (or 10% green) fill. Cart is a yellow pill with a count. On mobile the links collapse into a full-screen sheet.
+Fixed 72px header with the official logo SVG in currentColor (cream over the hero, Logo Green once scrolled). Links are 15px/600 pills with a 15% white or 10% green fill for the in-view section. Cart is a yellow pill with a count. The mobile sheet lists sections in Young Serif 34px.
 
 ### Branch Map
-A 28px-radius panel holding a static OpenStreetMap street render per branch at reduced saturation (0.75), with a centred Logo Green pill pin carrying a yellow pin disc and the branch name. Branch selector chips sit top left (yellow when selected, white otherwise); a primary "Yo‘lni ko‘rsatish" button sits bottom right; OSM attribution stays visible bottom left.
+A 28px panel with a static OpenStreetMap render per branch at 0.75 saturation, a centred Logo Green pill pin with a yellow disc and the branch name, branch chips top left (yellow selected, white otherwise), a primary directions button bottom right and visible OSM attribution bottom left.
 
 ## Do's and Don'ts
 
 ### Do:
+- **Do** set every heading in Young Serif 400 with -0.005em tracking and kerning on; cream on green, Forest Deep on paper and yellow.
 - **Do** put the next action in Brand Yellow (#EDCD49) with Forest Night text, and keep secondary actions green or outline.
-- **Do** alternate full-bleed section fields (Forest Deep, Paper, Mist Green, Brand Yellow, White) to separate sections.
-- **Do** frame hero-level dish photography in the brand drop (50% 0 50% 50%), backed by a yellow drop.
-- **Do** place every product photo on Studio Grey (#ECEBE7) so the official studio shots sit edge-free.
-- **Do** set all headings in Urbanist 800/900 with negative tracking, and allow one accent-coloured word per headline.
+- **Do** close every change of field colour with a painted brush edge in the lower section's colour.
+- **Do** present menu food as cutouts on alternating Sage Tile (#DCE5D0) and Paper Deep (#ECE1C8) tiles with a warm plate shadow.
+- **Do** keep the paper ground grained and warm (#F6F0E1).
+- **Do** frame hero-level dish photography in the brand drop (50% 0 50% 50%).
 - **Do** use tabular figures for prices, weights, phone numbers and hours.
 - **Do** keep every interactive target at least 44px and use pills for controls.
-- **Do** keep shadows soft, long and negatively spread, tinted green or black at low opacity.
 
 ### Don't:
-- **Don't** use a serif or italic display face, a cream ground, or terracotta; that is the replaced restaurant default.
-- **Don't** put white text on yellow, or yellow text on light grounds.
+- **Don't** set a heading in a sans or a synthesised bold or italic serif; that is the rejected "simple fonts" template.
+- **Don't** use Caveat beyond a short margin note: no hand-lettered headings, prices, buttons or paragraphs.
 - **Don't** alter or substitute the owner-pinned colours #EDCD49, #115A2E or #3E5F21.
+- **Don't** put white text on yellow, or yellow text on paper.
+- **Don't** separate colour fields with straight rules or generated wave shapes.
 - **Don't** add uppercase eyebrow labels above section headings.
-- **Don't** use hard, offset, or zero-blur shadows.
-- **Don't** replace official studio photography with illustrations, stock, or generated food imagery.
+- **Don't** use hard, offset or neutral-grey shadows on food or coloured fields.
+- **Don't** replace official studio photography or its cutouts with illustrations, stock or generated food.
 - **Don't** redraw or recolour the official logo paths; only its currentColor fill changes with the ground.
