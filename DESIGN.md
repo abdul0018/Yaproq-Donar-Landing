@@ -189,8 +189,8 @@ Two owner-pinned brand hues, green and yellow, carry the whole system over a gre
 - **Forest Deep** (#0B3D1F): the hero field, the "ways to order" field, promo cards, and the default colour of every headline on a light ground.
 - **Forest Night** (#072813): the footer field and the text colour on yellow (about 11:1 contrast). Also the selection text colour.
 - **Leaf Hover** (#1A6B39): hover state of every green fill.
-- **Sprout Green** (#2E7A45): the accent word inside a headline on light grounds ("yeymiz?", "YAPROQ") and the open-now dot. Large text only.
-- **Brand Olive** (#3E5F21): owner-pinned site green from the official identity. Defined in the token set but has no shipped surface in this build; reserve it for official-brand reproductions rather than inventing a role for it.
+- **Sprout Green** (#2E7A45): the open-now dot only.
+- **Brand Olive** (#3E5F21): owner-pinned official site green. The accent word inside a headline on light grounds ("yeymiz?", "YAPROQ") and hover colour for text links and ribbon items. About 6.7:1 on Paper.
 
 ### Secondary
 - **Brand Yellow** (#EDCD49): owner-pinned. Primary action fill, the accent word in the hero H1, full section fields (promotions, closing CTA), the drop-shape backing behind hero and about photos, "Yangi" tags and discount badges, the active size segment on dark grounds, the global focus ring and text selection.
@@ -206,7 +206,7 @@ Two owner-pinned brand hues, green and yellow, carry the whole system over a gre
 - **Mist Green** (#F1F6EE): the menu section field.
 - **Pale Sage** (#E2ECDC): body copy on green fields (as `green-100`) and the map panel's loading ground.
 - **Studio Grey** (#ECEBE7): the backdrop of every product photo container, matched to the official studio shots so photos sit seamlessly.
-- **White** (#FFFFFF): dish tiles, branch cards, dialogs, reviews and closing section grounds.
+- **White** (#FFFFFF): branch cards, dialogs, reviews and closing section grounds.
 
 ### Named Rules
 **The Yellow Means Go Rule.** Yellow fills are for the action a visitor should take next, for offers, and for the drop backing behind photos. Text on yellow is always Forest Night, never white.
@@ -255,7 +255,7 @@ Depth is mostly tonal: colour fields and white tiles on tinted grounds do the la
 
 ### Shadow Vocabulary
 - **Yellow Glow** (`box-shadow: 0 10px 24px -12px rgba(184,150,26,0.9)`): under the primary yellow button only.
-- **Card Lift** (`box-shadow: 0 22px 44px -28px rgba(11,61,31,0.45)`): dish tile on hover; a slightly tighter variant (-30px, 0.55) marks the selected branch card.
+- **Card Lift** (`box-shadow: 0 18px 36px -28px rgba(11,61,31,0.6)`, deepening to `0 26px 44px -26px rgba(11,61,31,0.65)` on hover): dish photo wells; a slightly tighter variant (-30px, 0.55) marks the selected branch card.
 - **Photo Drop** (`box-shadow: 0 40px 70px -30px rgba(0,0,0,0.6)`): drop-shaped hero and closing photos.
 - **Floating Chip** (`box-shadow: 0 24px 50px -24px rgba(0,0,0,0.55)`): the hero price chip; map pins and map chips use the smaller `0 10px 24px -8px rgba(0,0,0,0.5)`.
 - **Header Hairline** (`box-shadow: 0 1px 0 rgba(15,36,23,0.08)`): scrolled header edge.
@@ -295,7 +295,7 @@ Confident, round and thumb-sized.
 A segmented control for official dish sizes: a 20px-radius well at 7% Logo Green (10% white on dark), 4px inner padding, equal-width 14px-radius segments at least 44px tall. The weight leads in 14px/800; the official size name sits under it at 12px tabular. Selected segment is Logo Green with white on light grounds, Brand Yellow with Forest Night on dark. Changing it updates price and cart line.
 
 ### Cards / Containers
-- **Dish tile:** white, 28px radius, 14 to 16px padding, Studio Grey photo well at 20px radius (4:3), photo scales to 105% on hover, tile gains Card Lift.
+- **Dish tile:** no card. The Studio Grey photo well (20px radius on mobile, 22px from sm, 4:3 from sm) sits directly on the Mist Green menu ground with a soft green Card Lift that deepens on hover, and the photo scales to 105%. Name, description, size switch and price/action follow on the ground. On mobile, tiles are rows separated by a 1px 10% green rule.
 - **Feature card (on light):** Logo Green or Forest Deep field, white text, 28px radius, photo well inset at 22px radius.
 - **Branch card:** white at 60% with a 2px 10% green border; selected becomes solid white with a Logo Green border and lift. 24px padding.
 - **Promo card:** Forest Deep, 28px radius, photo half on Studio Grey, yellow discount badge.

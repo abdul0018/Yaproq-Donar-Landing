@@ -18,7 +18,7 @@ export default function CategoryStrip() {
             type="button"
             tabIndex={hidden ? -1 : 0}
             onClick={() => selectCategory(c.id)}
-            className="px-6 py-5 font-display text-[26px] font-black leading-none tracking-tight text-green-900 transition-colors hover:text-green-600 sm:text-[30px]"
+            className="px-6 py-5 font-display text-[26px] font-black leading-none tracking-tight text-green-900 transition-colors hover:text-green-500 sm:text-[30px]"
           >
             {c.name}
           </button>

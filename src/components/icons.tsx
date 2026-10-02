@@ -20,7 +20,6 @@ export const IconFlame = (p: P) => (<svg {...base(p)}><path d="M12 21c-4 0-7-2.8
 export const IconLeaf = (p: P) => (<svg {...base(p)}><path d="M5 19C5 10 10 5 20 4c0 10-5 15-14 15" /><path d="M5 19 13 11" /></svg>);
 export const IconCheck = (p: P) => (<svg {...base(p)}><path d="m5 12.5 4.5 4.5L19 7.5" /></svg>);
 export const IconInstagram = (p: P) => (<svg {...base(p)}><rect x="3.5" y="3.5" width="17" height="17" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.2" cy="6.8" r=".8" fill="currentColor" /></svg>);
-export const IconTelegram = (p: P) => (<svg {...base(p)}><path d="M21 4 3 11l6 2 2 6 3-4 5 4 2-15Z" /><path d="m9 13 8-6" /></svg>);
 export const IconTruck = (p: P) => (<svg {...base(p)}><path d="M3 6h11v10H3zM14 10h4l3 3v3h-7" /><circle cx="7" cy="17.5" r="1.8" /><circle cx="17.5" cy="17.5" r="1.8" /></svg>);
 export const IconLocate = (p: P) => (<svg {...base(p)}><circle cx="12" cy="12" r="3" /><circle cx="12" cy="12" r="8" /><path d="M12 2v2M12 20v2M2 12h2M20 12h2" /></svg>);
 export const IconQuote = (p: P) => (<svg {...base(p)} fill="currentColor" stroke="none"><path d="M10 7H6a2 2 0 0 0-2 2v4h4v4l2-4V7Zm10 0h-4a2 2 0 0 0-2 2v4h4v4l2-4V7Z" /></svg>);

@@ -18,10 +18,10 @@ function DishTile({ d, index }: { d: Dish; index: number }) {
   const [v, setV] = useState(d.variants[0]);
   return (
     <li
-      className="group grid animate-fade-up grid-cols-[104px_1fr] gap-x-4 gap-y-3 rounded-3xl bg-white p-3.5 transition-shadow duration-500 hover:shadow-[0_22px_44px_-28px_rgba(11,61,31,0.45)] sm:flex sm:flex-col sm:p-4"
+      className="group grid animate-fade-up grid-cols-[104px_1fr] gap-x-4 gap-y-3 border-b border-green-800/10 pb-5 last:border-0 sm:flex sm:flex-col sm:border-0 sm:pb-0"
       style={{ animationDelay: `${Math.min(index, 8) * 40}ms` }}
     >
-      <div className="relative aspect-square overflow-hidden rounded-2xl bg-studio sm:aspect-[4/3]">
+      <div className="relative aspect-square overflow-hidden rounded-2xl bg-studio shadow-[0_18px_36px_-28px_rgba(11,61,31,0.6)] transition-shadow duration-500 group-hover:shadow-[0_26px_44px_-26px_rgba(11,61,31,0.65)] sm:aspect-[4/3] sm:rounded-[22px]">
         <DishVisual dish={d} className="transition-transform duration-700 ease-out group-hover:scale-105" />
         {d.tags && (
           <div className="absolute left-2 top-2 hidden gap-1.5 sm:flex">
@@ -33,7 +33,7 @@ function DishTile({ d, index }: { d: Dish; index: number }) {
           </div>
         )}
       </div>
-      <div className="contents sm:flex sm:min-w-0 sm:flex-1 sm:flex-col sm:gap-3 sm:px-1 sm:pb-1">
+      <div className="contents sm:flex sm:min-w-0 sm:flex-1 sm:flex-col sm:gap-3">
         <div className="min-w-0">
           <div className="flex items-start justify-between gap-3">
             <h3 className="font-display text-[20px] font-extrabold leading-tight text-green-900 sm:text-[22px]">{d.name}</h3>
@@ -112,7 +112,7 @@ export default function Menu() {
       <div className="container">
         <SectionHeading
           id="menu-title"
-          title={<>Bugun nima <span className="text-green-600">yeymiz?</span></>}
+          title={<>Bugun nima <span className="text-green-500">yeymiz?</span></>}
           lead="Kategoriyani tanlang yoki taom nomini yozing. Ko‘p taomlar bir necha o‘lchamda: go‘sht miqdorini o‘zingiz tanlaysiz."
         />
       </div>
@@ -191,7 +191,7 @@ export default function Menu() {
 
         <div id="menu-panel" role="tabpanel">
           {list.length ? (
-            <ul key={q ? `q-${q}` : active} className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5 xl:grid-cols-4">
+            <ul key={q ? `q-${q}` : active} className="grid gap-5 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-3 xl:grid-cols-4">
               {list.map((d, i) => (
                 <DishTile key={d.id} d={d} index={i} />
               ))}

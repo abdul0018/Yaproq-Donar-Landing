@@ -44,7 +44,7 @@ Source: https://yaproq-donar.uz (About, Branches and Menu pages, read 2026-10-02
   - Site header: "every day 11:00–02:40".
   - Branch ordering config: 10:00–02:40.
 - **Phone:** +998 71 200 84 44, for all branches and delivery.
-- **Ordering channels:** website (yaproq-donar.uz), phone, Telegram bot "Yaproq Donar", and the Yaproq Donar mobile app (Google Play and App Store).
+- **Ordering channels:** website (yaproq-donar.uz), phone, and the Yaproq Donar mobile app (Google Play and App Store). There is no Telegram bot (owner-confirmed); the official About page mention is outdated.
   - The website supports delivery and pickup. Table booking is enabled; dine-in ordering on the web is not.
   - The app also allows pre-ordering before a visit and sends promotion notifications.
 - **Delivery:** from the nearest branch, within 1 hour. Price depends on the customer's location.
@@ -103,7 +103,8 @@ Source: https://yaproq-donar.uz (About, Branches and Menu pages, read 2026-10-02
   - "Har bir buyurtmadan 2% keshbek" (shown with the app).
   - No end dates are published, so no countdowns.
 - **App links:** App Store https://apps.apple.com/uz/app/yaproq-donar/id6755135029 · Google Play https://play.google.com/store/apps/details?id=uz.yaproqdonar.app
-- **Telegram bot and Facebook URLs:** not found on the official site; do not link them until confirmed.
+- **Telegram bot:** none (owner-confirmed). Never offer it as a channel.
+- **Facebook URL:** not found on the official site; do not link it until confirmed.
 - **Price oddity:** "Qarsildoq baqlajon salati" is listed at 69 001 so‘m officially; it is shown as listed.
 
 - **Official menu data:** names, descriptions, prices, weights and product photo paths, from yaproq-donar.uz (2026-10-02).
@@ -122,5 +123,5 @@ Source: https://yaproq-donar.uz (About, Branches and Menu pages, read 2026-10-02
 1. **Freshness is the claim; facts are the proof.** Back quality with true statements (local beef, the dishes themselves, real photos), never with invented numbers or reviews.
 2. **Nearby local → decision in seconds.** A visitor should quickly see what to eat, what it costs, which branch is closest and open, and how to get the food.
 3. **The website mirrors the real menu.** Dish names, sizes and prices match the official menu; anything not yet confirmed is marked, not guessed.
-4. **Send orders to the channels that work.** Calls to action lead to working paths (website ordering, phone, Telegram bot, app, directions), not dead ends.
+4. **Send orders to the channels that work.** Calls to action lead to working paths (website ordering, phone, app, directions), not dead ends.
 5. **Uzbek first, naturally.** All customer-facing copy is fluent Uzbek Latin.

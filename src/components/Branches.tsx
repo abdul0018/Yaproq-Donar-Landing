@@ -179,7 +179,7 @@ export default function Branches() {
       <div className="container">
         <SectionHeading
           id="branches-title"
-          title={<>Sizga eng yaqin <span className="text-green-600">YAPROQ</span></>}
+          title={<>Sizga eng yaqin <span className="text-green-500">YAPROQ</span></>}
           lead={`Toshkentda uchta filial, har kuni ${facts.hours}. Joylashuvingizni ulashing — eng yaqinini o‘zimiz topamiz.`}
           action={
             <button type="button" onClick={locate} disabled={geo.status === "loading"} className="btn-green h-14 px-6">

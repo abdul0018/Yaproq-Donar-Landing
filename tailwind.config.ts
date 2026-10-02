@@ -11,6 +11,7 @@ const config: Config = {
           50: "#F1F6EE",
           100: "#E2ECDC",
           200: "#C5D9BA",
+          // Brand olive (official site green): accent words in headings, link hovers.
           500: "#3E5F21",
           600: "#2E7A45",
           700: "#1A6B39",
