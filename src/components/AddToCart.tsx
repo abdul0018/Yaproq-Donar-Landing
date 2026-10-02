@@ -1,6 +1,7 @@
 "use client";
 
 import { useCart } from "@/lib/cart";
+import { flyToCart } from "@/lib/fly";
 import { IconMinus, IconPlus } from "./icons";
 
 /** "Savatga" button for one size of a dish; turns into a quantity stepper once it is in the cart. */
@@ -12,7 +13,7 @@ export default function AddToCart({ variantId, name, size = "md", tone = "green"
 
   if (qty === 0) {
     return (
-      <button type="button" onClick={() => add(variantId)} className={`btn ${h} min-h-0 px-5 ${fill}`} aria-label={`${name} — savatga qo‘shish`}>
+      <button type="button" onClick={(e) => { add(variantId); flyToCart(e.currentTarget); }} className={`btn ${h} min-h-0 px-5 ${fill}`} aria-label={`${name} — savatga qo‘shish`}>
         <IconPlus className="h-4 w-4" /> Savatga
       </button>
     );

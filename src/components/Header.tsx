@@ -82,6 +82,7 @@ export default function Header() {
             type="button"
             onClick={() => setOpen(true)}
             className="btn min-h-[44px] gap-2.5 bg-yellow px-4 text-green-950 hover:bg-yellow-300 sm:px-5"
+            data-cart-target
             aria-label={`Savat, ${count} ta mahsulot`}
           >
             <IconBag className="h-[18px] w-[18px]" />

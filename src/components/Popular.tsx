@@ -2,12 +2,12 @@
 
 import { useState } from "react";
 import { featuredIds, getDish, type Dish } from "@/data/menu";
-import { formatPrice } from "@/data/site";
 import AddToCart from "./AddToCart";
 import DishVisual from "./DishVisual";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 import SizeSwitch from "./SizeSwitch";
+import Price from "./Price";
 import { IconArrow } from "./icons";
 import TornEdge from "./TornEdge";
 
@@ -31,7 +31,7 @@ function LeadDish({ dish }: { dish: Dish }) {
           <SizeSwitch dish={dish} value={v} onChange={setV} tone="dark" />
           <div className="flex flex-wrap items-center justify-between gap-4 border-t border-white/15 pt-5">
             <div>
-              <p className="tabular font-display text-[32px] leading-none">{formatPrice(v.price)}</p>
+              <p className="tabular font-display text-[32px] leading-none"><Price value={v.price} /></p>
               {v.portion && <p className="mt-1 text-[13px] text-green-100">{v.portion} go‘sht</p>}
             </div>
             <AddToCart variantId={v.id} name={dish.name} size="lg" tone="yellow" />
@@ -56,7 +56,7 @@ function SideDish({ dish, delay }: { dish: Dish; delay: number }) {
         </div>
         <SizeSwitch dish={dish} value={v} onChange={setV} />
         <div className="flex flex-wrap items-center justify-between gap-3">
-          <p className="tabular text-[17px] font-extrabold text-green-900">{formatPrice(v.price)}</p>
+          <p className="tabular text-[17px] font-extrabold text-green-900"><Price value={v.price} /></p>
           <AddToCart variantId={v.id} name={dish.name} />
         </div>
       </div>

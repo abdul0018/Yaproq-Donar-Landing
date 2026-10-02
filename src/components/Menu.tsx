@@ -2,11 +2,11 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { categories, dishes, type CategoryId, type Dish } from "@/data/menu";
-import { formatPrice } from "@/data/site";
 import AddToCart from "./AddToCart";
 import DishVisual from "./DishVisual";
 import SectionHeading from "./SectionHeading";
 import SizeSwitch from "./SizeSwitch";
+import Price from "./Price";
 import { IconClose, IconGift, IconSearch } from "./icons";
 
 const tagLabel: Record<NonNullable<Dish["tags"]>[number], { text: string; cls: string }> = {
@@ -52,7 +52,7 @@ function DishTile({ d, index }: { d: Dish; index: number }) {
           <SizeSwitch dish={d} value={v} onChange={setV} />
         </div>
         <div className="col-span-2 mt-auto flex flex-wrap items-center justify-between gap-2">
-          <p className="tabular text-[16px] font-extrabold text-green-900 sm:text-[17px]">{formatPrice(v.price)}</p>
+          <p className="tabular text-[16px] font-extrabold text-green-900 sm:text-[17px]"><Price value={v.price} /></p>
           {v.price > 0 ? <AddToCart variantId={v.id} name={d.name} /> : <span className="text-[13px] font-semibold text-ink-500">Asosiy taomga qo‘shib beriladi</span>}
         </div>
       </div>

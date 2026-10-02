@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import { categories, type CategoryId } from "@/data/menu";
 import { IconSprout } from "./icons";
 import TornEdge from "./TornEdge";
@@ -11,6 +12,16 @@ export const selectCategory = (id: CategoryId) => {
 
 /** Endless yellow ribbon of categories; each one jumps straight to that part of the menu. */
 export default function CategoryStrip() {
+  // The ribbon only scrolls while it is on screen.
+  const ref = useRef<HTMLElement>(null);
+  const [visible, setVisible] = useState(true);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const io = new IntersectionObserver(([e]) => setVisible(e.isIntersecting));
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
   const row = (hidden: boolean) => (
     <ul className="flex shrink-0 items-center" aria-hidden={hidden || undefined}>
       {categories.map((c) => (
@@ -29,10 +40,10 @@ export default function CategoryStrip() {
     </ul>
   );
   return (
-    <nav aria-label="Taom turlari" className="group relative z-10 bg-yellow">
+    <nav ref={ref} aria-label="Taom turlari" className="group relative z-10 bg-yellow">
       <TornEdge className="text-yellow" seed={2} />
       <div className="overflow-hidden">
-      <div className="flex w-max animate-marquee group-hover:[animation-play-state:paused] group-focus-within:[animation-play-state:paused]">
+      <div className={`flex w-max animate-marquee group-hover:[animation-play-state:paused] group-focus-within:[animation-play-state:paused] ${visible ? "" : "[animation-play-state:paused]"}`}>
         {row(false)}
         {row(true)}
       </div>

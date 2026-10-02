@@ -90,6 +90,55 @@
     transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* ---------- Motion: one painted entrance, one splash bloom, quiet feedback ---------- */
+
+/* Hero: the yellow drop is brushed on (a soft-edged sweep), then the plate settles into it. */
+@keyframes paint-sweep {
+  from { -webkit-mask-position: 100% 0; mask-position: 100% 0; }
+  to { -webkit-mask-position: 0 0; mask-position: 0 0; }
+}
+.paint-in {
+  -webkit-mask-image: linear-gradient(100deg, #000 45%, transparent 55%);
+  mask-image: linear-gradient(100deg, #000 45%, transparent 55%);
+  -webkit-mask-size: 260% 100%;
+  mask-size: 260% 100%;
+  -webkit-mask-position: 0 0;
+  mask-position: 0 0;
+  animation: paint-sweep 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.05s both;
+}
+@keyframes plate-settle {
+  from { opacity: 0; transform: scale(1.06) rotate(-4deg); }
+  to { opacity: 1; transform: none; }
+}
+.plate-settle { animation: plate-settle 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both; }
+
+.line-mask { display: inline-block; overflow: hidden; vertical-align: bottom; padding-bottom: 0.08em; margin-bottom: -0.08em; }
+@keyframes line-rise {
+  from { transform: translateY(105%); }
+  to { transform: none; }
+}
+.line-rise { display: inline-block; animation: line-rise 0.7s cubic-bezier(0.16, 1, 0.3, 1) both; }
+
+/* About: the watercolour blooms once as it enters (class added by JS; visible by default). */
+@keyframes bloom {
+  from { opacity: 0; transform: scale(0.82) rotate(-14deg); filter: blur(6px); }
+  to { opacity: 1; transform: rotate(-6deg); filter: blur(0); }
+}
+.bloom-run { animation: bloom 0.9s cubic-bezier(0.16, 1, 0.3, 1) both; }
+
+/* Price changes when a size is picked. */
+@keyframes tick {
+  from { opacity: 0; transform: translateY(35%); }
+  to { opacity: 1; transform: none; }
+}
+.price-tick { display: inline-block; animation: tick 0.22s cubic-bezier(0.16, 1, 0.3, 1); }
+
+/* Add-to-cart flight dot (positioned by JS). */
+.fly-dot {
+  position: fixed; z-index: 70; width: 18px; height: 18px; margin: -9px 0 0 -9px;
+  border-radius: 9999px; background: #edcd49; box-shadow: 0 0 0 3px #115a2e; pointer-events: none;
+}
+
 @keyframes pop {
   0% { transform: scale(1); }
   40% { transform: scale(1.25); }
@@ -111,4 +160,6 @@
     transition-duration: 0.001ms !important;
   }
   .reveal-pending { opacity: 1; transform: none; }
+  .paint-in { -webkit-mask-image: none; mask-image: none; }
+  .line-rise, .plate-settle, .bloom-run { animation: none !important; }
 }

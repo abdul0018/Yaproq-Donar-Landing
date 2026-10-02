@@ -1,5 +1,6 @@
 import { facts } from "@/data/site";
 import Reveal from "./Reveal";
+import Bloom from "./Bloom";
 import TornEdge from "./TornEdge";
 
 // Facts from the official About page (yaproq-donar.uz/en/pages/about). Nothing here is embellished.
@@ -46,8 +47,7 @@ export default function About() {
         <Reveal delay={120} className="lg:col-span-5">
           <figure className="mx-auto max-w-md lg:max-w-none">
             <div className="relative aspect-[10/9]">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img aria-hidden src="/images/paint/splash-sage.png" alt="" width={900} height={741} loading="lazy" className="pointer-events-none absolute -inset-[16%] h-[132%] w-[132%] max-w-none rotate-[-6deg] object-contain" />
+              <Bloom />
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/images/cut/iskender-kabob.webp" alt="Iskender kabob: mol go‘shti, tomat qaylasi va suzma" width={700} height={525} loading="lazy" className="absolute left-[19%] top-[24%] w-[62%] drop-shadow-[0_22px_20px_rgba(60,45,20,0.3)]" />
             </div>
