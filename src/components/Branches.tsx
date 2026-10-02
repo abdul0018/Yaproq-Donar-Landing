@@ -5,6 +5,7 @@ import { branches, contacts, facts, directionsUrl, distanceKm, hasLocation, isOp
 import SectionHeading from "./SectionHeading";
 import Reveal from "./Reveal";
 import { IconArrowUpRight, IconClock, IconClose, IconLocate, IconNavigate, IconPhone, IconPin } from "./icons";
+import TornEdge from "./TornEdge";
 
 type Geo = { status: "idle" | "loading" | "ok" | "error"; pos?: { lat: number; lng: number }; message?: string };
 
@@ -98,7 +99,7 @@ function BranchDialog({ branch, onClose, mounted }: { branch: Branch | null; onC
         <div className="p-6 sm:p-8">
           <div className="flex items-start justify-between gap-4">
             <div>
-              <h3 id="branch-dialog-title" className="font-display text-[38px] font-black leading-none text-green-900">{branch.name}</h3>
+              <h3 id="branch-dialog-title" className="font-display text-[38px] leading-none text-green-900">{branch.name}</h3>
               {branch.district && <p className="mt-2 text-[15px] text-ink-600">{branch.district}</p>}
             </div>
             <button type="button" onClick={onClose} className="grid h-11 w-11 shrink-0 place-items-center rounded-full hover:bg-green-800/5" aria-label="Yopish">
@@ -175,7 +176,8 @@ export default function Branches() {
   };
 
   return (
-    <section id="filiallar" aria-labelledby="branches-title" className="bg-paper py-20 sm:py-28">
+    <section id="filiallar" aria-labelledby="branches-title" className="relative bg-paper py-20 sm:py-28">
+      <TornEdge className="text-paper" seed={7} />
       <div className="container">
         <SectionHeading
           id="branches-title"
@@ -205,7 +207,7 @@ export default function Branches() {
                           <OpenBadge b={b} mounted={mounted} />
                           {nearestId === b.id && <span className="rounded-full bg-yellow px-2.5 py-1 text-[12.5px] font-bold text-green-950">Eng yaqin</span>}
                         </div>
-                        <h3 className="mt-2 font-display text-[30px] font-black leading-none text-green-900">{b.name}</h3>
+                        <h3 className="mt-2 font-display text-[30px] leading-none text-green-900">{b.name}</h3>
                       </div>
                       {distances?.[b.id] !== undefined && <span className="tabular shrink-0 text-[14px] font-bold text-green-800">{distances[b.id].toFixed(1).replace(".", ",")} km</span>}
                     </div>

@@ -8,7 +8,7 @@ import { useCart } from "@/lib/cart";
 export default function FinalCta() {
   const { setOpen } = useCart();
   return (
-    <section aria-labelledby="cta-title" className="bg-white pb-20 sm:pb-28">
+    <section aria-labelledby="cta-title" className="bg-paper pb-24 sm:pb-32">
       <div className="container">
         <Reveal className="relative overflow-hidden rounded-[36px] bg-yellow px-6 py-14 text-green-950 sm:px-12 sm:py-20 lg:px-16">
           <div aria-hidden className="pointer-events-none absolute -bottom-36 -right-24 aspect-square w-[320px] sm:-bottom-24 sm:-right-12 sm:w-[420px] lg:bottom-auto lg:right-14 lg:top-1/2 lg:w-[420px] lg:-translate-y-1/2">
@@ -18,7 +18,7 @@ export default function FinalCta() {
             </div>
           </div>
           <div className="relative max-w-xl">
-            <h2 id="cta-title" className="font-display text-display-lg font-black text-green-900">
+            <h2 id="cta-title" className="font-display text-display-lg text-green-900">
               Issiq donar sizni kutyapti.
             </h2>
             <p className="mt-5 max-w-md text-[17px] leading-relaxed">

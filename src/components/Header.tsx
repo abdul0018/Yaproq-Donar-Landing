@@ -114,7 +114,7 @@ export default function Header() {
           <ul className="flex flex-col">
             {navLinks.map((l) => (
               <li key={l.href} className="border-b border-green-800/10">
-                <a href={l.href} onClick={() => setMenuOpen(false)} className="flex items-center justify-between py-5 font-display text-[34px] font-extrabold leading-none tracking-tight text-green-900">
+                <a href={l.href} onClick={() => setMenuOpen(false)} className="flex items-center justify-between py-5 font-display text-[34px] leading-none text-green-900">
                   {l.label}
                   <IconArrow className="h-6 w-6 text-green-800/40" />
                 </a>

@@ -1,5 +1,6 @@
 import { facts } from "@/data/site";
 import Reveal from "./Reveal";
+import TornEdge from "./TornEdge";
 
 // Facts from the official About page (yaproq-donar.uz/en/pages/about). Nothing here is embellished.
 const pillars = [
@@ -19,11 +20,12 @@ const pillars = [
 
 export default function About() {
   return (
-    <section id="biz-haqimizda" aria-labelledby="about-title" className="bg-paper py-20 sm:py-28">
+    <section id="biz-haqimizda" aria-labelledby="about-title" className="relative bg-paper py-20 sm:py-28">
+      <TornEdge className="text-paper" seed={5} />
       <div className="container grid gap-12 lg:grid-cols-12 lg:gap-10">
         <div className="lg:col-span-7">
           <Reveal>
-            <h2 id="about-title" className="font-display text-display-lg font-black text-green-900">
+            <h2 id="about-title" className="font-display text-display-lg text-green-900">
               {facts.founded} yildan beri Toshkentda turkcha donar
             </h2>
             <p className="mt-6 max-w-[62ch] text-[18px] leading-relaxed text-ink-700">
@@ -34,7 +36,7 @@ export default function About() {
           <ul className="mt-12 grid gap-8 sm:grid-cols-3 sm:gap-6">
             {pillars.map((p, i) => (
               <Reveal as="li" key={p.title} delay={i * 90} className="border-t-2 border-green-800 pt-5">
-                <h3 className="font-display text-[24px] font-extrabold leading-tight text-green-900">{p.title}</h3>
+                <h3 className="font-display text-[24px] leading-tight text-green-900">{p.title}</h3>
                 <p className="mt-2 text-[15px] leading-relaxed text-ink-600">{p.text}</p>
               </Reveal>
             ))}
@@ -50,7 +52,7 @@ export default function About() {
               <img src="/images/menu/iskender-kabob.webp" alt="Iskender kabob: mol go‘shti, tomat qaylasi va suzma" width={600} height={450} loading="lazy" className="h-full w-full scale-110 object-cover" />
             </div>
             </div>
-            <figcaption className="mt-6 text-center text-[14px] font-semibold text-ink-600">Iskender kabob — mol go‘shti, tomat qaylasi, iskender noni va suzma</figcaption>
+            <figcaption className="mt-5 text-center font-hand text-[24px] font-bold leading-snug text-green-800">Iskender kabob — mol go‘shti, tomat qaylasi, iskender noni va suzma</figcaption>
           </figure>
         </Reveal>
       </div>

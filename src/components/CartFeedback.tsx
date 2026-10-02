@@ -37,7 +37,7 @@ export default function CartFeedback() {
             <span className="grid h-8 min-w-8 place-items-center rounded-full bg-yellow px-2 text-[14px] font-bold text-green-950 tabular">{count}</span>
             <span className="text-[15px] font-semibold">Savatni ko‘rish</span>
           </span>
-          <span className="tabular flex items-center gap-2 font-display text-[18px] font-black">{formatPrice(subtotal)} <IconArrow className="h-5 w-5" /></span>
+          <span className="tabular flex items-center gap-2 font-display text-[18px]">{formatPrice(subtotal)} <IconArrow className="h-5 w-5" /></span>
         </button>
       </div>
     </>

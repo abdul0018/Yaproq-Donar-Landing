@@ -9,6 +9,7 @@ import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 import SizeSwitch from "./SizeSwitch";
 import { IconArrow } from "./icons";
+import TornEdge from "./TornEdge";
 
 function LeadDish({ dish }: { dish: Dish }) {
   const [v, setV] = useState(dish.variants[0]);
@@ -22,7 +23,7 @@ function LeadDish({ dish }: { dish: Dish }) {
         </div>
         <div className="flex flex-col justify-end gap-5 p-6 pt-3 sm:p-8 sm:pl-4 lg:pl-8 lg:pt-4 xl:pl-4 xl:pt-8">
           <div>
-            <h3 className="font-display text-display-md font-black">{dish.name}</h3>
+            <h3 className="font-display text-display-md">{dish.name}</h3>
             <p className="mt-3 text-[16px] leading-relaxed text-green-100">
               Brendimiz nomini olgan taom: lavash ustida yupqa kesilgan mol go‘shti donari va qovurilgan kartoshka. Asosiy taom bilan salat va souslar sovg‘a.
             </p>
@@ -30,7 +31,7 @@ function LeadDish({ dish }: { dish: Dish }) {
           <SizeSwitch dish={dish} value={v} onChange={setV} tone="dark" />
           <div className="flex flex-wrap items-center justify-between gap-4 border-t border-white/15 pt-5">
             <div>
-              <p className="tabular font-display text-[32px] font-black leading-none">{formatPrice(v.price)}</p>
+              <p className="tabular font-display text-[32px] leading-none">{formatPrice(v.price)}</p>
               {v.portion && <p className="mt-1 text-[13px] text-green-100">{v.portion} go‘sht</p>}
             </div>
             <AddToCart variantId={v.id} name={dish.name} size="lg" tone="yellow" />
@@ -50,7 +51,7 @@ function SideDish({ dish, delay }: { dish: Dish; delay: number }) {
       </div>
       <div className="flex min-w-0 flex-col gap-3">
         <div>
-          <h3 className="font-display text-[24px] font-extrabold leading-tight text-green-900 sm:text-[26px]">{dish.name}</h3>
+          <h3 className="font-display text-[24px] leading-tight text-green-900 sm:text-[26px]">{dish.name}</h3>
           <p className="mt-1 text-[14.5px] leading-snug text-ink-600">{dish.description}</p>
         </div>
         <SizeSwitch dish={dish} value={v} onChange={setV} />
@@ -66,7 +67,8 @@ function SideDish({ dish, delay }: { dish: Dish; delay: number }) {
 export default function Popular() {
   const [lead, ...rest] = featuredIds.map((id) => getDish(id)!);
   return (
-    <section aria-labelledby="signature-title" className="bg-paper pb-16 pt-20 sm:pb-20 sm:pt-28">
+    <section aria-labelledby="signature-title" className="relative bg-paper pb-16 pt-20 sm:pb-20 sm:pt-28">
+      <TornEdge className="text-paper" seed={3} />
       <div className="container">
         <SectionHeading
           id="signature-title"

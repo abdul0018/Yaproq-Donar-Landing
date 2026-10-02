@@ -19,7 +19,7 @@ export default function Hero() {
 
       <div className="container relative grid min-h-[100svh] items-center gap-10 pb-12 pt-28 lg:grid-cols-12 lg:gap-6 lg:pb-16 lg:pt-28">
         <div className="relative z-10 lg:col-span-6">
-          <h1 className="animate-fade-up font-display text-display-xl font-black">
+          <h1 className="animate-fade-up font-display text-display-xl">
             Ta’mga <span className="text-yellow">yangicha</span> yondashuv.
           </h1>
           <p className="mt-6 max-w-[34rem] animate-fade-up text-[17px] leading-relaxed text-green-100 [animation-delay:100ms] sm:text-lg">
@@ -33,7 +33,7 @@ export default function Hero() {
               <IconPin className="h-5 w-5" /> Eng yaqin filial
             </a>
           </div>
-          <p className="mt-6 flex animate-fade-up items-center gap-2.5 text-[15px] font-semibold text-yellow [animation-delay:240ms]">
+          <p className="mt-6 flex animate-fade-up items-center gap-2.5 font-hand text-[24px] font-bold leading-tight text-yellow [animation-delay:240ms]">
             <IconGift className="h-5 w-5 shrink-0" /> Har bir asosiy taomga salat va souslar — sovg‘a
           </p>
         </div>
@@ -55,7 +55,7 @@ export default function Hero() {
             </div>
             <div className="absolute bottom-[4%] left-0 z-10 flex animate-fade-up items-center gap-4 rounded-2xl bg-white p-3 pl-4 text-ink shadow-[0_24px_50px_-24px_rgba(0,0,0,0.55)] [animation-delay:500ms] sm:left-[2%]">
               <div className="min-w-0">
-                <p className="font-display text-[19px] font-extrabold leading-tight text-green-900">{dish.name}</p>
+                <p className="font-display text-[19px] leading-tight text-green-900">{dish.name}</p>
                 <p className="tabular text-[14px] text-ink-600">{formatPrice(base.price)} dan</p>
               </div>
               <button

@@ -29,18 +29,22 @@ const config: Config = {
           600: "#B8961A",
         },
         ink: { DEFAULT: "#0F2417", 700: "#2B3D31", 600: "#45574B", 500: "#5E6E63", 400: "#83918A" },
-        paper: "#F5F7F1",
+        // Warm paper ground from the user's reference posters.
+        paper: "#F6F0E1",
+        "paper-deep": "#ECE1C8",
+        sage: "#DCE5D0",
         // Backdrop of the official studio product photos.
         studio: "#ECEBE7",
       },
       fontFamily: {
-        display: ["var(--font-display)", "system-ui", "sans-serif"],
+        display: ["var(--font-display)", "Georgia", "serif"],
+        hand: ["var(--font-hand)", "cursive"],
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
       },
       fontSize: {
-        "display-xl": ["clamp(2.9rem, 7.2vw, 6rem)", { lineHeight: "0.92", letterSpacing: "-0.035em" }],
-        "display-lg": ["clamp(2.2rem, 4.8vw, 4rem)", { lineHeight: "0.98", letterSpacing: "-0.03em" }],
-        "display-md": ["clamp(1.6rem, 2.8vw, 2.4rem)", { lineHeight: "1.05", letterSpacing: "-0.02em" }],
+        "display-xl": ["clamp(2.8rem, 6.6vw, 5.6rem)", { lineHeight: "1", letterSpacing: "-0.015em" }],
+        "display-lg": ["clamp(2.1rem, 4.4vw, 3.6rem)", { lineHeight: "1.05", letterSpacing: "-0.01em" }],
+        "display-md": ["clamp(1.6rem, 2.6vw, 2.2rem)", { lineHeight: "1.1", letterSpacing: "-0.01em" }],
       },
       borderRadius: { xl: "14px", "2xl": "20px", "3xl": "28px" },
       transitionTimingFunction: { out: "cubic-bezier(0.16, 1, 0.3, 1)" },

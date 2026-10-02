@@ -1,10 +1,12 @@
 import Logo from "./Logo";
 import { branches, contacts, facts, navLinks, telHref } from "@/data/site";
 import { IconArrowUpRight, IconInstagram, IconPhone } from "./icons";
+import TornEdge from "./TornEdge";
 
 export default function Footer() {
   return (
-    <footer id="aloqa" className="bg-green-950 pb-28 pt-16 text-white lg:pb-10">
+    <footer id="aloqa" className="relative bg-green-950 pb-28 pt-16 text-white lg:pb-10">
+      <TornEdge className="text-green-950" seed={8} />
       <div className="container">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
@@ -41,7 +43,7 @@ export default function Footer() {
 
           <div className="lg:col-span-3">
             <h3 className="text-[13px] font-bold uppercase tracking-[0.14em] text-green-200">Buyurtma</h3>
-            <a href={telHref(contacts.phone)} className="tabular mt-5 flex items-center gap-2 font-display text-[26px] font-black leading-none hover:text-yellow">
+            <a href={telHref(contacts.phone)} className="tabular mt-5 flex items-center gap-2 font-display text-[26px] leading-none hover:text-yellow">
               <IconPhone className="h-5 w-5" /> {contacts.phone}
             </a>
             <p className="mt-2 text-[14px] text-green-100">Yetkazib berish: eng yaqin filialdan 1 soatda</p>

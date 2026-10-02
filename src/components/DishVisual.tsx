@@ -19,7 +19,7 @@ export default function DishVisual({ dish, className = "", priority }: { dish: D
   // No official photo: an honest name tile rather than a drawing among real photos.
   return (
     <div className="grid h-full w-full place-items-center bg-green-100 p-3 text-center">
-      <span className="font-display text-[clamp(18px,4vw,30px)] font-black leading-none text-green-800">{dish.name}</span>
+      <span className="font-display text-[clamp(18px,4vw,30px)] leading-none text-green-800">{dish.name}</span>
     </div>
   );
 }

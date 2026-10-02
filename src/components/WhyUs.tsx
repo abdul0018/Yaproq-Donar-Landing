@@ -4,6 +4,7 @@ import { useState, type ReactNode } from "react";
 import { contacts, facts, telHref } from "@/data/site";
 import SectionHeading from "./SectionHeading";
 import { IconArrowUpRight, IconCard, IconDevice, IconGlobe, IconPhone, IconStore } from "./icons";
+import TornEdge from "./TornEdge";
 
 type Way = { id: string; title: string; short: string; text: string; icon: (p: { className?: string }) => ReactNode; actions: ReactNode };
 
@@ -75,7 +76,8 @@ export default function WhyUs() {
   const Icon = w.icon;
 
   return (
-    <section aria-labelledby="ways-title" className="bg-green-900 py-20 text-white sm:py-28">
+    <section aria-labelledby="ways-title" className="relative bg-green-900 py-20 text-white sm:py-28">
+      <TornEdge className="text-green-900" seed={6} />
       <div className="container">
         <SectionHeading
           id="ways-title"
@@ -101,7 +103,7 @@ export default function WhyUs() {
                   >
                     <XIcon className={`h-7 w-7 shrink-0 transition-colors ${on ? "text-yellow" : "text-green-200"}`} />
                     <span className="min-w-0 flex-1">
-                      <span className={`block font-display text-[28px] font-extrabold leading-none tracking-tight transition-colors duration-300 sm:text-[38px] ${on ? "text-white" : "text-green-100 group-hover:text-white"}`}>
+                      <span className={`block font-display text-[28px] leading-none transition-colors duration-300 sm:text-[38px] ${on ? "text-white" : "text-green-100 group-hover:text-white"}`}>
                         {x.title}
                       </span>
                       <span className="tabular mt-2 block text-[14.5px] text-green-100">{x.short}</span>
@@ -125,7 +127,7 @@ export default function WhyUs() {
           <div className="hidden lg:col-span-5 lg:block">
             <div key={active} className={`sticky top-32 rounded-[40px_0_40px_40px] bg-green-800 p-9 ${changed ? "animate-fade-up" : ""}`}>
               <Icon className="h-12 w-12 text-yellow" />
-              <p className="mt-6 font-display text-[40px] font-black leading-none">{w.title}</p>
+              <p className="mt-6 font-display text-[40px] leading-none">{w.title}</p>
               <p className="mt-5 text-[17px] leading-relaxed text-green-100">{w.text}</p>
               <div className="mt-8 flex flex-wrap gap-3">{w.actions}</div>
               <p className="mt-10 flex items-center gap-2.5 border-t border-white/15 pt-5 text-[14px] text-green-100">

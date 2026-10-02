@@ -19,7 +19,7 @@ export default function SectionHeading({
   return (
     <Reveal className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
       <div className="max-w-3xl">
-        <h2 id={id} className={`font-display text-display-lg font-black ${light ? "text-white" : "text-green-900"}`}>
+        <h2 id={id} className={`font-display text-display-lg ${light ? "text-white" : "text-green-900"}`}>
           {title}
         </h2>
         {lead && <p className={`mt-4 max-w-[60ch] text-[17px] leading-relaxed ${light ? "text-green-100" : "text-ink-600"}`}>{lead}</p>}

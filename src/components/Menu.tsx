@@ -36,7 +36,7 @@ function DishTile({ d, index }: { d: Dish; index: number }) {
       <div className="contents sm:flex sm:min-w-0 sm:flex-1 sm:flex-col sm:gap-3">
         <div className="min-w-0">
           <div className="flex items-start justify-between gap-3">
-            <h3 className="font-display text-[20px] font-extrabold leading-tight text-green-900 sm:text-[22px]">{d.name}</h3>
+            <h3 className="font-display text-[20px] leading-tight text-green-900 sm:text-[22px]">{d.name}</h3>
             {v.portion && d.variants.length === 1 && <span className="tabular mt-1 shrink-0 text-[13px] text-ink-500">{v.portion}</span>}
           </div>
           {d.tags && (
@@ -108,7 +108,7 @@ export default function Menu() {
   const counts = useMemo(() => Object.fromEntries(categories.map((c) => [c.id, dishes.filter((d) => d.category === c.id).length])), []);
 
   return (
-    <section id="menyu" aria-labelledby="menu-title" className="bg-green-50 py-20 sm:py-28">
+    <section id="menyu" aria-labelledby="menu-title" className="bg-paper py-20 sm:py-28">
       <div className="container">
         <SectionHeading
           id="menu-title"
@@ -118,7 +118,7 @@ export default function Menu() {
       </div>
 
       {/* Sticky category bar */}
-      <div className="sticky top-[72px] z-30 mt-10 border-y border-green-800/10 bg-green-50/95 backdrop-blur-md">
+      <div className="sticky top-[72px] z-30 mt-10 border-y border-green-800/10 bg-paper/95 backdrop-blur-md">
         <div className="container flex items-center gap-3 py-3">
           <div ref={tabsRef} role="tablist" aria-label="Menyu kategoriyalari" className={`no-scrollbar relative -mx-1 flex min-w-0 flex-1 snap-x gap-1.5 overflow-x-auto px-1 ${moreRight ? "pr-10 [mask-image:linear-gradient(to_right,#000_calc(100%-48px),transparent)]" : ""}`}>
             {categories.map((c) => {
@@ -198,7 +198,7 @@ export default function Menu() {
             </ul>
           ) : (
             <div className="rounded-3xl border-2 border-dashed border-green-800/15 px-6 py-16 text-center">
-              <p className="font-display text-2xl font-extrabold text-green-900">«{query}» topilmadi</p>
+              <p className="font-display text-2xl text-green-900">«{query}» topilmadi</p>
               <p className="mt-2 text-ink-600">Boshqacha yozib ko‘ring, masalan «donar» yoki «pide».</p>
               <button type="button" onClick={() => setQuery("")} className="btn-outline mt-6">
                 <IconClose className="h-4 w-4" /> Qidiruvni tozalash

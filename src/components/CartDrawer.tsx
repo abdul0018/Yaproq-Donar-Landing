@@ -55,7 +55,7 @@ export default function CartDrawer() {
         className={`on-light absolute bottom-0 right-0 top-0 flex w-full max-w-[460px] flex-col bg-paper shadow-2xl outline-none transition-transform duration-500 ease-out ${open ? "translate-x-0" : "translate-x-full"}`}
       >
         <div className="flex items-center justify-between border-b border-green-800/10 px-5 py-4 sm:px-6">
-          <h2 id={`${uid}-title`} className="font-display text-[28px] font-black leading-none text-green-900">
+          <h2 id={`${uid}-title`} className="font-display text-[28px] leading-none text-green-900">
             Savat {count > 0 && <span className="tabular font-sans text-[16px] font-bold text-ink-500">· {count} ta</span>}
           </h2>
           <button type="button" onClick={() => setOpen(false)} className="grid h-11 w-11 place-items-center rounded-full hover:bg-green-800/5" aria-label="Savatni yopish">
@@ -66,7 +66,7 @@ export default function CartDrawer() {
         {lines.length === 0 ? (
           <div className="flex flex-1 flex-col overflow-y-auto px-5 py-8 sm:px-6">
             <span className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-yellow text-green-900"><IconBag className="h-7 w-7" /></span>
-            <p className="mt-5 text-center font-display text-[26px] font-extrabold text-green-900">Savat hozircha bo‘sh</p>
+            <p className="mt-5 text-center font-display text-[26px] text-green-900">Savat hozircha bo‘sh</p>
             <p className="mt-2 text-center text-ink-600">Yaproq’ning asosiy taomlaridan boshlang:</p>
             <ul className="mt-8 grid gap-3">
               {suggestions.map((d) => {
@@ -112,7 +112,7 @@ export default function CartDrawer() {
             </div>
 
             <div className="border-t border-green-800/10 bg-white px-5 pb-5 pt-4 sm:px-6">
-              <div className="flex items-baseline justify-between font-display text-[24px] font-black text-green-900">
+              <div className="flex items-baseline justify-between font-display text-[24px] text-green-900">
                 <span>Jami</span>
                 <span className="tabular">{formatPrice(subtotal)}</span>
               </div>

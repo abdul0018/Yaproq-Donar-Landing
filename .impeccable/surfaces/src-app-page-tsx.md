@@ -11,11 +11,11 @@ Scope: the YAPROQ DONAR homepage, the whole site. Visitor mode: Persuade. Audien
 
 ## Direction contract
 
-THESIS: the official YAPROQ campaign world on the web: deep brand green fields, brand-yellow actions and drop shapes, heavy geometric sans headlines, real studio photography. Refuses the cream + italic serif + terracotta restaurant default of the earlier build.
-OWN-WORLD: green-900/800 fields; yellow #EDCD49 primary actions on green and as full section field (promotions, ribbon, closing CTA); the brand drop shape (50% 0 50% 50%) framing hero/about/CTA photos; official logo SVG; sprout-leaf device; studio-grey photo tiles; Urbanist 700–900 display, Manrope body.
-STORY: the visitor reads the slogan "Ta’mga yangicha yondashuv", sees real dishes with weights and prices, sees the real offers, then picks the nearest branch or orders through phone, the official site or the app.
-FIRST VIEWPORT: green field; left H1 with "yangicha" in yellow, supporting copy, yellow "Menyuni ko‘rish", outline "Eng yaqin filial", free-salad line; right the chicken Yaproq donar photo in a yellow-backed drop with a price chip that adds to cart; bottom fact row (1-hour delivery, branch names, hours). Signature interaction: per-dish weight switch (grams first, official size name second) updating price and cart line. Motion: the hero leaf-in is the single authored entrance.
-FORM: no concept roll. The user pinned the world in their own words ("keep the original yellow and green", after asking to use the official site's real content), so this is a refinement inside the brand's established campaign world, position 1 by default; seed key: none (roll waived by brand pin).
+THESIS: the user's own references (painted restaurant posters: deep green field with a big soft serif headline and a plate, a torn brush-edge into warm paper, food on colour tiles) rendered in YAPROQ's pinned brand yellow and greens with real photography. Refuses the flat, plain-sans template look of the previous pass ("simple fonts", per the user).
+OWN-WORLD: green-900/800 fields and warm cream paper (#F6F0E1) with fine grain; brush-torn section edges where colour fields meet; brand yellow #EDCD49 for actions, offers and the drop shape; Young Serif display (soft, heavy, warm serif like the reference headline), Figtree body, Caveat hand-lettered notes used sparingly; official logo; food photos on cream and sage tiles.
+STORY: unchanged — slogan, real dishes with weights and prices, real offers, nearest branch or a real ordering channel.
+FIRST VIEWPORT: green field; big Young Serif H1 "Ta’mga yangicha yondashuv." with "yangicha" in yellow; copy, yellow "Menyuni ko‘rish", outline "Eng yaqin filial", hand-lettered free-salad note; chicken Yaproq donar photo in the yellow drop; the field ends in a torn brush edge.
+FORM: user-pinned in their own words ("I wanted to be like this and better shrifts", with two reference images); no concept roll; seed key: none (roll waived by user pin).
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
 
 Unresolved: Kukcha/Yunusobod show 10:00–02:40 (ordering-system hours) while the official About page says 10:00–03:00; summary lines use 10:00–03:00, branch cards show each branch’s own hours.

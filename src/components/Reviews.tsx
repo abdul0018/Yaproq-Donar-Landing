@@ -17,11 +17,11 @@ const photos = [
 
 export default function Reviews() {
   return (
-    <section aria-labelledby="reviews-title" className="bg-white py-20 sm:py-28">
+    <section aria-labelledby="reviews-title" className="bg-paper pb-20 pt-4 sm:pb-28">
       <div className="container">
         <div className="grid gap-10 lg:grid-cols-12 lg:items-end">
           <Reveal className="lg:col-span-7">
-            <h2 id="reviews-title" className="font-display text-display-lg font-black text-green-900">
+            <h2 id="reviews-title" className="font-display text-display-lg text-green-900">
               Mehmonlarimiz fikrini o‘qing
             </h2>
             <p className="mt-4 max-w-[58ch] text-[17px] leading-relaxed text-ink-600">
@@ -39,7 +39,7 @@ export default function Reviews() {
         </div>
 
         <div className="mt-16 flex flex-col gap-4 border-t-2 border-green-800/10 pt-10 sm:flex-row sm:items-center sm:justify-between">
-          <p className="font-display text-[30px] font-black leading-none text-green-900 sm:text-[36px]">Menyudan</p>
+          <p className="font-display text-[30px] leading-none text-green-900 sm:text-[36px]">Menyudan</p>
           <a href={contacts.instagram} target="_blank" rel="noopener noreferrer" className="btn-outline w-fit">
             <IconInstagram className="h-5 w-5" /> {contacts.instagramHandle} <IconArrowUpRight className="h-4 w-4" />
           </a>
