@@ -45,15 +45,13 @@ export default function About() {
 
         <Reveal delay={120} className="lg:col-span-5">
           <figure className="mx-auto max-w-md lg:max-w-none">
-            <div className="relative p-3 sm:p-4">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img aria-hidden src="/images/paint/splash-sage.png" alt="" width={900} height={876} loading="lazy" className="pointer-events-none absolute -left-[22%] -top-[16%] h-[132%] w-[132%] max-w-none rotate-[-10deg] object-contain" />
-            <div className="relative aspect-square overflow-hidden rounded-[50%_0_50%_50%] bg-studio ring-[10px] ring-yellow">
+            <div className="relative aspect-[10/9]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/menu/iskender-kabob.webp" alt="Iskender kabob: mol go‘shti, tomat qaylasi va suzma" width={600} height={450} loading="lazy" className="h-full w-full scale-110 object-cover" />
+              <img aria-hidden src="/images/paint/splash-sage.png" alt="" width={900} height={741} loading="lazy" className="pointer-events-none absolute -inset-[16%] h-[132%] w-[132%] max-w-none rotate-[-6deg] object-contain" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/cut/iskender-kabob.webp" alt="Iskender kabob: mol go‘shti, tomat qaylasi va suzma" width={700} height={525} loading="lazy" className="absolute left-[19%] top-[24%] w-[62%] drop-shadow-[0_22px_20px_rgba(60,45,20,0.3)]" />
             </div>
-            </div>
-            <figcaption className="relative z-10 mt-5 text-center font-hand text-[24px] font-bold leading-snug text-green-800">Iskender kabob — mol go‘shti, tomat qaylasi, iskender noni va suzma</figcaption>
+            <figcaption className="relative z-10 mt-2 text-center font-hand text-[24px] font-bold leading-snug text-green-800">Iskender kabob — mol go‘shti, tomat qaylasi, iskender noni va suzma</figcaption>
           </figure>
         </Reveal>
       </div>

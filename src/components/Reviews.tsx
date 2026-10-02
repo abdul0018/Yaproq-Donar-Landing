@@ -50,7 +50,7 @@ export default function Reviews() {
               <button type="button" onClick={() => selectCategory(p.cat)} className="group block w-full text-left">
                 <span className={`block aspect-square overflow-hidden rounded-2xl ${i % 2 ? "bg-paper-deep" : "bg-sage"}`}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={p.src} alt="" width={600} height={450} loading="lazy" className="h-full w-full object-cover mix-blend-multiply brightness-[1.08] contrast-[1.03] transition-transform duration-700 ease-out group-hover:scale-110" />
+                  <img src={p.src.replace("/menu/", "/cut/")} alt="" width={600} height={450} loading="lazy" className="h-full w-full object-contain p-[10%] drop-shadow-[0_14px_14px_rgba(60,45,20,0.22)] transition-transform duration-700 ease-out group-hover:scale-110" />
                 </span>
                 <span className="mt-2 block text-[14px] font-bold text-green-900 group-hover:underline">{p.name}</span>
               </button>

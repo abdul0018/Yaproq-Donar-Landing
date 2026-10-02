@@ -1,0 +1,4 @@
+{
+  "prompt": "Derived, not generated: alpha cutout of the official YAPROQ product photo public/images/menu/tovuq-pilav-usti.webp. Background removed with ImageMagick by a tight luminance threshold (corner backdrop level - 0.045), largest connected component kept, hole fill, 1px erode and soft edge; trimmed.",
+  "createdAt": "2026-10-02T19:02:57.448Z"
+}

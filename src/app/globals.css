@@ -31,6 +31,10 @@
     text-wrap: balance;
   }
   .font-display {
+    /* Young Serif ships one weight: never let the browser fake bold or italic. */
+    font-weight: 400;
+    font-synthesis: none;
+    letter-spacing: -0.005em;
     font-kerning: normal;
     font-feature-settings: "kern", "liga";
     text-rendering: optimizeLegibility;

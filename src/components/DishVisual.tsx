@@ -1,4 +1,5 @@
 import type { Dish } from "@/data/menu";
+import { cutoutIds } from "@/data/cutouts";
 
 /** The official product photo, or a name tile for the rare item without one. Fills its parent. */
 /**
@@ -6,6 +7,21 @@ import type { Dish } from "@/data/menu";
  * backdrop becomes the tile (sage or paper) while the food keeps its colour.
  */
 export default function DishVisual({ dish, className = "", priority, onTile }: { dish: Dish; className?: string; priority?: boolean; onTile?: boolean }) {
+  // On a colour tile, prefer the clean cutout so the dish sits on flat tile colour.
+  if (onTile && cutoutIds.has(dish.id)) {
+    return (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src={`/images/cut/${dish.id}.webp`}
+        alt={dish.name}
+        width={700}
+        height={525}
+        loading={priority ? "eager" : "lazy"}
+        decoding="async"
+        className={`h-full w-full object-contain p-[9%] drop-shadow-[0_14px_14px_rgba(60,45,20,0.22)] ${className}`}
+      />
+    );
+  }
   if (dish.image) {
     return (
       // eslint-disable-next-line @next/next/no-img-element
