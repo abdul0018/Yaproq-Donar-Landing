@@ -1,7 +1,7 @@
 "use client";
 
 import { getDish } from "@/data/menu";
-import { branches, formatPrice } from "@/data/site";
+import { branches, facts, formatPrice } from "@/data/site";
 import { useCart } from "@/lib/cart";
 import { IconArrow, IconClock, IconGift, IconPin, IconPlus, IconTruck } from "./icons";
 
@@ -78,7 +78,7 @@ export default function Hero() {
             <IconPin className="h-5 w-5 shrink-0 text-yellow" /> {branches.map((b) => b.name).join(" · ")}
           </li>
           <li className="flex items-center gap-2.5">
-            <IconClock className="h-5 w-5 shrink-0 text-yellow" /> Har kuni {branches[0].hours}
+            <IconClock className="h-5 w-5 shrink-0 text-yellow" /> Har kuni {facts.hours}
           </li>
         </ul>
       </div>

@@ -36,7 +36,7 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-            <p className="tabular mt-4 text-[14px] text-green-100">Har kuni {branches[0].hours}</p>
+            <p className="tabular mt-4 text-[14px] text-green-100">Har kuni {facts.hours}</p>
           </div>
 
           <div className="lg:col-span-3">
@@ -44,7 +44,7 @@ export default function Footer() {
             <a href={telHref(contacts.phone)} className="tabular mt-5 flex items-center gap-2 font-display text-[26px] font-black leading-none hover:text-yellow">
               <IconPhone className="h-5 w-5" /> {contacts.phone}
             </a>
-            <p className="mt-2 text-[14px] text-green-100">Yetkazib berish: {facts.deliveryHours}</p>
+            <p className="mt-2 text-[14px] text-green-100">Yetkazib berish: eng yaqin filialdan 1 soatda</p>
             <div className="mt-6 grid gap-2">
               <a href={contacts.orderUrl} target="_blank" rel="noopener noreferrer" className="btn h-12 min-h-0 w-full bg-yellow text-green-950 hover:bg-yellow-300">
                 Saytda buyurtma <IconArrowUpRight className="h-4 w-4" />

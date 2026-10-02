@@ -24,8 +24,9 @@ export default function SizeSwitch({
       <div className={`grid w-full auto-cols-fr grid-flow-col gap-1 rounded-2xl p-1 ${dark ? "bg-white/10" : "bg-green-800/[0.07]"}`}>
         {dish.variants.map((v) => {
           const on = v.id === value.id;
-          const text = v.label ?? v.portion ?? "";
-          const sub = v.label && v.portion ? v.portion : null;
+          // Lead with the weight; the official size name ("Oddiy", "1,5") is secondary.
+          const text = v.portion || v.label || "";
+          const sub = v.portion && v.label ? v.label : null;
           return (
             <label
               key={v.id}

@@ -42,7 +42,7 @@ const ways: Way[] = [
     id: "telefon",
     title: "Telefon orqali",
     short: contacts.phone,
-    text: `Qo‘ng‘iroq qiling — buyurtmani qabul qilib, eng yaqin filialga yo‘naltiramiz. Yetkazib berish har kuni ${facts.deliveryHours}.`,
+    text: `Qo‘ng‘iroq qiling — buyurtmani qabul qilib, eng yaqin filialga yo‘naltiramiz. Har kuni ${facts.hours}.`,
     icon: IconPhone,
     actions: (
       <a href={telHref(contacts.phone)} className="btn-primary tabular">

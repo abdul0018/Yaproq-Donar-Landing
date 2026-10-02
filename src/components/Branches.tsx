@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { branches, contacts, directionsUrl, distanceKm, hasLocation, isOpenNow, telHref, toMap, yandexUrl, type Branch } from "@/data/site";
+import { branches, contacts, facts, directionsUrl, distanceKm, hasLocation, isOpenNow, telHref, toMap, yandexUrl, type Branch } from "@/data/site";
 import SectionHeading from "./SectionHeading";
 import Reveal from "./Reveal";
 import { IconArrowUpRight, IconClock, IconClose, IconLocate, IconNavigate, IconPhone, IconPin } from "./icons";
@@ -13,6 +13,7 @@ const located = branches.filter(hasLocation);
 function OpenBadge({ b, mounted }: { b: Branch; mounted: boolean }) {
   if (!mounted) return null;
   const open = isOpenNow(b);
+  if (open === null) return null;
   return (
     <span className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[12.5px] font-bold ${open ? "bg-green-800/10 text-green-800" : "bg-ink/5 text-ink-600"}`}>
       <span className={`h-1.5 w-1.5 rounded-full ${open ? "bg-green-600" : "bg-ink-400"}`} />
@@ -25,28 +26,8 @@ function CityMap({ selected, onSelect, user }: { selected: string; onSelect: (id
   const u = user ? toMap(user.lat, user.lng) : null;
   return (
     <div className="relative h-full min-h-[320px] overflow-hidden rounded-3xl bg-green-100">
-      <svg aria-hidden viewBox="0 0 100 100" preserveAspectRatio="none" className="absolute inset-0 h-full w-full">
-        <path d="M44 38c4-3 10-2 12 2s-1 9-6 9-9-7-6-11Z" fill="#C5D9BA" />
-        <path d="M14 30c5-4 12-3 13 2s-5 8-9 7-7-5-4-9Z" fill="#C5D9BA" />
-        <path d="M62 70c6-3 14 0 14 5s-8 7-12 6-6-8-2-11Z" fill="#C5D9BA" />
-        <ellipse cx="52" cy="50" rx="44" ry="42" fill="none" stroke="#FFFFFF" strokeWidth="5" vectorEffect="non-scaling-stroke" />
-        <ellipse cx="52" cy="50" rx="24" ry="22" fill="none" stroke="#FFFFFF" strokeWidth="3" vectorEffect="non-scaling-stroke" />
-        {["M52 0 L52 100", "M0 52 L100 46", "M10 90 L90 12", "M14 10 L88 92", "M0 70 L48 52", "M60 0 L56 46"].map((d) => (
-          <path key={d} d={d} stroke="#FFFFFF" strokeWidth="3" fill="none" vectorEffect="non-scaling-stroke" />
-        ))}
-        <path d="M60 0C56 14 50 22 52 34S46 52 40 62 30 84 26 100" stroke="#9FC3BC" strokeWidth="6" fill="none" vectorEffect="non-scaling-stroke" strokeLinecap="round" />
-        <path d="M100 8C86 20 76 28 70 40S60 62 46 74" stroke="#9FC3BC" strokeWidth="4" fill="none" vectorEffect="non-scaling-stroke" strokeLinecap="round" />
-      </svg>
-
-      {[
-        { t: "Yunusobod", x: 64, y: 14 },
-        { t: "Markaz", x: 50, y: 56 },
-        { t: "Chilonzor", x: 20, y: 86 },
-      ].map((l) => (
-        <span key={l.t} className="pointer-events-none absolute -translate-x-1/2 text-[11px] font-bold uppercase tracking-[0.14em] text-green-900/35" style={{ left: `${l.x}%`, top: `${l.y}%` }}>
-          {l.t}
-        </span>
-      ))}
+      {/* Plain field: only the pins' relative positions are real (from coordinates); no streets are drawn. */}
+      <div aria-hidden className="absolute inset-0 [background-image:radial-gradient(#115A2E26_1.2px,transparent_1.2px)] [background-size:22px_22px]" />
 
       {u && (
         <span className="absolute z-10 -translate-x-1/2 -translate-y-1/2" style={{ left: `${u.x}%`, top: `${u.y}%` }}>
@@ -80,7 +61,7 @@ function CityMap({ selected, onSelect, user }: { selected: string; onSelect: (id
         );
       })}
 
-      <p className="absolute bottom-3 right-4 text-[11px] font-semibold text-green-900/45">Sxematik xarita</p>
+      <p className="absolute bottom-3 left-4 right-4 text-[12px] font-semibold text-green-900/60">Filiallarning o‘zaro joylashuvi. Aniq yo‘l uchun «Yo‘lni ko‘rsatish»ni bosing.</p>
     </div>
   );
 }
@@ -121,7 +102,7 @@ function BranchDialog({ branch, onClose, mounted }: { branch: Branch | null; onC
             </div>
             <div className="flex gap-3">
               <IconClock className="mt-0.5 h-5 w-5 shrink-0 text-green-800" />
-              <div><dt className="sr-only">Ish vaqti</dt><dd className="tabular font-semibold">Har kuni, {branch.hours}</dd></div>
+              <div><dt className="sr-only">Ish vaqti</dt><dd className="tabular font-semibold">{branch.hours ? `Har kuni, ${branch.hours}` : "Ish vaqtini telefon orqali aniqlashtiring"}</dd></div>
             </div>
             <div className="flex gap-3">
               <IconPhone className="mt-0.5 h-5 w-5 shrink-0 text-green-800" />
@@ -188,7 +169,7 @@ export default function Branches() {
         <SectionHeading
           id="branches-title"
           title={<>Sizga eng yaqin <span className="text-green-600">YAPROQ</span></>}
-          lead={`Toshkentda uchta filial, har kuni ${branches[0].hours}. Joylashuvingizni ulashing — eng yaqinini o‘zimiz topamiz.`}
+          lead={`Toshkentda uchta filial, har kuni ${facts.hours}. Joylashuvingizni ulashing — eng yaqinini o‘zimiz topamiz.`}
           action={
             <button type="button" onClick={locate} disabled={geo.status === "loading"} className="btn-green h-14 px-6">
               <IconLocate className={`h-5 w-5 ${geo.status === "loading" ? "animate-spin" : ""}`} />
@@ -219,7 +200,7 @@ export default function Branches() {
                     </div>
                     <div className="pointer-events-none relative mt-4 grid gap-2 text-[15px] text-ink-700">
                       <p className="flex gap-2.5"><IconPin className="mt-0.5 h-4 w-4 shrink-0 text-green-800" /> <span>{b.address ?? "Manzil va yo‘lni telefon orqali aniqlashtiring"}</span></p>
-                      <p className="flex gap-2.5"><IconClock className="mt-0.5 h-4 w-4 shrink-0 text-green-800" /> <span className="tabular">Har kuni, {b.hours}</span></p>
+                      <p className="flex gap-2.5"><IconClock className="mt-0.5 h-4 w-4 shrink-0 text-green-800" /> <span className="tabular">{b.hours ? `Har kuni, ${b.hours}` : "Ish vaqtini telefon orqali aniqlashtiring"}</span></p>
                       <p className="flex gap-2.5"><IconPhone className="mt-0.5 h-4 w-4 shrink-0 text-green-800" /> <a href={telHref(b.phone)} className="tabular pointer-events-auto underline decoration-green-800/30 decoration-2 hover:decoration-green-800">{b.phone}</a></p>
                     </div>
                     <div className="relative mt-5 flex flex-wrap gap-2">

@@ -105,7 +105,7 @@ export default function Menu() {
       {/* Sticky category bar */}
       <div className="sticky top-[72px] z-30 mt-10 border-y border-green-800/10 bg-green-50/95 backdrop-blur-md">
         <div className="container flex items-center gap-3 py-3">
-          <div ref={tabsRef} role="tablist" aria-label="Menyu kategoriyalari" className="no-scrollbar relative -mx-1 flex flex-1 snap-x gap-1.5 overflow-x-auto px-1">
+          <div ref={tabsRef} role="tablist" aria-label="Menyu kategoriyalari" className="no-scrollbar relative -mx-1 flex min-w-0 flex-1 snap-x gap-1.5 overflow-x-auto px-1 pr-10 [mask-image:linear-gradient(to_right,#000_calc(100%-48px),transparent)]">
             {categories.map((c) => {
               const on = !q && c.id === active;
               return (
@@ -137,7 +137,7 @@ export default function Menu() {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Qidirish…"
-              className="h-11 w-56 rounded-full border border-green-800/15 bg-white pl-10 pr-4 text-[15px] outline-none transition placeholder:text-ink-500 focus:w-72 focus:border-green-800"
+              className="h-11 w-48 rounded-full border border-green-800/15 bg-white pl-10 pr-4 text-[15px] outline-none transition placeholder:text-ink-500 focus:w-64 focus:border-green-800"
             />
           </label>
         </div>

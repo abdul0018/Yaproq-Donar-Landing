@@ -1,7 +1,6 @@
-import DishArt from "./DishArt";
 import type { Dish } from "@/data/menu";
 
-/** The official product photo, or a drawn fallback for the rare item without one. Fills its parent. */
+/** The official product photo, or a name tile for the rare item without one. Fills its parent. */
 export default function DishVisual({ dish, className = "", priority }: { dish: Dish; className?: string; priority?: boolean }) {
   if (dish.image) {
     return (
@@ -17,9 +16,10 @@ export default function DishVisual({ dish, className = "", priority }: { dish: D
       />
     );
   }
+  // No official photo: an honest name tile rather than a drawing among real photos.
   return (
-    <div className="grid h-full w-full place-items-center bg-studio">
-      <DishArt kind="drink" seed={dish.id} plate="none" className="h-[78%] w-[78%]" title={dish.name} />
+    <div className="grid h-full w-full place-items-center bg-green-100 p-3 text-center">
+      <span className="font-display text-[clamp(18px,4vw,30px)] font-black leading-none text-green-800">{dish.name}</span>
     </div>
   );
 }

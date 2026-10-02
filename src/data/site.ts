@@ -7,9 +7,10 @@ export type Branch = {
   district?: string;
   /** Unknown addresses stay undefined: never guessed. */
   address?: string;
-  hours: string;
+  /** Undefined when the branch's hours are not confirmed: no hours and no "open now" badge are shown. */
+  hours?: string;
   /** Opening hours in 24h format (an end past 24 means after midnight), for the "open now" badge. */
-  open: [number, number];
+  open?: [number, number];
   phone: string;
   lat?: number;
   lng?: number;
@@ -44,8 +45,6 @@ export const branches: Branch[] = [
   {
     id: "nurafshon",
     name: "Nurafshon",
-    hours: "10:00 – 02:40",
-    open: [10, 26 + 40 / 60],
     phone: "+998 71 200 84 44",
     onlineOrders: false,
   },
@@ -69,7 +68,8 @@ export const contacts = {
 export const facts = {
   founded: 2021,
   delivery: "Eng yaqin filialdan 1 soat ichida",
-  deliveryHours: "10:00 – 03:00",
+  /** Single displayed opening-hours value until the owner confirms which official figure is current. */
+  hours: "10:00 – 02:40",
   payments: ["Naqd", "Karta", "Bank o‘tkazmasi", "Click", "Payme"],
 };
 
@@ -105,6 +105,7 @@ export const yandexUrl = (b: Branch & { lat: number; lng: number }) => `https://
 export const telHref = (phone: string) => `tel:${phone.replace(/\s/g, "")}`;
 
 export function isOpenNow(b: Branch, date = new Date()) {
+  if (!b.open) return null;
   const [from, to] = b.open;
   if (to - from >= 24) return true;
   // Always evaluate in Tashkent time, regardless of the visitor's timezone.

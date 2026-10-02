@@ -1,16 +1,19 @@
+"use client";
+
 import { contacts } from "@/data/site";
 import Reveal from "./Reveal";
+import { selectCategory } from "./CategoryStrip";
 import { IconArrowUpRight, IconInstagram, IconStar } from "./icons";
 
-// Real photos only; no captions, counts or quotes are invented here.
+// Official menu photos, labelled as such (not presented as social posts).
 const photos = [
-  { src: "/images/menu/yaproq-donar.webp", alt: "Yaproq donar" },
-  { src: "/images/menu/yaproq-pide.webp", alt: "Yaproq pide" },
-  { src: "/images/menu/tovuq-iskender.webp", alt: "Tovuqli Iskender kabob" },
-  { src: "/images/menu/mercimek.webp", alt: "Merjimek sho‘rvasi" },
-  { src: "/images/menu/tombik-donar.webp", alt: "Tombik donar" },
-  { src: "/images/menu/havuch.webp", alt: "Havuch dilim" },
-];
+  { src: "/images/menu/yaproq-donar.webp", name: "Yaproq donar", cat: "asosiy" },
+  { src: "/images/menu/yaproq-pide.webp", name: "Yaproq pide", cat: "pide" },
+  { src: "/images/menu/tovuq-iskender.webp", name: "Tovuqli Iskender", cat: "tovuq" },
+  { src: "/images/menu/mercimek.webp", name: "Merjimek sho‘rvasi", cat: "shorvalar" },
+  { src: "/images/menu/tombik-donar.webp", name: "Tombik donar", cat: "asosiy" },
+  { src: "/images/menu/havuch.webp", name: "Havuch", cat: "desertlar" },
+] as const;
 
 export default function Reviews() {
   return (
@@ -36,19 +39,22 @@ export default function Reviews() {
         </div>
 
         <div className="mt-16 flex flex-col gap-4 border-t-2 border-green-800/10 pt-10 sm:flex-row sm:items-center sm:justify-between">
-          <p className="font-display text-[30px] font-black leading-none text-green-900 sm:text-[36px]">{contacts.instagramHandle}</p>
+          <p className="font-display text-[30px] font-black leading-none text-green-900 sm:text-[36px]">Menyudan</p>
           <a href={contacts.instagram} target="_blank" rel="noopener noreferrer" className="btn-outline w-fit">
-            <IconInstagram className="h-5 w-5" /> Instagram’da kuzating
+            <IconInstagram className="h-5 w-5" /> {contacts.instagramHandle} <IconArrowUpRight className="h-4 w-4" />
           </a>
         </div>
         <ul className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
-          {photos.map((p, i) => (
-            <Reveal as="li" key={p.src} delay={i * 50}>
-              <a href={contacts.instagram} target="_blank" rel="noopener noreferrer" className="group block aspect-square overflow-hidden rounded-2xl bg-studio" aria-label={`Instagram: ${p.alt}`}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={p.src} alt="" width={600} height={450} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" />
-              </a>
-            </Reveal>
+          {photos.map((p) => (
+            <li key={p.src}>
+              <button type="button" onClick={() => selectCategory(p.cat)} className="group block w-full text-left">
+                <span className="block aspect-square overflow-hidden rounded-2xl bg-studio">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={p.src} alt="" width={600} height={450} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" />
+                </span>
+                <span className="mt-2 block text-[14px] font-bold text-green-900 group-hover:underline">{p.name}</span>
+              </button>
+            </li>
           ))}
         </ul>
       </div>
