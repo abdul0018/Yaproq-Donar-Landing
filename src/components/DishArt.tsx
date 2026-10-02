@@ -19,6 +19,7 @@ export type ArtKind =
   | "dessert"
   | "drink"
   | "sauce"
+  | "soup"
   | "set";
 
 type Props = {
@@ -427,6 +428,23 @@ function SauceBowl({ tone }: { tone: "white" | "red" | "cheese" }) {
   );
 }
 
+function Soup({ seed }: { seed: () => number }) {
+  return (
+    <g>
+      <circle cx="200" cy="200" r="118" fill="#B8733F" />
+      <circle cx="200" cy="200" r="108" fill="#D99A5E" />
+      <circle cx="200" cy="200" r="94" fill="#E9A93A" />
+      {Array.from({ length: 16 }, (_, i) => (
+        <circle key={i} cx={140 + seed() * 120} cy={140 + seed() * 120} r={1.6 + seed() * 2.4} fill="#C4761E" opacity=".7" />
+      ))}
+      <path d="M150 170c20-12 60-14 90 4" stroke="#F6CC6A" strokeWidth="6" strokeLinecap="round" fill="none" opacity=".7" />
+      <Leaf x={186} y={210} r={-20} s={0.7} c="#3F8560" />
+      <Leaf x={214} y={226} r={160} s={0.6} c="#5FA052" />
+      <Lemon x={290} y={118} r={40} s={1.3} />
+    </g>
+  );
+}
+
 function SetBoard({ seed }: { seed: () => number }) {
   const G = useG();
   return (
@@ -524,6 +542,7 @@ export default function DishArt({ kind, seed = kind, plate = "light", className,
       {kind === "drink" && <Drink seed={r} tone={drinkTone} />}
       {kind === "sauce" && <SauceBowl tone={sauceTone} />}
       {kind === "set" && <SetBoard seed={r} />}
+      {kind === "soup" && <Soup seed={r} />}
     </svg>
     </GradCtx.Provider>
   );

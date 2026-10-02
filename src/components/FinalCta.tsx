@@ -1,6 +1,5 @@
 "use client";
 
-import DishArt from "./DishArt";
 import Reveal from "./Reveal";
 import { IconArrow, IconPin } from "./icons";
 import { useCart } from "@/lib/cart";
@@ -11,8 +10,11 @@ export default function FinalCta() {
     <section aria-labelledby="cta-title" className="bg-cream pb-20 sm:pb-28">
       <div className="container">
         <Reveal className="grain relative overflow-hidden rounded-[36px] bg-ember px-6 py-14 text-white sm:px-12 sm:py-20 lg:px-16">
-          <div aria-hidden className="pointer-events-none absolute -right-24 -top-24 w-[420px] opacity-95 sm:-right-10 sm:w-[520px] lg:right-0 lg:top-1/2 lg:w-[560px] lg:-translate-y-1/2">
-            <div className="animate-spin-slow"><DishArt kind="wrap" seed="cta-donar" plate="dark" /></div>
+          <div aria-hidden className="pointer-events-none absolute -bottom-40 -right-28 aspect-square w-[340px] sm:-right-16 sm:w-[440px] lg:-bottom-auto lg:right-12 lg:top-1/2 lg:w-[460px] lg:-translate-y-1/2">
+            <div className="h-full w-full overflow-hidden rounded-full bg-studio shadow-[0_40px_80px_-30px_rgba(0,0,0,0.6)] ring-[10px] ring-white/15">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/lavash-donar.webp" alt="" width={600} height={450} loading="lazy" className="h-full w-full scale-[1.08] object-cover" />
+            </div>
           </div>
           <div className="relative max-w-xl">
             <p className="eyebrow text-white/80">Och qoldingizmi?</p>

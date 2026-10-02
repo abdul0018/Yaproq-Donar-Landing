@@ -21,8 +21,12 @@ function DishTile({ d, index }: { d: Dish; index: number }) {
       className="group grid animate-fade-up grid-cols-[108px_1fr] gap-4 rounded-3xl bg-cream-50 p-3.5 transition-shadow duration-500 hover:shadow-[0_24px_50px_-30px_rgba(23,63,46,0.45)] sm:flex sm:flex-col sm:p-4"
       style={{ animationDelay: `${Math.min(index, 8) * 45}ms` }}
     >
-      <div className="relative aspect-square overflow-hidden rounded-2xl bg-cream-200/60 sm:rounded-[22px]">
-        <DishVisual dish={d} className="h-full w-full p-1.5 transition-transform duration-700 ease-out group-hover:rotate-[10deg] group-hover:scale-105 sm:p-4" />
+      <div className="relative aspect-square overflow-hidden rounded-2xl bg-studio sm:aspect-[4/3] sm:rounded-[22px]">
+        <DishVisual
+          dish={d}
+          photoClassName="transition-transform duration-700 ease-out group-hover:scale-110"
+          artClassName="p-1.5 transition-transform duration-700 ease-out group-hover:rotate-[10deg] group-hover:scale-105 sm:p-3"
+        />
         {d.tags && (
           <div className="absolute left-2 top-2 hidden flex-wrap gap-1.5 sm:flex">
             {d.tags.map((t) => (

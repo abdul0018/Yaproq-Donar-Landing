@@ -111,7 +111,7 @@ export default function CartDrawer() {
             <ul className="mt-8 grid gap-3">
               {suggestions.map((d) => (
                 <li key={d.id} className="flex items-center gap-4 rounded-2xl bg-cream-50 p-3">
-                  <div className="h-16 w-16 shrink-0"><DishVisual dish={d} className="h-full w-full" /></div>
+                  <div className="h-16 w-16 shrink-0 overflow-hidden rounded-xl bg-studio"><DishVisual dish={d} /></div>
                   <div className="min-w-0 flex-1">
                     <p className="font-semibold">{d.name}</p>
                     <p className="text-[14px] text-ink-500">{formatPrice(d.price)}</p>
@@ -130,7 +130,7 @@ export default function CartDrawer() {
               <ul className="grid gap-3">
                 {lines.map((l) => (
                   <li key={l.id} className="flex items-center gap-3 rounded-2xl bg-cream-50 p-3">
-                    <div className="h-16 w-16 shrink-0"><DishVisual dish={l.dish} className="h-full w-full" /></div>
+                    <div className="h-16 w-16 shrink-0 overflow-hidden rounded-xl bg-studio"><DishVisual dish={l.dish} /></div>
                     <div className="min-w-0 flex-1">
                       <p className="truncate font-semibold">{l.dish.name}</p>
                       <p className="text-[14px] text-ink-500">{formatPrice(l.dish.price * l.qty)}</p>

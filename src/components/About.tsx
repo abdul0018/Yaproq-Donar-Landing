@@ -1,4 +1,3 @@
-import DishArt from "./DishArt";
 import Reveal from "./Reveal";
 
 const pillars = [
@@ -56,17 +55,17 @@ export default function About() {
         </div>
 
         <Reveal delay={150} className="relative lg:col-span-5">
-          <div className="relative mx-auto aspect-[4/5] max-w-md overflow-hidden rounded-[40px] bg-forest lg:max-w-none">
-            <div aria-hidden className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-forest-600" />
-            <div className="absolute inset-x-[-12%] top-[10%]">
-              <DishArt kind="pide" seed="about-pide" plate="dark" className="w-full drop-shadow-[0_30px_40px_rgba(0,0,0,0.4)]" title="Tandirdan yangi chiqqan pide" />
+          <figure className="relative mx-auto max-w-md overflow-hidden rounded-[40px] bg-forest p-3 lg:max-w-none">
+            <div className="overflow-hidden rounded-[30px] bg-studio">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/pide-pishloqli.webp" alt="Tandirdan yangi chiqqan pishloqli pide" width={600} height={450} loading="lazy" className="aspect-[4/3] w-full object-cover transition-transform duration-[1.2s] ease-out hover:scale-105" />
             </div>
-            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-forest-900 via-forest-900/80 to-transparent p-7 pt-20 text-cream">
+            <figcaption className="px-5 pb-5 pt-6 text-cream sm:px-6">
               <p className="font-display text-[22px] italic leading-snug">“Go‘sht tongda keladi, kechqurun tugaydi. Qolgani — bizning ishimiz emas.”</p>
               <p className="mt-3 text-[14px] text-cream/60">Bosh oshpaz</p>
-            </div>
-          </div>
-          <div className="absolute -top-8 right-6 hidden rounded-2xl bg-cream-50 p-5 shadow-[0_24px_60px_-30px_rgba(21,32,26,0.5)] sm:block lg:-left-10">
+            </figcaption>
+          </figure>
+          <div className="absolute -left-6 bottom-36 hidden rounded-2xl bg-cream-50 p-5 shadow-[0_24px_60px_-30px_rgba(21,32,26,0.5)] sm:block lg:-left-10">
             <p className="font-display text-5xl leading-none text-forest">1 200+</p>
             <p className="mt-2 max-w-[14ch] text-[14px] leading-snug text-ink-500">porsiya donar har kuni tayyorlanadi</p>
           </div>

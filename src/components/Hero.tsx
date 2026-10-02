@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import DishArt, { Chili, Lemon, Leaf, Tomato } from "./DishArt";
+import { Chili, Lemon, Leaf, Tomato } from "./DishArt";
+import DishVisual from "./DishVisual";
 import { IconArrow, IconPin, IconPlus, IconStar } from "./icons";
 import { branches, formatPrice } from "@/data/site";
 import { getDish } from "@/data/menu";
@@ -10,7 +11,7 @@ import { useCart } from "@/lib/cart";
 export default function Hero() {
   const stage = useRef<HTMLDivElement>(null);
   const { add } = useCart();
-  const hero = getDish("donar-klassik")!;
+  const hero = getDish("donar-tarelka")!;
 
   // Gentle pointer parallax on the scattered ingredients (desktop only).
   useEffect(() => {
@@ -86,8 +87,18 @@ export default function Hero() {
           <div aria-hidden className="absolute inset-[4%] rounded-full border border-cream/10" />
           <div aria-hidden className="absolute inset-[-4%] hidden rounded-full border border-dashed border-cream/10 lg:block" />
           <div className="absolute inset-[8%] animate-fade-up [animation-delay:200ms] [animation-duration:1.4s]">
-            <div className="h-full w-full animate-spin-slow">
-              <DishArt kind="plate" seed="hero-donar-tarelka" plate="dark" className="h-full w-full drop-shadow-[0_40px_60px_rgba(0,0,0,0.45)]" title="Donar tarelka: go‘sht, guruch, fri va sabzavotlar" />
+            {/* Studio photo framed as a plate-sized disc */}
+            <div className="relative h-full w-full overflow-hidden rounded-full bg-studio shadow-[0_50px_90px_-30px_rgba(0,0,0,0.75)] ring-[10px] ring-forest-700/70">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={hero.image}
+                alt={`${hero.name}: donar go‘shti, guruch, kartoshka fri va lavash`}
+                width={600}
+                height={450}
+                fetchPriority="high"
+                className="h-full w-full scale-[1.06] object-cover transition-transform duration-[1.6s] ease-out hover:scale-[1.12]"
+              />
+              <div aria-hidden className="pointer-events-none absolute inset-0 rounded-full shadow-[inset_0_0_60px_rgba(15,43,31,0.35)]" />
             </div>
           </div>
 
@@ -105,11 +116,11 @@ export default function Hero() {
 
           {/* product tag */}
           <div className="absolute bottom-[4%] left-0 z-10 flex animate-fade-up items-center gap-3 rounded-2xl bg-cream p-2.5 pr-3 text-ink shadow-[0_20px_50px_-20px_rgba(0,0,0,0.6)] [animation-delay:600ms] sm:left-[2%] sm:gap-4 sm:p-3 sm:pr-4">
-            <div className="h-14 w-14 shrink-0 rounded-xl bg-cream-200 sm:h-16 sm:w-16">
-              <DishArt kind="wrap" seed="donar-klassik" plate="none" className="h-full w-full" />
+            <div className="h-14 w-14 shrink-0 overflow-hidden rounded-xl bg-studio sm:h-16 sm:w-16">
+              <DishVisual dish={hero} />
             </div>
             <div className="min-w-0">
-              <p className="text-[12px] font-semibold uppercase tracking-wider text-ember">Xit</p>
+              <p className="text-[12px] font-semibold uppercase tracking-wider text-ember">Eng ko‘p tanlanadi</p>
               <p className="font-display text-lg leading-tight">{hero.name}</p>
               <p className="text-[14px] text-ink-500">{formatPrice(hero.price)}</p>
             </div>

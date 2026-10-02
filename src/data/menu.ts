@@ -7,6 +7,7 @@ export type CategoryId =
   | "tovuq"
   | "shaurma"
   | "pide"
+  | "shorvalar"
   | "salatlar"
   | "desertlar"
   | "ichimliklar"
@@ -35,6 +36,7 @@ export const categories: Category[] = [
   { id: "tovuq", name: "Tovuq", short: "Tovuq" },
   { id: "shaurma", name: "Shaurma", short: "Shaurma" },
   { id: "pide", name: "Pide", short: "Pide" },
+  { id: "shorvalar", name: "Sho‘rvalar", short: "Sho‘rva" },
   { id: "salatlar", name: "Salatlar", short: "Salat" },
   { id: "desertlar", name: "Desertlar", short: "Desert" },
   { id: "ichimliklar", name: "Ichimliklar", short: "Ichimlik" },
@@ -88,10 +90,12 @@ export const dishes: Dish[] = [
     id: "donar-tarelka",
     category: "asosiy",
     name: "Donar tarelka",
-    description: "Mol go‘shti donari, guruch, fri, yangi sabzavotlar va sarimsoqli sous.",
+    description: "Mol go‘shti donari, sariyog‘li guruch, kartoshka fri va issiq lavash.",
     price: 64000,
     portion: "520 g",
     art: "plate",
+    image: "/images/donar-tarelka.webp",
+    tags: ["top"],
   },
   {
     id: "adana",
@@ -105,6 +109,28 @@ export const dishes: Dish[] = [
   },
 
   // Donar
+  {
+    id: "lavash-donar",
+    category: "donar",
+    name: "Lavashli donar porsiya",
+    description: "Issiq lavash ustida yupqa kesilgan mol go‘shti donari va kartoshka fri.",
+    price: 56000,
+    portion: "450 g",
+    art: "plate",
+    image: "/images/lavash-donar.webp",
+    tags: ["top"],
+  },
+  {
+    id: "non-donar",
+    category: "donar",
+    name: "Non ichida donar",
+    description: "Kunjutli tandir noni ichida mol go‘shti donari, yonida kartoshka fri.",
+    price: 42000,
+    portion: "400 g",
+    art: "wrap",
+    image: "/images/non-donar.webp",
+    tags: ["yangi"],
+  },
   {
     id: "donar-klassik",
     category: "donar",
@@ -220,11 +246,12 @@ export const dishes: Dish[] = [
     id: "pide-pishloq",
     category: "pide",
     name: "Pishloqli pide",
-    description: "Sulguni, mozzarella va tuxum — ichi cho‘ziladigan, issiq holda.",
+    description: "Qayiq shaklidagi tandir non, ustida eritilgan pishloq. Issiq holda, sous bilan.",
     price: 39000,
     portion: "380 g",
     art: "pide",
-    tags: ["vegetarian"],
+    image: "/images/pide-pishloqli.webp",
+    tags: ["top", "vegetarian"],
   },
   {
     id: "pide-aralash",
@@ -235,6 +262,28 @@ export const dishes: Dish[] = [
     portion: "520 g",
     art: "pide",
     tags: ["yangi"],
+  },
+
+  // Sho‘rvalar
+  {
+    id: "yasmiq-shorva",
+    category: "shorvalar",
+    name: "Yasmiq sho‘rva",
+    description: "Qizil yasmiqdan quyuq sho‘rva, limon bo‘lagi va qarsildoq krutonlar bilan.",
+    price: 22000,
+    portion: "350 ml",
+    art: "soup",
+    image: "/images/yasmiq-shorva.webp",
+    tags: ["top", "vegetarian"],
+  },
+  {
+    id: "tovuq-shorva",
+    category: "shorvalar",
+    name: "Tovuqli sho‘rva",
+    description: "Tovuq bulyoni, uy lag‘moni, sabzi va ko‘katlar. Yengil va iliq.",
+    price: 24000,
+    portion: "350 ml",
+    art: "soup",
   },
 
   // Salatlar
@@ -370,25 +419,25 @@ export const dishes: Dish[] = [
   },
 ];
 
-export const featuredIds = ["donar-klassik", "iskender", "tovuq-grill", "pide-gosht"];
+export const featuredIds = ["donar-tarelka", "non-donar", "pide-pishloq", "yasmiq-shorva"];
 
 export const featuredCopy: Record<string, { kicker: string; story: string }> = {
-  "donar-klassik": {
+  "donar-tarelka": {
     kicker: "Eng ko‘p buyurtma qilinadi",
     story:
-      "Har kuni tongda marinadlanadigan mol go‘shti vertikal olovda sekin aylanadi. Lavash buyurtmadan keyin isitiladi — shuning uchun u doim yumshoq.",
+      "Har tong marinadlanadigan mol go‘shti vertikal olovda sekin aylanadi va buyurtmadan keyin kesiladi. Yonida sariyog‘li guruch, fri va issiq lavash — to‘liq bir tushlik.",
   },
-  iskender: {
-    kicker: "Oshpaz tavsiyasi",
-    story: "Issiq sariyog‘ stol oldida quyiladi.",
+  "non-donar": {
+    kicker: "Yangi",
+    story: "Kunjutli tandir noni, ichi to‘la donar.",
   },
-  "tovuq-grill": {
-    kicker: "Ko‘mirda",
-    story: "12 soatlik marinad, tutun hidi.",
-  },
-  "pide-gosht": {
+  "pide-pishloq": {
     kicker: "Tandirdan",
     story: "Xamir har kuni filialda qoriladi.",
+  },
+  "yasmiq-shorva": {
+    kicker: "Har kuni ertalabdan",
+    story: "Limon va krutonlar bilan, issiq.",
   },
 };
 

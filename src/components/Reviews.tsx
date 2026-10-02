@@ -43,13 +43,13 @@ const reviews = [
   },
 ];
 
-const posts: Array<{ art: ArtKind; seed: string; bg: string; caption: string; likes: string }> = [
-  { art: "wrap", seed: "ig-1", bg: "bg-forest", caption: "Klassika hech qachon eskirmaydi", likes: "2,4 ming" },
-  { art: "pide", seed: "ig-2", bg: "bg-ember", caption: "Tandirdan endigina chiqdi", likes: "1,8 ming" },
+const posts: Array<{ image?: string; art?: ArtKind; seed: string; bg: string; caption: string; likes: string }> = [
+  { image: "/images/donar-tarelka.webp", seed: "ig-1", bg: "bg-studio", caption: "Donar tarelka — klassika", likes: "2,4 ming" },
+  { image: "/images/pide-pishloqli.webp", seed: "ig-2", bg: "bg-studio", caption: "Tandirdan endigina chiqdi", likes: "1,8 ming" },
   { art: "drink", seed: "ig-ayron-3", bg: "bg-leaf", caption: "Ayron — har kuni yangi", likes: "1,1 ming" },
-  { art: "dessert", seed: "ig-4", bg: "bg-saffron", caption: "Paxlava juma kuni", likes: "3,0 ming" },
-  { art: "chicken", seed: "ig-5", bg: "bg-ink", caption: "Ko‘mir. Tutun. Tovuq.", likes: "2,2 ming" },
-  { art: "salad", seed: "ig-6", bg: "bg-forest-600", caption: "Yaproq salati qaytdi", likes: "960" },
+  { image: "/images/non-donar.webp", seed: "ig-4", bg: "bg-studio", caption: "Non ichida donar qaytdi", likes: "3,0 ming" },
+  { image: "/images/yasmiq-shorva.webp", seed: "ig-5", bg: "bg-studio", caption: "Sovuq kunlar uchun sho‘rva", likes: "2,2 ming" },
+  { image: "/images/lavash-donar.webp", seed: "ig-6", bg: "bg-studio", caption: "Lavash, go‘sht, fri. Tamom.", likes: "960" },
 ];
 
 const Stars = ({ n, className = "" }: { n: number; className?: string }) => (
@@ -127,7 +127,12 @@ export default function Reviews() {
           {posts.map((p, i) => (
             <Reveal as="li" key={p.seed} delay={i * 60}>
               <a href={contacts.instagram} target="_blank" rel="noopener noreferrer" className={`group relative block aspect-square overflow-hidden rounded-2xl ${p.bg}`} aria-label={`Instagram posti: ${p.caption}`}>
-                <DishArt kind={p.art} seed={p.seed} plate="none" className="absolute inset-[-8%] h-[116%] w-[116%] transition-transform duration-700 ease-out group-hover:rotate-12 group-hover:scale-110" />
+                {p.image ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={p.image} alt="" width={600} height={450} loading="lazy" className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" />
+                ) : (
+                  <DishArt kind={p.art!} seed={p.seed} plate="none" className="absolute inset-[-8%] h-[116%] w-[116%] transition-transform duration-700 ease-out group-hover:rotate-12 group-hover:scale-110" />
+                )}
                 <span className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-ink/80 via-ink/10 to-transparent p-3 text-cream opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
                   <span className="text-[13px] font-semibold leading-snug">{p.caption}</span>
                   <span className="mt-1 flex items-center gap-1 text-[12px] text-cream/70">♥ {p.likes} <IconArrowUpRight className="ml-auto h-4 w-4" /></span>

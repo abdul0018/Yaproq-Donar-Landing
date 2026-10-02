@@ -32,6 +32,6 @@ Page flow: **Hero → category ribbon → popular → menu → promotions → ab
 ## Before launch
 
 - **Branch data**: addresses, phone numbers, hours and coordinates in `src/data/site.ts` are representative. Replace them with the real branch details.
-- **Photos**: dishes render with built-in illustrations (`DishArt`). To use real photography, add a file to `public/images/` and set `image: "/images/<file>.jpg"` on the dish in `menu.ts`. `DishVisual` switches to the photo automatically.
+- **Photos**: 5 real product photos live in `public/images/` (donar tarelka, lavashli donar, non ichida donar, pishloqli pide, yasmiq sho‘rva). Dishes without a photo fall back to the built-in illustration (`DishArt`). To add one, drop the file into `public/images/` and set `image: "/images/<file>.webp"` on the dish in `menu.ts`. Photo frames use the `studio` colour (`#E1DAD5`), which matches the photos' grey backdrop, so keep new shots on the same background.
 - **Orders**: checkout validates and shows a confirmation, but does not send the order anywhere. Connect it at the `Integration point` comment in `src/components/CartDrawer.tsx` (order API or Telegram bot).
 - **Reviews / Instagram**: sample content in `src/components/Reviews.tsx`.

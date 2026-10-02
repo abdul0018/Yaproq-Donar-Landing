@@ -12,6 +12,8 @@ const config: Config = {
         leaf: { DEFAULT: "#8DBF6A", 300: "#B7D99C", 100: "#E4F0D9" },
         ember: { DEFAULT: "#E2622B", 600: "#C9501C", 400: "#F08A55", 100: "#FBE3D5" },
         saffron: "#F2B544",
+        // Matches the backdrop of the studio product photos so photo tiles blend in.
+        studio: "#E1DAD5",
       },
       fontFamily: {
         display: ["var(--font-display)", "Georgia", "serif"],
