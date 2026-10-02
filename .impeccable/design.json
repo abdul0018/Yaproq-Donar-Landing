@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-02T17:37:37+00:00",
+  "generatedAt": "2026-10-02T17:53:57+00:00",
   "title": "Design System: YAPROQ DONAR",
   "extensions": {
     "colorMeta": {
@@ -77,11 +77,12 @@
           "#C5D9BA",
           "#E2ECDC",
           "#F1F6EE"
-        ]
+        ],
+        "purpose": "The open-now dot only."
       },
       "brand-olive": {
         "role": "primary",
-        "displayName": "Brand Olive (owner-pinned, no shipped surface)",
+        "displayName": "Brand Olive (owner-pinned)",
         "canonical": "#3E5F21",
         "tonalRamp": [
           "#17240C",
@@ -92,7 +93,8 @@
           "#86A06B",
           "#B9CBA6",
           "#E6EDDE"
-        ]
+        ],
+        "purpose": "Accent word in headlines on light grounds; hover colour for text links and ribbon items. About 6.7:1 on Paper."
       },
       "mist-green": {
         "role": "neutral",
@@ -282,7 +284,7 @@
       },
       "headline": {
         "displayName": "Headline",
-        "purpose": "Every section H2; one accent word may turn Sprout Green on light grounds."
+        "purpose": "Every section H2; one accent word may switch to Brand Olive on light grounds."
       },
       "title-lg": {
         "displayName": "Title Large",
@@ -325,8 +327,13 @@
       },
       {
         "name": "card-lift",
-        "value": "0 22px 44px -28px rgba(11,61,31,0.45)",
-        "purpose": "Dish tile hover."
+        "value": "0 18px 36px -28px rgba(11,61,31,0.6)",
+        "purpose": "Dish photo well at rest (the tile itself has no card)."
+      },
+      {
+        "name": "card-lift-hover",
+        "value": "0 26px 44px -26px rgba(11,61,31,0.65)",
+        "purpose": "Dish photo well on tile hover."
       },
       {
         "name": "card-selected",
@@ -449,10 +456,10 @@
     {
       "name": "Dish Tile",
       "kind": "card",
-      "refersTo": "dish-tile",
-      "description": "White 28px card, studio-grey photo well, Urbanist name, tabular price, add-to-cart pill.",
-      "html": "<article class=\"ds-dish\"><div class=\"ds-dish-photo\"><span class=\"ds-tag\">Yangi</span></div><h3>Yaproq donar</h3><p class=\"ds-dish-desc\">Mol go‘shti, kartoshka fri, lavash.</p><div class=\"ds-dish-row\"><b>79 000 so‘m</b><button class=\"ds-add\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M12 5v14M5 12h14\"/></svg> Savatga</button></div></article>",
-      "css": ".ds-dish{width:260px;background:#fff;border-radius:28px;padding:16px;transition:box-shadow .5s cubic-bezier(.16,1,.3,1);font-family:Manrope,system-ui,sans-serif}.ds-dish:hover{box-shadow:0 22px 44px -28px rgba(11,61,31,.45)}.ds-dish-photo{position:relative;aspect-ratio:4/3;border-radius:20px;background:#ECEBE7}.ds-tag{position:absolute;left:8px;top:8px;background:#EDCD49;color:#072813;border-radius:9999px;padding:4px 10px;font:700 12px/1 Manrope,sans-serif}.ds-dish h3{margin:12px 0 0;font:800 22px/1.25 Urbanist,system-ui,sans-serif;color:#0B3D1F}.ds-dish-desc{margin:6px 0 0;font-size:14px;line-height:1.375;color:#45574B}.ds-dish-row{margin-top:12px;display:flex;align-items:center;justify-content:space-between}.ds-dish-row b{font-weight:800;font-size:17px;color:#0B3D1F;font-variant-numeric:tabular-nums}.ds-add{display:inline-flex;align-items:center;gap:6px;height:44px;padding:0 20px;border:0;border-radius:9999px;background:#115A2E;color:#fff;font:700 14px/1 Manrope,sans-serif;cursor:pointer}.ds-add:hover{background:#1A6B39}.ds-add:focus-visible{outline:3px solid #115A2E;outline-offset:3px}"
+      "refersTo": "dish-photo",
+      "description": "No card: a studio-grey photo well with a soft green lift sits on the Mist Green ground; name, description, tabular price and add-to-cart pill follow on the ground.",
+      "html": "<div class=\"ds-dish-ground\"><article class=\"ds-dish\"><div class=\"ds-dish-photo\"><span class=\"ds-tag\">Yangi</span></div><h3>Yaproq donar</h3><p class=\"ds-dish-desc\">Mol go‘shti, kartoshka fri, lavash.</p><div class=\"ds-dish-row\"><b>79 000 so‘m</b><button class=\"ds-add\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M12 5v14M5 12h14\"/></svg> Savatga</button></div></article></div>",
+      "css": ".ds-dish-ground{background:#F1F6EE;padding:24px;font-family:Manrope,system-ui,sans-serif}.ds-dish{width:260px}.ds-dish-photo{position:relative;aspect-ratio:4/3;border-radius:22px;background:#ECEBE7;box-shadow:0 18px 36px -28px rgba(11,61,31,.6);transition:box-shadow .5s cubic-bezier(.16,1,.3,1)}.ds-dish:hover .ds-dish-photo{box-shadow:0 26px 44px -26px rgba(11,61,31,.65)}.ds-tag{position:absolute;left:8px;top:8px;background:#EDCD49;color:#072813;border-radius:9999px;padding:4px 10px;font:700 12px/1 Manrope,sans-serif}.ds-dish h3{margin:12px 0 0;font:800 22px/1.25 Urbanist,system-ui,sans-serif;color:#0B3D1F}.ds-dish-desc{margin:6px 0 0;font-size:14px;line-height:1.375;color:#45574B}.ds-dish-row{margin-top:12px;display:flex;align-items:center;justify-content:space-between}.ds-dish-row b{font-weight:800;font-size:17px;color:#0B3D1F;font-variant-numeric:tabular-nums}.ds-add{display:inline-flex;align-items:center;gap:6px;height:44px;padding:0 20px;border:0;border-radius:9999px;background:#115A2E;color:#fff;font:700 14px/1 Manrope,sans-serif;cursor:pointer}.ds-add:hover{background:#1A6B39}.ds-add:focus-visible{outline:3px solid #115A2E;outline-offset:3px}"
     },
     {
       "name": "Category Tabs",
@@ -489,7 +496,7 @@
   ],
   "narrative": {
     "northStar": "The Campaign Poster, Served Hot",
-    "overview": "This is the brand's own campaign artwork carried onto the web: deep green fields that read as the YAPROQ identity before a single word is read, brand yellow reserved for the things a hungry visitor should press, and heavy geometric headlines that sit like banner lettering. Food is always the real studio photograph on its grey studio backdrop, never an illustration. The page alternates full-bleed fields (forest green, paper, mist green, solid yellow, white) so each section is a distinct poster panel rather than a stack of cards on one ground.\n\nDensity is generous at section level (80px mobile, 112px desktop vertical rhythm) and compact inside commerce surfaces: dish tiles, size switches, and cart rows pack weight, price, and action tightly so ordering stays fast. Motion is quiet and eased (a single expo-out curve); the hero's leaf-in is the one authored entrance, everything else is a short fade-up reveal that respects reduced motion.\n\nThe world replaced an earlier cream, italic-serif, terracotta restaurant build. That default is rejected: no serif display, no cream ground, no terracotta.",
+    "overview": "**Creative North Star: \"The Campaign Poster, Served Hot\"**\n\nThis is the brand's own campaign artwork carried onto the web: deep green fields that read as the YAPROQ identity before a single word is read, brand yellow reserved for the things a hungry visitor should press, and heavy geometric headlines that sit like banner lettering. Food is always the real studio photograph on its grey studio backdrop, never an illustration. The page alternates full-bleed fields (forest green, paper, mist green, solid yellow, white) so each section is a distinct poster panel rather than a stack of cards on one ground.\n\nDensity is generous at section level (80px mobile, 112px desktop vertical rhythm) and compact inside commerce surfaces: dish tiles, size switches, and cart rows pack weight, price, and action tightly so ordering stays fast. Motion is quiet and eased (a single expo-out curve); the hero's leaf-in is the one authored entrance, everything else is a short fade-up reveal that respects reduced motion.\n\nThe world replaced an earlier cream, italic-serif, terracotta restaurant build. That default is rejected: no serif display, no cream ground, no terracotta.",
     "keyCharacteristics": [
       "Green field plus yellow action: green carries identity, yellow carries intent.",
       "The brand drop shape (one square corner, three round) frames hero, about, and closing photos.",

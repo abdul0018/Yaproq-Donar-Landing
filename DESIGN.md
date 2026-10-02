@@ -83,7 +83,6 @@ rounded:
   pill: "9999px"
   drop: "50% 0 50% 50%"
 spacing:
-  tile-pad: "16px"
   card-pad: "24px"
   gutter: "20px"
   section-y-mobile: "80px"
@@ -119,9 +118,7 @@ components:
     backgroundColor: "{colors.logo-green}"
     textColor: "{colors.white}"
   dish-tile:
-    backgroundColor: "{colors.white}"
-    rounded: "{rounded.card}"
-    padding: "{spacing.tile-pad}"
+    backgroundColor: "{colors.mist-green}"
   dish-photo:
     backgroundColor: "{colors.studio-grey}"
     rounded: "{rounded.tile}"
@@ -224,7 +221,7 @@ Two owner-pinned brand hues, green and yellow, carry the whole system over a gre
 
 ### Hierarchy
 - **Display** (900, clamp(2.9rem, 7.2vw, 6rem), 0.92): the hero H1 only. One accent word may switch to Brand Yellow.
-- **Headline** (900, clamp(2.2rem, 4.8vw, 4rem), 0.98): every section H2. One accent word may switch to Sprout Green on light grounds.
+- **Headline** (900, clamp(2.2rem, 4.8vw, 4rem), 0.98): every section H2. One accent word may switch to Brand Olive on light grounds.
 - **Title Large** (900, clamp(1.6rem, 2.8vw, 2.4rem), 1.05): the featured dish name in the signature card.
 - **Title** (900, 30px, 1): branch names, promo set names, large prices, offer rows (up to 34px).
 - **Title Small** (800, 20 to 22px, 1.25): dish tile names, about pillars, hero price chip.
@@ -245,13 +242,13 @@ Two owner-pinned brand hues, green and yellow, carry the whole system over a gre
 
 A centred container that caps at 1320px, with side padding of 16px (mobile), 24px (from 640px) and 40px (from 1024px). Sections are full-bleed colour fields with 80px vertical padding on mobile and 112px from 640px; each section switches field colour so the page reads as a sequence of panels.
 
-Desktop composition uses a 12-column grid: the hero splits 6/6 (copy left, drop photo right) with a full-width fact row underneath; branches split 5/7 (card list left, sticky map right); the signature section splits 7/5. Dish grids step 1, 2, 3, 4 columns at 0, 640, 1024 and 1280px with 16 to 20px gaps. On mobile, dish tiles switch to a horizontal row (104px photo beside text) to keep the menu scannable, and the map moves above the branch list.
+Desktop composition uses a 12-column grid: the hero splits 6/6 (copy left, drop photo right) with a full-width fact row underneath; branches split 5/7 (card list left, sticky map right); the signature section splits 7/5. Dish grids step 1, 2, 3, 4 columns at 0, 640, 1024 and 1280px with 20px gaps on mobile, then 24px across and 48px down from 640px. On mobile, dish tiles switch to a horizontal row (104px photo beside text) to keep the menu scannable, and the map moves above the branch list.
 
 The header is fixed at 72px, transparent over the hero and Paper with blur once scrolled; the menu's category bar sticks directly under it. Anchor scrolling offsets by 5.5rem so headings land clear of the header.
 
 ## Elevation & Depth
 
-Depth is mostly tonal: colour fields and white tiles on tinted grounds do the layering. Shadows are soft, long, negatively spread and tinted green or black at low opacity, used to lift a photo, the selected card, or a floating chip. There are no hard or offset shadows.
+Depth is mostly tonal: colour fields and white branch cards and dialogs on tinted grounds do the layering, while dish photos lift straight off the menu ground. Shadows are soft, long, negatively spread and tinted green or black at low opacity, used to lift a photo, the selected card, or a floating chip. There are no hard or offset shadows.
 
 ### Shadow Vocabulary
 - **Yellow Glow** (`box-shadow: 0 10px 24px -12px rgba(184,150,26,0.9)`): under the primary yellow button only.
