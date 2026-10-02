@@ -1,5 +1,5 @@
 // Business facts from the official site (yaproq-donar.uz: About, Branches, ordering config; read 2026-10-02).
-// Open questions are tracked in PRODUCT.md: the Nurafshon branch address, and which opening hours are current.
+// Nurafshon details are owner-provided (2026-10-02); its coordinates are the 2GIS point for the Besh Qozon building.
 
 export type Branch = {
   id: string;
@@ -7,6 +7,8 @@ export type Branch = {
   district?: string;
   /** Unknown addresses stay undefined: never guessed. */
   address?: string;
+  /** Wayfinding hint shown under the address. */
+  landmark?: string;
   /** Undefined when the branch's hours are not confirmed: no hours and no "open now" badge are shown. */
   hours?: string;
   /** Opening hours in 24h format (an end past 24 means after midnight), for the "open now" badge. */
@@ -45,6 +47,13 @@ export const branches: Branch[] = [
   {
     id: "nurafshon",
     name: "Nurafshon",
+    district: "Shayxontohur tumani",
+    address: "Nurafshon aylanma ko‘chasi, 41/13",
+    landmark: "«Besh Qozon» binosi, 3-qavat (terrasa)",
+    hours: "10:00 – 03:00",
+    open: [10, 27],
+    lat: 41.31654,
+    lng: 69.209663,
     phone: "+998 71 200 84 44",
     onlineOrders: false,
   },
@@ -68,8 +77,8 @@ export const contacts = {
 export const facts = {
   founded: 2021,
   delivery: "Eng yaqin filialdan 1 soat ichida",
-  /** Single displayed opening-hours value until the owner confirms which official figure is current. */
-  hours: "10:00 – 02:40",
+  /** Network-wide opening hours from the official About page; each branch card shows its own exact hours. */
+  hours: "10:00 – 03:00",
   payments: ["Naqd", "Karta", "Bank o‘tkazmasi", "Click", "Payme"],
 };
 

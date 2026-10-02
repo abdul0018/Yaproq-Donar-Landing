@@ -109,7 +109,7 @@ function BranchDialog({ branch, onClose, mounted }: { branch: Branch | null; onC
           <dl className="mt-6 grid gap-4 text-[15px]">
             <div className="flex gap-3">
               <IconPin className="mt-0.5 h-5 w-5 shrink-0 text-green-800" />
-              <div><dt className="sr-only">Manzil</dt><dd className="font-semibold">{branch.address ?? "Manzilni telefon orqali aniqlashtiring"}</dd></div>
+              <div><dt className="sr-only">Manzil</dt><dd className="font-semibold">{branch.address ?? "Manzilni telefon orqali aniqlashtiring"}</dd>{branch.landmark && <dd className="text-ink-600">{branch.landmark}</dd>}</div>
             </div>
             <div className="flex gap-3">
               <IconClock className="mt-0.5 h-5 w-5 shrink-0 text-green-800" />
@@ -210,7 +210,7 @@ export default function Branches() {
                       {distances?.[b.id] !== undefined && <span className="tabular shrink-0 text-[14px] font-bold text-green-800">{distances[b.id].toFixed(1).replace(".", ",")} km</span>}
                     </div>
                     <div className="pointer-events-none relative mt-4 grid gap-2 text-[15px] text-ink-700">
-                      <p className="flex gap-2.5"><IconPin className="mt-0.5 h-4 w-4 shrink-0 text-green-800" /> <span>{b.address ?? "Manzil va yo‘lni telefon orqali aniqlashtiring"}</span></p>
+                      <p className="flex gap-2.5"><IconPin className="mt-0.5 h-4 w-4 shrink-0 text-green-800" /> <span>{b.address ?? "Manzil va yo‘lni telefon orqali aniqlashtiring"}{b.landmark && <span className="block text-ink-500">{b.landmark}</span>}</span></p>
                       <p className="flex gap-2.5"><IconClock className="mt-0.5 h-4 w-4 shrink-0 text-green-800" /> <span className="tabular">{b.hours ? `Har kuni, ${b.hours}` : "Ish vaqtini telefon orqali aniqlashtiring"}</span></p>
                       <p className="flex gap-2.5"><IconPhone className="mt-0.5 h-4 w-4 shrink-0 text-green-800" /> <a href={telHref(b.phone)} className="tabular pointer-events-auto underline decoration-green-800/30 decoration-2 hover:decoration-green-800">{b.phone}</a></p>
                     </div>

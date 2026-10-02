@@ -18,4 +18,4 @@ FIRST VIEWPORT: green field; left H1 with "yangicha" in yellow, supporting copy,
 FORM: no concept roll. The user pinned the world in their own words ("keep the original yellow and green", after asking to use the official site's real content), so this is a refinement inside the brand's established campaign world, position 1 by default; seed key: none (roll waived by brand pin).
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
 
-Unresolved: Nurafshon address and hours; which official opening-hours figure is current.
+Unresolved: Kukcha/Yunusobod show 10:00–02:40 (ordering-system hours) while the official About page says 10:00–03:00; summary lines use 10:00–03:00, branch cards show each branch’s own hours.

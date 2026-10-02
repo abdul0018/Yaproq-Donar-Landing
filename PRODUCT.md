@@ -37,7 +37,7 @@ Source: https://yaproq-donar.uz (About, Branches and Menu pages, read 2026-10-02
   |---|---|---|---|
   | Kukcha | Ko‘kcha-Darvoza ko‘chasi, 345 | 41.322020, 69.205720 | Yes |
   | Yunusobod | Yunusobod tumani, Iftixor ko‘chasi, 1 (1/1 on 2GIS) | 41.347733, 69.286792 | Yes |
-  | Nurafshon | Open question; 2GIS lists a third YAPROQ at Sherozi ko‘chasi 41/1, 3rd floor, which may be this branch | Unknown | Not listed on the website |
+  | Nurafshon | Nurafshon aylanma ko‘chasi, 41/13, Shayxontohur tumani; «Besh Qozon» binosi, 3-qavat (terrasa). Hours 10:00–03:00. Owner-provided 2026-10-02 (sources: Goldenpages, Instagram). Same building as the 2GIS listing at Sherozi ko‘chasi 41/1 | 41.31654, 69.209663 (2GIS point; matches OSM "Besh qozon") | Not listed on the website |
 
 - **Hours:** the official sources disagree; owner to confirm.
   - About page: 10:00–03:00, delivery 10:00–03:00.
