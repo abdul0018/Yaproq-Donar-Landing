@@ -85,15 +85,26 @@ Source: https://yaproq-donar.uz (About, Branches and Menu pages, read 2026-10-02
 
 ## Brand Commitments
 
-- **Name:** YAPROQ DONAR. The official site also uses "YAPROQ DONER" for branch names.
-- **Official site theme:** primary `#edcd49` (yellow), secondary `#3e5f21` (green). Logo: https://yaproq-donar.uz/images/yaproq/logo.svg.
-  - These are recorded as existing brand assets. The owner has not said whether the redesign must keep them.
+- **Name:** YAPROQ DONAR. The logo reads "YAPROQ — Donar by Beshqozon". The official site also uses "YAPROQ DONER" for branch names.
+- **Colours (owner-confirmed, binding):** keep the original yellow `#edcd49` and green. Site green `#3e5f21`; logo green `#115a2e`.
+- **Logo:** https://yaproq-donar.uz/images/yaproq/logo.svg (single-colour wordmark), vendored as `src/components/Logo.tsx`.
+- **Campaign slogan:** "Ta’mga yangicha yondashuv", from the official homepage slider.
 - **From the original brief:**
   - Green must stay an important brand colour without covering the whole interface.
   - Copy is natural Uzbek Latin, with no random Russian or English.
   - The result should be premium, food-focused and conversion-focused, not a generic template or a delivery-marketplace look.
 
 ## Evidence on Hand
+
+- **Real promotions** (official homepage slider, 2026-10-02):
+  - Pita seti (tovuqli) −25%: 56 000 so‘m, was 75 500.
+  - Durum seti (tovuqli) −25%: 54 000 so‘m, was 73 500.
+  - "Birinchi yetkazib berish BEPUL".
+  - "Har bir buyurtmadan 2% keshbek" (shown with the app).
+  - No end dates are published, so no countdowns.
+- **App links:** App Store https://apps.apple.com/uz/app/yaproq-donar/id6755135029 · Google Play https://play.google.com/store/apps/details?id=uz.yaproqdonar.app
+- **Telegram bot and Facebook URLs:** not found on the official site; do not link them until confirmed.
+- **Price oddity:** "Qarsildoq baqlajon salati" is listed at 69 001 so‘m officially; it is shown as listed.
 
 - **Official menu data:** names, descriptions, prices, weights and product photo paths, from yaproq-donar.uz (2026-10-02).
 - **Product photos in this repo:** `public/images/` — donar-tarelka, lavash-donar, non-donar, pide-pishloqli, yasmiq-shorva.
@@ -104,12 +115,7 @@ Source: https://yaproq-donar.uz (About, Branches and Menu pages, read 2026-10-02
   - Ratings, review counts and customer testimonials.
   - Daily volumes, preparation times, seat counts and amenities (parking, kids' corner, terrace, drive-thru, 24/7).
   - Chef quotes, the founding story, and promotions or discounts.
-- **Known false content in the current site build — must be corrected:**
-  - Founding year (says 2016; the truth is 2021).
-  - Branch names, addresses, phones, hours and features.
-  - Rating "4.8 / 2 400+ sharh" and the testimonials.
-  - "1 200+ porsiya", "~12 daq" and "−20% tushlikda".
-  - Invented dishes and prices, plus the Instagram captions and like counts.
+- **Invented content removed (2026-10-02 rebuild):** the earlier build's fake founding year, branches, ratings, testimonials, stats, dishes, prices and promotions have been replaced with the official data above. Do not reintroduce any of them.
 
 ## Product Principles
 

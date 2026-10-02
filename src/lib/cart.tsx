@@ -1,7 +1,7 @@
 "use client";
 
 import { createContext, useCallback, useContext, useEffect, useMemo, useReducer, useState, type ReactNode } from "react";
-import { getDish, type Dish } from "@/data/menu";
+import { getVariant, variantName, type Dish, type Variant } from "@/data/menu";
 
 type Line = { id: string; qty: number };
 type State = { lines: Line[] };
@@ -28,7 +28,8 @@ function reducer(state: State, a: Action): State {
 }
 
 type CartCtx = {
-  lines: Array<Line & { dish: Dish }>;
+  /** `id` is a variant id (official product slug). */
+  lines: Array<Line & { dish: Dish; variant: Variant; name: string }>;
   count: number;
   subtotal: number;
   qtyOf: (id: string) => number;
@@ -42,7 +43,7 @@ type CartCtx = {
 };
 
 const Ctx = createContext<CartCtx | null>(null);
-const KEY = "yaproq-cart-v1";
+const KEY = "yaproq-cart-v2";
 
 export function CartProvider({ children }: { children: ReactNode }) {
   const [state, dispatch] = useReducer(reducer, { lines: [] });
@@ -54,7 +55,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
     try {
       const raw = localStorage.getItem(KEY);
       if (raw) {
-        const lines = (JSON.parse(raw) as Line[]).filter((l) => getDish(l.id) && l.qty > 0);
+        const lines = (JSON.parse(raw) as Line[]).filter((l) => getVariant(l.id) && l.qty > 0);
         dispatch({ type: "hydrate", lines });
       }
     } catch {}
@@ -76,11 +77,14 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const clear = useCallback(() => dispatch({ type: "clear" }), []);
 
   const value = useMemo<CartCtx>(() => {
-    const lines = state.lines.map((l) => ({ ...l, dish: getDish(l.id)! }));
+    const lines = state.lines.map((l) => {
+      const { dish, variant } = getVariant(l.id)!;
+      return { ...l, dish, variant, name: variantName(dish, variant) };
+    });
     return {
       lines,
       count: lines.reduce((s, l) => s + l.qty, 0),
-      subtotal: lines.reduce((s, l) => s + l.qty * l.dish.price, 0),
+      subtotal: lines.reduce((s, l) => s + l.qty * l.variant.price, 0),
       qtyOf: (id) => state.lines.find((l) => l.id === id)?.qty ?? 0,
       add,
       setQty,

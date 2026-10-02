@@ -1,74 +1,57 @@
+import { facts } from "@/data/site";
 import Reveal from "./Reveal";
 
+// Facts from the official About page (yaproq-donar.uz/en/pages/about). Nothing here is embellished.
 const pillars = [
   {
-    n: "01",
-    title: "Go‘sht",
-    text: "Faqat mahalliy mol va tovuq go‘shti. Har tong filialda marinadlanadi — kechagi go‘sht ertangi kunga qolmaydi.",
+    title: "Mahalliy mol go‘shti",
+    text: "Taomlarimizning aksariyatida 100% mahalliy, sifatli mol go‘shtidan tayyorlangan donar ishlatiladi.",
   },
   {
-    n: "02",
-    title: "Non",
-    text: "Lavash va pide xamiri har kuni qoriladi. Lavash buyurtmadan so‘ng isitiladi, shuning uchun yumshoq bo‘ladi.",
+    title: "Turk oshxonasi",
+    text: "Asosan turk taomlari va desertlari: Iskender kabob, beyti, pide, ezogelin sho‘rvasi, San Sebastyan va trileche.",
   },
   {
-    n: "03",
-    title: "Sous",
-    text: "Firmaviy oq sous qatiq, sarimsoq va ukropdan tayyorlanadi. Retsepti 2016 yildan beri o‘zgarmagan.",
+    title: "Mehmonlar ishonchi",
+    text: "Asosiy qadriyatimiz — sifatli taom va mehmonlarimizning ishonchi. Shuning uchun asosiy taomga salat va souslar sovg‘a.",
   },
 ];
 
 export default function About() {
   return (
-    <section id="biz-haqimizda" aria-labelledby="about-title" className="relative overflow-hidden bg-cream py-20 sm:py-28">
-      <div className="container grid gap-14 lg:grid-cols-12 lg:gap-10">
+    <section id="biz-haqimizda" aria-labelledby="about-title" className="bg-paper py-20 sm:py-28">
+      <div className="container grid gap-12 lg:grid-cols-12 lg:gap-10">
         <div className="lg:col-span-7">
           <Reveal>
-            <p className="eyebrow text-ember">Biz haqimizda</p>
-            <h2 id="about-title" className="mt-5 font-display text-display-lg font-medium">
-              <span className="italic text-forest">Yaproq</span> — barg degani. Biz uchun bu{" "}
-              <span className="relative whitespace-nowrap">
-                yangilik
-                <svg aria-hidden viewBox="0 0 200 12" className="absolute -bottom-2 left-0 w-full text-leaf" preserveAspectRatio="none">
-                  <path d="M2 8C50 2 150 2 198 7" stroke="currentColor" strokeWidth="4" fill="none" strokeLinecap="round" />
-                </svg>
-              </span>{" "}
-              va halollik.
+            <h2 id="about-title" className="font-display text-display-lg font-black text-green-900">
+              {facts.founded} yildan beri Toshkentda turkcha donar
             </h2>
-          </Reveal>
-          <Reveal delay={100}>
-            <p className="mt-8 max-w-2xl text-[18px] leading-relaxed text-ink-600">
-              YAPROQ 2016 yilda Chilonzordagi kichik oshxonadan boshlangan. Maqsad oddiy edi: donarni xuddi uyda qilgandek — yangi
-              mahsulotdan, shoshilmasdan va to‘yimli qilib tayyorlash. Bugun bizning uchta filialimiz bor, lekin bu qoida o‘zgarmagan.
+            <p className="mt-6 max-w-[62ch] text-[18px] leading-relaxed text-ink-700">
+              YAPROQ — «Donar by Beshqozon». {facts.founded} yilda ochilganmiz va bugun Toshkentda uchta filialimiz bor: Kukcha, Nurafshon va Yunusobod. Filialga kelishingiz, olib ketishingiz yoki eng yaqin filialdan yetkazib berishni buyurtma qilishingiz mumkin.
             </p>
           </Reveal>
 
-          <ol className="mt-12 grid gap-px overflow-hidden rounded-3xl bg-ink/10 sm:grid-cols-3">
+          <ul className="mt-12 grid gap-8 sm:grid-cols-3 sm:gap-6">
             {pillars.map((p, i) => (
-              <Reveal as="li" key={p.n} delay={i * 90} className="bg-cream p-6 sm:p-7">
-                <span className="font-display text-[15px] italic text-ember">{p.n}</span>
-                <h3 className="mt-3 font-display text-[28px] leading-none">{p.title}</h3>
-                <p className="mt-3 text-[15px] leading-relaxed text-ink-500">{p.text}</p>
+              <Reveal as="li" key={p.title} delay={i * 90} className="border-t-2 border-green-800 pt-5">
+                <h3 className="font-display text-[24px] font-extrabold leading-tight text-green-900">{p.title}</h3>
+                <p className="mt-2 text-[15px] leading-relaxed text-ink-600">{p.text}</p>
               </Reveal>
             ))}
-          </ol>
+          </ul>
         </div>
 
-        <Reveal delay={150} className="relative lg:col-span-5">
-          <figure className="relative mx-auto max-w-md overflow-hidden rounded-[40px] bg-forest p-3 lg:max-w-none">
-            <div className="overflow-hidden rounded-[30px] bg-studio">
+        <Reveal delay={120} className="lg:col-span-5">
+          <figure className="mx-auto max-w-md lg:max-w-none">
+            <div className="relative p-3 sm:p-4">
+            <div aria-hidden className="absolute inset-0 rounded-[50%_0_50%_50%] bg-yellow" />
+            <div className="relative aspect-square overflow-hidden rounded-[50%_0_50%_50%] bg-studio">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/pide-pishloqli.webp" alt="Tandirdan yangi chiqqan pishloqli pide" width={600} height={450} loading="lazy" className="aspect-[4/3] w-full object-cover transition-transform duration-[1.2s] ease-out hover:scale-105" />
+              <img src="/images/menu/iskender-kabob.webp" alt="Iskender kabob: mol go‘shti, tomat qaylasi va suzma" width={600} height={450} loading="lazy" className="h-full w-full scale-110 object-cover" />
             </div>
-            <figcaption className="px-5 pb-5 pt-6 text-cream sm:px-6">
-              <p className="font-display text-[22px] italic leading-snug">“Go‘sht tongda keladi, kechqurun tugaydi. Qolgani — bizning ishimiz emas.”</p>
-              <p className="mt-3 text-[14px] text-cream/60">Bosh oshpaz</p>
-            </figcaption>
+            </div>
+            <figcaption className="mt-6 text-center text-[14px] font-semibold text-ink-600">Iskender kabob — mol go‘shti, tomat qaylasi, iskender noni va suzma</figcaption>
           </figure>
-          <div className="absolute -left-6 bottom-36 hidden rounded-2xl bg-cream-50 p-5 shadow-[0_24px_60px_-30px_rgba(21,32,26,0.5)] sm:block lg:-left-10">
-            <p className="font-display text-5xl leading-none text-forest">1 200+</p>
-            <p className="mt-2 max-w-[14ch] text-[14px] leading-snug text-ink-500">porsiya donar har kuni tayyorlanadi</p>
-          </div>
         </Reveal>
       </div>
     </section>

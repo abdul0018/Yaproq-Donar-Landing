@@ -3,32 +3,28 @@
 import { useCart } from "@/lib/cart";
 import { IconMinus, IconPlus } from "./icons";
 
-/** "Savatga" button that turns into a quantity stepper once the item is in the cart. */
-export default function AddToCart({ id, name, size = "md", tone = "dark" }: { id: string; name: string; size?: "md" | "lg"; tone?: "dark" | "ember" }) {
+/** "Savatga" button for one size of a dish; turns into a quantity stepper once it is in the cart. */
+export default function AddToCart({ variantId, name, size = "md", tone = "green" }: { variantId: string; name: string; size?: "md" | "lg"; tone?: "green" | "yellow" }) {
   const { qtyOf, add, setQty } = useCart();
-  const qty = qtyOf(id);
+  const qty = qtyOf(variantId);
   const h = size === "lg" ? "h-12" : "h-11";
+  const fill = tone === "yellow" ? "bg-yellow text-green-950 hover:bg-yellow-300" : "bg-green-800 text-white hover:bg-green-700";
 
   if (qty === 0) {
     return (
-      <button
-        type="button"
-        onClick={() => add(id)}
-        className={`btn ${h} min-h-0 px-5 ${tone === "ember" ? "bg-ember text-white hover:bg-ember-600" : "bg-forest text-cream hover:bg-ember"}`}
-        aria-label={`${name}ni savatga qo‘shish`}
-      >
+      <button type="button" onClick={() => add(variantId)} className={`btn ${h} min-h-0 px-5 ${fill}`} aria-label={`${name} — savatga qo‘shish`}>
         <IconPlus className="h-4 w-4" /> Savatga
       </button>
     );
   }
 
   return (
-    <div className={`inline-flex ${h} items-center rounded-full bg-forest text-cream`} role="group" aria-label={`${name}: ${qty} ta`}>
-      <button type="button" onClick={() => setQty(id, qty - 1)} className="grid h-full w-11 place-items-center rounded-full transition hover:bg-white/10 active:scale-90" aria-label="Kamaytirish">
+    <div className={`inline-flex ${h} items-center rounded-full ${fill}`} role="group" aria-label={`${name}: savatda ${qty} ta`}>
+      <button type="button" onClick={() => setQty(variantId, qty - 1)} className="grid h-full w-11 place-items-center rounded-full transition hover:bg-black/10 active:scale-90" aria-label="Bittaga kamaytirish">
         <IconMinus className="h-4 w-4" />
       </button>
-      <span className="min-w-6 text-center text-[15px] font-bold tabular-nums" aria-live="polite">{qty}</span>
-      <button type="button" onClick={() => add(id)} className="grid h-full w-11 place-items-center rounded-full transition hover:bg-white/10 active:scale-90" aria-label="Ko‘paytirish">
+      <span className="tabular min-w-6 text-center text-[15px] font-bold" aria-live="polite">{qty}</span>
+      <button type="button" onClick={() => add(variantId)} className="grid h-full w-11 place-items-center rounded-full transition hover:bg-black/10 active:scale-90" aria-label="Bittaga ko‘paytirish">
         <IconPlus className="h-4 w-4" />
       </button>
     </div>

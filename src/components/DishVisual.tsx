@@ -1,23 +1,8 @@
 import DishArt from "./DishArt";
 import type { Dish } from "@/data/menu";
 
-type Props = {
-  dish: Dish;
-  /** Plate tone for the illustration fallback. */
-  plate?: "light" | "dark" | "none";
-  /** Extra classes on the photo (e.g. hover zoom). */
-  photoClassName?: string;
-  /** Extra classes on the illustration (e.g. padding, hover rotation). */
-  artClassName?: string;
-  sizes?: string;
-  priority?: boolean;
-};
-
-/**
- * Real product photo when the dish has one, otherwise the illustration.
- * Fills its parent — the parent decides the frame (tile, disc, thumbnail).
- */
-export default function DishVisual({ dish, plate = "light", photoClassName = "", artClassName = "", priority }: Props) {
+/** The official product photo, or a drawn fallback for the rare item without one. Fills its parent. */
+export default function DishVisual({ dish, className = "", priority }: { dish: Dish; className?: string; priority?: boolean }) {
   if (dish.image) {
     return (
       // eslint-disable-next-line @next/next/no-img-element
@@ -28,9 +13,13 @@ export default function DishVisual({ dish, plate = "light", photoClassName = "",
         height={450}
         loading={priority ? "eager" : "lazy"}
         decoding="async"
-        className={`h-full w-full object-cover ${photoClassName}`}
+        className={`h-full w-full object-cover ${className}`}
       />
     );
   }
-  return <DishArt kind={dish.art} seed={dish.id} plate={plate} className={`h-full w-full ${artClassName}`} title={dish.name} />;
+  return (
+    <div className="grid h-full w-full place-items-center bg-studio">
+      <DishArt kind="drink" seed={dish.id} plate="none" className="h-[78%] w-[78%]" title={dish.name} />
+    </div>
+  );
 }

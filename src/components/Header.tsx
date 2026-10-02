@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Logo from "./Logo";
-import { IconBag, IconClose, IconMenu, IconPhone } from "./icons";
+import { IconArrow, IconBag, IconClose, IconMenu, IconPhone } from "./icons";
 import { navLinks, contacts, telHref } from "@/data/site";
 import { useCart } from "@/lib/cart";
 
@@ -45,12 +45,12 @@ export default function Header() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow,color] duration-500 ${
-        light ? "bg-transparent text-cream" : "bg-cream/90 text-ink shadow-[0_1px_0_rgba(21,32,26,0.08)] backdrop-blur-md"
+        light ? "bg-transparent text-white" : "bg-paper/95 text-ink shadow-[0_1px_0_rgba(15,36,23,0.08)] backdrop-blur-md"
       }`}
     >
       <div className="container flex h-[72px] items-center justify-between gap-6">
-        <a href="#asosiy" aria-label="YAPROQ DONAR — bosh sahifa" onClick={() => setMenuOpen(false)}>
-          <Logo tone={light ? "light" : "dark"} />
+        <a href="#asosiy" aria-label="YAPROQ — bosh sahifa" onClick={() => setMenuOpen(false)} className={light ? "text-white" : "text-green-800"}>
+          <Logo className="h-8 w-auto sm:h-9" />
         </a>
 
         <nav aria-label="Asosiy navigatsiya" className="hidden lg:block">
@@ -62,8 +62,8 @@ export default function Header() {
                   <a
                     href={l.href}
                     aria-current={isActive ? "true" : undefined}
-                    className={`relative rounded-full px-4 py-2 text-[15px] font-medium transition-colors ${
-                      isActive ? (light ? "bg-cream/15" : "bg-forest/10 text-forest") : light ? "hover:bg-cream/10" : "hover:bg-ink/5"
+                    className={`relative rounded-full px-4 py-2 text-[15px] font-semibold transition-colors ${
+                      isActive ? (light ? "bg-white/15" : "bg-green-800/10 text-green-800") : light ? "hover:bg-white/10" : "hover:bg-green-800/5"
                     }`}
                   >
                     {l.label}
@@ -75,24 +75,24 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <a href={telHref(contacts.callCenter)} className={`hidden items-center gap-2 rounded-full px-3 py-2 text-[15px] font-semibold xl:inline-flex ${light ? "hover:bg-cream/10" : "hover:bg-ink/5"}`}>
-            <IconPhone className="h-4 w-4" /> {contacts.callCenterShort}
+          <a href={telHref(contacts.phone)} className={`tabular hidden items-center gap-2 rounded-full px-3 py-2 text-[15px] font-bold xl:inline-flex ${light ? "hover:bg-white/10" : "hover:bg-green-800/5"}`}>
+            <IconPhone className="h-4 w-4" /> {contacts.phone}
           </a>
           <button
             type="button"
             onClick={() => setOpen(true)}
-            className={`btn min-h-[44px] gap-2.5 px-4 sm:px-5 ${light ? "bg-cream text-forest hover:bg-white" : "bg-forest text-cream hover:bg-forest-700"}`}
+            className="btn min-h-[44px] gap-2.5 bg-yellow px-4 text-green-950 hover:bg-yellow-300 sm:px-5"
             aria-label={`Savat, ${count} ta mahsulot`}
           >
             <IconBag className="h-[18px] w-[18px]" />
             <span className="hidden sm:inline">Buyurtma</span>
-            <span key={pulse?.n} className={`grid h-6 min-w-6 place-items-center rounded-full bg-ember px-1.5 text-[12px] font-bold text-white ${pulse ? "animate-pop" : ""}`}>
+            <span key={pulse?.n} className={`tabular grid h-6 min-w-6 place-items-center rounded-full bg-green-900 px-1.5 text-[12px] font-bold text-white ${pulse ? "animate-pop" : ""}`}>
               {count}
             </span>
           </button>
           <button
             type="button"
-            className={`grid h-11 w-11 place-items-center rounded-full lg:hidden ${light ? "hover:bg-cream/10" : "hover:bg-ink/5"}`}
+            className={`grid h-11 w-11 place-items-center rounded-full lg:hidden ${light ? "hover:bg-white/10" : "hover:bg-green-800/5"}`}
             onClick={() => setMenuOpen((v) => !v)}
             aria-expanded={menuOpen}
             aria-controls="mobile-nav"
@@ -106,17 +106,17 @@ export default function Header() {
       {/* Mobile navigation */}
       <div
         id="mobile-nav"
-        className={`fixed inset-x-0 bottom-0 top-[72px] origin-top bg-cream transition-all duration-500 ease-out lg:hidden ${
+        className={`fixed inset-x-0 bottom-0 top-[72px] origin-top bg-paper transition-all duration-500 ease-out lg:hidden ${
           menuOpen ? "visible opacity-100" : "invisible -translate-y-2 opacity-0"
         }`}
       >
         <nav aria-label="Mobil navigatsiya" className="container flex h-full flex-col pb-8 pt-6">
           <ul className="flex flex-col">
-            {navLinks.map((l, i) => (
-              <li key={l.href} className="border-b border-ink/10" style={{ transitionDelay: `${menuOpen ? i * 40 : 0}ms` }}>
-                <a href={l.href} onClick={() => setMenuOpen(false)} className="flex items-center justify-between py-5 font-display text-[32px] leading-none tracking-tight text-ink">
+            {navLinks.map((l) => (
+              <li key={l.href} className="border-b border-green-800/10">
+                <a href={l.href} onClick={() => setMenuOpen(false)} className="flex items-center justify-between py-5 font-display text-[34px] font-extrabold leading-none tracking-tight text-green-900">
                   {l.label}
-                  <span className="text-[14px] font-sans font-semibold text-ink-400">0{i + 1}</span>
+                  <IconArrow className="h-6 w-6 text-green-800/40" />
                 </a>
               </li>
             ))}
@@ -125,8 +125,8 @@ export default function Header() {
             <button type="button" onClick={() => { setMenuOpen(false); setOpen(true); }} className="btn-primary w-full">
               <IconBag className="h-5 w-5" /> Buyurtma berish
             </button>
-            <a href={telHref(contacts.callCenter)} className="btn-ghost w-full">
-              <IconPhone className="h-5 w-5" /> {contacts.callCenter}
+            <a href={telHref(contacts.phone)} className="btn-outline tabular w-full">
+              <IconPhone className="h-5 w-5" /> {contacts.phone}
             </a>
           </div>
         </nav>

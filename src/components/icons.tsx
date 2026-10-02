@@ -24,3 +24,11 @@ export const IconTelegram = (p: P) => (<svg {...base(p)}><path d="M21 4 3 11l6 2
 export const IconTruck = (p: P) => (<svg {...base(p)}><path d="M3 6h11v10H3zM14 10h4l3 3v3h-7" /><circle cx="7" cy="17.5" r="1.8" /><circle cx="17.5" cy="17.5" r="1.8" /></svg>);
 export const IconLocate = (p: P) => (<svg {...base(p)}><circle cx="12" cy="12" r="3" /><circle cx="12" cy="12" r="8" /><path d="M12 2v2M12 20v2M2 12h2M20 12h2" /></svg>);
 export const IconQuote = (p: P) => (<svg {...base(p)} fill="currentColor" stroke="none"><path d="M10 7H6a2 2 0 0 0-2 2v4h4v4l2-4V7Zm10 0h-4a2 2 0 0 0-2 2v4h4v4l2-4V7Z" /></svg>);
+export const IconCopy = (p: P) => (<svg {...base(p)}><rect x="8" y="8" width="12" height="12" rx="2.5" /><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" /></svg>);
+export const IconGlobe = (p: P) => (<svg {...base(p)}><circle cx="12" cy="12" r="8.5" /><path d="M3.5 12h17M12 3.5c2.5 2.6 3.5 5.4 3.5 8.5s-1 5.9-3.5 8.5c-2.5-2.6-3.5-5.4-3.5-8.5s1-5.9 3.5-8.5Z" /></svg>);
+export const IconDevice = (p: P) => (<svg {...base(p)}><rect x="6.5" y="2.5" width="11" height="19" rx="2.5" /><path d="M10.5 18.5h3" /></svg>);
+export const IconStore = (p: P) => (<svg {...base(p)}><path d="M4 9.5 5.5 4h13L20 9.5" /><path d="M4 9.5a2.7 2.7 0 0 0 5.3 0 2.7 2.7 0 0 0 5.4 0 2.7 2.7 0 0 0 5.3 0" /><path d="M5.5 12v8h13v-8M10 20v-4.5h4V20" /></svg>);
+export const IconGift = (p: P) => (<svg {...base(p)}><rect x="3.5" y="8.5" width="17" height="4" rx="1" /><path d="M5 12.5V20h14v-7.5M12 8.5V20M12 8.5C10.5 5 7 5 7 7s3 1.5 5 1.5ZM12 8.5C13.5 5 17 5 17 7s-3 1.5-5 1.5Z" /></svg>);
+export const IconCard = (p: P) => (<svg {...base(p)}><rect x="3" y="5.5" width="18" height="13" rx="2.5" /><path d="M3 10h18M7 15h4" /></svg>);
+/** Sprout leaf, the device YAPROQ uses in its campaign artwork. */
+export const IconSprout = (p: P) => (<svg {...base(p)} fill="currentColor" stroke="none"><path d="M11.2 21.5v-6.2C6.4 15 3.5 12 3.6 7.2c4.7-.1 7.4 2.4 7.9 6.4.5-5.3 3.6-9 9-9.4.3 6.4-3.2 10.2-8.3 10.9v6.4h-1Z" /></svg>);

@@ -1,74 +1,76 @@
-// NOTE: addresses, phone numbers and coordinates below are representative content for the
-// design. Replace them with the confirmed details of each YAPROQ DONAR branch before launch.
+// Business facts from the official site (yaproq-donar.uz: About, Branches, ordering config; read 2026-10-02).
+// Open questions are tracked in PRODUCT.md: the Nurafshon branch address, and which opening hours are current.
 
 export type Branch = {
   id: string;
   name: string;
-  district: string;
-  address: string;
-  landmark: string;
+  district?: string;
+  /** Unknown addresses stay undefined: never guessed. */
+  address?: string;
   hours: string;
-  /** Opening hours in 24h format, used for the "open now" indicator. */
+  /** Opening hours in 24h format (an end past 24 means after midnight), for the "open now" badge. */
   open: [number, number];
   phone: string;
-  lat: number;
-  lng: number;
-  seats: number;
-  features: string[];
+  lat?: number;
+  lng?: number;
+  /** Whether the branch takes orders through the official website. */
+  onlineOrders: boolean;
 };
 
 export const branches: Branch[] = [
   {
-    id: "chilonzor",
-    name: "Chilonzor",
-    district: "Chilonzor tumani",
-    address: "Bunyodkor shoh ko‘chasi, 18",
-    landmark: "Chilonzor metro bekati yonida",
-    hours: "09:00 – 02:00",
-    open: [9, 26],
-    phone: "+998 71 200 11 01",
-    lat: 41.2757,
-    lng: 69.2036,
-    seats: 80,
-    features: ["Avtoturargoh", "Bolalar burchagi", "Olib ketish"],
+    id: "kukcha",
+    name: "Kukcha",
+    address: "Ko‘kcha-Darvoza ko‘chasi, 345",
+    hours: "10:00 – 02:40",
+    open: [10, 26 + 40 / 60],
+    phone: "+998 71 200 84 44",
+    lat: 41.32202,
+    lng: 69.20572,
+    onlineOrders: true,
   },
   {
     id: "yunusobod",
     name: "Yunusobod",
     district: "Yunusobod tumani",
-    address: "Amir Temur shoh ko‘chasi, 107",
-    landmark: "Minor masjidi ro‘parasida",
-    hours: "10:00 – 01:00",
-    open: [10, 25],
-    phone: "+998 71 200 11 02",
-    lat: 41.3489,
-    lng: 69.2869,
-    seats: 120,
-    features: ["Yozgi terrasa", "Wi‑Fi", "Avtoturargoh"],
+    address: "Iftixor ko‘chasi, 1",
+    hours: "10:00 – 02:40",
+    open: [10, 26 + 40 / 60],
+    phone: "+998 71 200 84 44",
+    lat: 41.347733,
+    lng: 69.286792,
+    onlineOrders: true,
   },
   {
-    id: "buyuk-ipak",
-    name: "Buyuk Ipak Yo‘li",
-    district: "Mirzo Ulug‘bek tumani",
-    address: "Mirzo Ulug‘bek ko‘chasi, 56",
-    landmark: "Buyuk Ipak Yo‘li metro bekatidan 3 daqiqa",
-    hours: "24 soat",
-    open: [0, 24],
-    phone: "+998 71 200 11 03",
-    lat: 41.3263,
-    lng: 69.3346,
-    seats: 60,
-    features: ["24/7", "Drive-thru", "Olib ketish"],
+    id: "nurafshon",
+    name: "Nurafshon",
+    hours: "10:00 – 02:40",
+    open: [10, 26 + 40 / 60],
+    phone: "+998 71 200 84 44",
+    onlineOrders: false,
   },
 ];
 
 export const contacts = {
-  callCenter: "+998 71 200 11 00",
-  callCenterShort: "1100",
-  telegram: "https://t.me/yaproqdonar",
-  instagram: "https://instagram.com/yaproqdonar",
+  phone: "+998 71 200 84 44",
+  website: "https://yaproq-donar.uz",
+  orderUrl: "https://yaproq-donar.uz/uz/menu",
+  instagram: "https://www.instagram.com/yaproqdonar/",
   instagramHandle: "@yaproqdonar",
-  email: "salom@yaproq.uz",
+  appStore: "https://apps.apple.com/uz/app/yaproq-donar/id6755135029",
+  googlePlay: "https://play.google.com/store/apps/details?id=uz.yaproqdonar.app",
+  vacancyPhone: "+998 94 502 03 13",
+  reviews: {
+    yandex: "https://yandex.com/maps/org/yaproq_donar/235698824081/reviews/",
+    gis: "https://2gis.uz/uz/tashkent/branches/70000001096825779",
+  },
+};
+
+export const facts = {
+  founded: 2021,
+  delivery: "Eng yaqin filialdan 1 soat ichida",
+  deliveryHours: "10:00 – 03:00",
+  payments: ["Naqd", "Karta", "Bank o‘tkazmasi", "Click", "Payme"],
 };
 
 export const navLinks = [
@@ -79,10 +81,10 @@ export const navLinks = [
   { href: "#aloqa", label: "Aloqa" },
 ];
 
-/** Projects a coordinate onto the stylised Tashkent map (0–100 on both axes). */
+/** Projects a coordinate onto the schematic Tashkent map (0–100 on both axes). */
 export const toMap = (lat: number, lng: number) => ({
-  x: Math.min(97, Math.max(3, ((lng - 69.13) / 0.27) * 100)),
-  y: Math.min(97, Math.max(3, ((41.4 - lat) / 0.16) * 100)),
+  x: Math.min(95, Math.max(5, ((lng - 69.13) / 0.27) * 100)),
+  y: Math.min(95, Math.max(5, ((41.4 - lat) / 0.16) * 100)),
 });
 
 /** Great-circle distance in km. */
@@ -94,10 +96,11 @@ export function distanceKm(a: { lat: number; lng: number }, b: { lat: number; ln
   return 2 * R * Math.asin(Math.sqrt(h));
 }
 
-export const directionsUrl = (b: Branch) =>
-  `https://www.google.com/maps/dir/?api=1&destination=${b.lat},${b.lng}`;
+export const hasLocation = (b: Branch): b is Branch & { lat: number; lng: number } => b.lat !== undefined && b.lng !== undefined;
 
-export const yandexUrl = (b: Branch) => `https://yandex.uz/maps/?rtext=~${b.lat},${b.lng}&rtt=auto`;
+export const directionsUrl = (b: Branch & { lat: number; lng: number }) => `https://www.google.com/maps/dir/?api=1&destination=${b.lat},${b.lng}`;
+
+export const yandexUrl = (b: Branch & { lat: number; lng: number }) => `https://yandex.uz/maps/?rtext=~${b.lat},${b.lng}&rtt=auto`;
 
 export const telHref = (phone: string) => `tel:${phone.replace(/\s/g, "")}`;
 
@@ -112,4 +115,4 @@ export function isOpenNow(b: Branch, date = new Date()) {
 }
 
 export const formatNumber = (n: number) => String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-export const formatPrice = (n: number) => `${formatNumber(n)} so‘m`;
+export const formatPrice = (n: number) => (n === 0 ? "Bepul" : `${formatNumber(n)} so‘m`);

@@ -1,8 +1,11 @@
 "use client";
 
-import { useEffect, useRef, useState, type ElementType, type ReactNode, type CSSProperties } from "react";
+import { useEffect, useRef, useState, type CSSProperties, type ElementType, type ReactNode } from "react";
 
-/** Fades content up once it scrolls into view. Respects prefers-reduced-motion via CSS. */
+/**
+ * Fades content up as it enters the viewport. Content renders visible on the server and
+ * without JS; only elements still below the fold after hydration are held back for the reveal.
+ */
 export default function Reveal({
   as: Tag = "div",
   children,
@@ -17,26 +20,29 @@ export default function Reveal({
   style?: CSSProperties;
 }) {
   const ref = useRef<HTMLElement>(null);
-  const [shown, setShown] = useState(false);
+  const [state, setState] = useState<"idle" | "pending" | "in">("idle");
 
   useEffect(() => {
     const el = ref.current;
-    if (!el) return;
+    if (!el || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (el.getBoundingClientRect().top < window.innerHeight * 0.92) return; // already on screen: leave it be
+    setState("pending");
     const io = new IntersectionObserver(
       ([e]) => {
         if (e.isIntersecting) {
-          setShown(true);
+          setState("in");
           io.disconnect();
         }
       },
-      { rootMargin: "0px 0px -10% 0px", threshold: 0.08 },
+      { rootMargin: "0px 0px -8% 0px" },
     );
     io.observe(el);
     return () => io.disconnect();
   }, []);
 
+  const cls = state === "pending" ? "reveal-pending" : state === "in" ? "reveal-in" : "";
   return (
-    <Tag ref={ref} className={`reveal ${shown ? "is-in" : ""} ${className}`} style={{ ...style, transitionDelay: `${delay}ms` }}>
+    <Tag ref={ref} className={`${cls} ${className}`} style={{ ...style, transitionDelay: state === "in" ? `${delay}ms` : undefined }}>
       {children}
     </Tag>
   );

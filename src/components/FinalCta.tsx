@@ -1,5 +1,6 @@
 "use client";
 
+import { contacts } from "@/data/site";
 import Reveal from "./Reveal";
 import { IconArrow, IconPin } from "./icons";
 import { useCart } from "@/lib/cart";
@@ -7,31 +8,31 @@ import { useCart } from "@/lib/cart";
 export default function FinalCta() {
   const { setOpen } = useCart();
   return (
-    <section aria-labelledby="cta-title" className="bg-cream pb-20 sm:pb-28">
+    <section aria-labelledby="cta-title" className="bg-white pb-20 sm:pb-28">
       <div className="container">
-        <Reveal className="grain relative overflow-hidden rounded-[36px] bg-ember px-6 py-14 text-white sm:px-12 sm:py-20 lg:px-16">
-          <div aria-hidden className="pointer-events-none absolute -bottom-40 -right-28 aspect-square w-[340px] sm:-right-16 sm:w-[440px] lg:-bottom-auto lg:right-12 lg:top-1/2 lg:w-[460px] lg:-translate-y-1/2">
-            <div className="h-full w-full overflow-hidden rounded-full bg-studio shadow-[0_40px_80px_-30px_rgba(0,0,0,0.6)] ring-[10px] ring-white/15">
+        <Reveal className="relative overflow-hidden rounded-[36px] bg-yellow px-6 py-14 text-green-950 sm:px-12 sm:py-20 lg:px-16">
+          <div aria-hidden className="pointer-events-none absolute -bottom-36 -right-24 aspect-square w-[320px] sm:-bottom-24 sm:-right-12 sm:w-[420px] lg:bottom-auto lg:right-14 lg:top-1/2 lg:w-[420px] lg:-translate-y-1/2">
+            <div className="h-full w-full overflow-hidden rounded-[50%_0_50%_50%] bg-studio shadow-[0_40px_70px_-30px_rgba(11,61,31,0.55)] ring-[10px] ring-green-800">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/lavash-donar.webp" alt="" width={600} height={450} loading="lazy" className="h-full w-full scale-[1.08] object-cover" />
+              <img src="/images/menu/pilav-ustu-donar.webp" alt="" width={600} height={450} loading="lazy" className="h-full w-full scale-[1.12] object-cover" />
             </div>
           </div>
           <div className="relative max-w-xl">
-            <p className="eyebrow text-white/80">Och qoldingizmi?</p>
-            <h2 id="cta-title" className="mt-5 font-display text-display-lg font-medium">
-              Issiq donar sizni <span className="italic">kutyapti.</span>
+            <h2 id="cta-title" className="font-display text-display-lg font-black text-green-900">
+              Issiq donar sizni kutyapti.
             </h2>
-            <p className="mt-5 max-w-md text-[17px] leading-relaxed text-white/85">
-              Uyga buyurtma bering — 45 daqiqada yetkazamiz. Yoki eng yaqin filialga keling: navbatsiz, issiq va yangi.
+            <p className="mt-5 max-w-md text-[17px] leading-relaxed">
+              Buyurtma bering — eng yaqin filialdan 1 soat ichida yetkazamiz. Yoki Kukcha, Nurafshon va Yunusobod filiallarimizga keling.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <button type="button" onClick={() => setOpen(true)} className="btn h-14 bg-ink px-8 text-base text-cream hover:bg-forest-900">
+              <button type="button" onClick={() => setOpen(true)} className="btn-green h-14 px-8 text-base">
                 Buyurtma berish <IconArrow className="h-5 w-5" />
               </button>
-              <a href="#filiallar" className="btn h-14 border border-white/40 px-7 text-base text-white hover:bg-white/10">
+              <a href="#filiallar" className="btn-outline h-14 border-green-900/30 px-7 text-base">
                 <IconPin className="h-5 w-5" /> Filialni tanlash
               </a>
             </div>
+            <p className="tabular mt-6 text-[14.5px] font-semibold">Yoki qo‘ng‘iroq qiling: {contacts.phone}</p>
           </div>
         </Reveal>
       </div>
