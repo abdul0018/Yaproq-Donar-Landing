@@ -4,15 +4,16 @@ import { contacts } from "@/data/site";
 import Reveal from "./Reveal";
 import { selectCategory } from "./CategoryStrip";
 import { IconArrowUpRight, IconInstagram, IconStar } from "./icons";
+import { BASE } from "@/lib/base";
 
 // Official menu photos, labelled as such (not presented as social posts).
 const photos = [
-  { src: "/images/menu/yaproq-donar.webp", name: "Yaproq donar", cat: "asosiy" },
-  { src: "/images/menu/yaproq-pide.webp", name: "Yaproq pide", cat: "pide" },
-  { src: "/images/menu/tovuq-iskender.webp", name: "Tovuqli Iskender", cat: "tovuq" },
-  { src: "/images/menu/mercimek.webp", name: "Merjimek sho‘rvasi", cat: "shorvalar" },
-  { src: "/images/menu/tombik-donar.webp", name: "Tombik donar", cat: "asosiy" },
-  { src: "/images/menu/havuch.webp", name: "Havuch", cat: "desertlar" },
+  { src: `${BASE}/images/menu/yaproq-donar.webp`, name: "Yaproq donar", cat: "asosiy" },
+  { src: `${BASE}/images/menu/yaproq-pide.webp`, name: "Yaproq pide", cat: "pide" },
+  { src: `${BASE}/images/menu/tovuq-iskender.webp`, name: "Tovuqli Iskender", cat: "tovuq" },
+  { src: `${BASE}/images/menu/mercimek.webp`, name: "Merjimek sho‘rvasi", cat: "shorvalar" },
+  { src: `${BASE}/images/menu/tombik-donar.webp`, name: "Tombik donar", cat: "asosiy" },
+  { src: `${BASE}/images/menu/havuch.webp`, name: "Havuch", cat: "desertlar" },
 ] as const;
 
 export default function Reviews() {

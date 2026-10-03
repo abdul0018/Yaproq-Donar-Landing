@@ -6,6 +6,7 @@ import SectionHeading from "./SectionHeading";
 import Reveal from "./Reveal";
 import { IconArrowUpRight, IconClock, IconClose, IconLocate, IconNavigate, IconPhone, IconPin } from "./icons";
 import Valance from "./Valance";
+import { BASE } from "@/lib/base";
 
 type Geo = { status: "idle" | "loading" | "ok" | "error"; pos?: { lat: number; lng: number }; message?: string };
 
@@ -34,7 +35,7 @@ function BranchMap({ selected, onSelect }: { selected: string; onSelect: (id: st
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         key={b.id}
-        src={`/images/map/${b.id}.webp`}
+        src={`${BASE}/images/map/${b.id}.webp`}
         alt={`${b.name} filiali joylashgan hudud xaritasi: ${b.address}`}
         width={1200}
         height={800}

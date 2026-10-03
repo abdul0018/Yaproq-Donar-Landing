@@ -1,5 +1,6 @@
 import type { Dish } from "@/data/menu";
 import { cutoutIds } from "@/data/cutouts";
+import { BASE } from "@/lib/base";
 
 /** The official product photo, or a name tile for the rare item without one. Fills its parent. */
 /**
@@ -12,7 +13,7 @@ export default function DishVisual({ dish, className = "", priority, onTile }: {
     return (
       // eslint-disable-next-line @next/next/no-img-element
       <img
-        src={`/images/cut/${dish.id}.webp`}
+        src={`${BASE}/images/cut/${dish.id}.webp`}
         alt={dish.name}
         width={700}
         height={525}

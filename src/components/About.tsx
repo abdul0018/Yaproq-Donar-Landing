@@ -1,6 +1,7 @@
 import { facts } from "@/data/site";
 import Reveal from "./Reveal";
 import Valance from "./Valance";
+import { BASE } from "@/lib/base";
 
 // Facts from the official About page (yaproq-donar.uz/en/pages/about). Nothing here is embellished.
 const pillars = [
@@ -52,7 +53,7 @@ export default function About() {
                 <div className="h-full w-full rounded-full border-[3px] border-dotted border-green-800/50" />
               </div>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/cut/iskender-kabob.webp" alt="Iskender kabob: mol go‘shti, tomat qaylasi va suzma" width={700} height={525} loading="lazy" className="absolute left-[14%] top-[22%] w-[72%] drop-shadow-[0_22px_20px_rgba(60,45,20,0.35)]" />
+              <img src={`${BASE}/images/cut/iskender-kabob.webp`} alt="Iskender kabob: mol go‘shti, tomat qaylasi va suzma" width={700} height={525} loading="lazy" className="absolute left-[14%] top-[22%] w-[72%] drop-shadow-[0_22px_20px_rgba(60,45,20,0.35)]" />
             </div>
             <figcaption className="relative z-10 mt-5 text-center font-display text-[20px] leading-snug text-green-800">Iskender kabob — mol go‘shti, tomat qaylasi, iskender noni va suzma</figcaption>
           </figure>
