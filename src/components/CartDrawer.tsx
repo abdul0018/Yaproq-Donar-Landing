@@ -56,7 +56,7 @@ export default function CartDrawer() {
       >
         <div className="flex items-center justify-between border-b border-green-800/10 px-5 py-4 sm:px-6">
           <h2 id={`${uid}-title`} className="font-display text-[28px] leading-none text-green-900">
-            Savat {count > 0 && <span className="tabular font-sans text-[16px] font-bold text-ink-500">· {count} ta</span>}
+            Savat {count > 0 && <span className="tabular font-sans text-[16px] font-bold text-ink-500">· {count} ta mahsulot</span>}
           </h2>
           <button type="button" onClick={() => setOpen(false)} className="grid h-11 w-11 place-items-center rounded-full hover:bg-green-800/5" aria-label="Savatni yopish">
             <IconClose className="h-5 w-5" />
@@ -66,8 +66,8 @@ export default function CartDrawer() {
         {lines.length === 0 ? (
           <div className="flex flex-1 flex-col overflow-y-auto px-5 py-8 sm:px-6">
             <span className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-yellow text-green-900"><IconBag className="h-7 w-7" /></span>
-            <p className="mt-5 text-center font-display text-[26px] text-green-900">Savat hozircha bo‘sh</p>
-            <p className="mt-2 text-center text-ink-600">Yaproq’ning asosiy taomlaridan boshlang:</p>
+            <p className="mt-5 text-center font-display text-[26px] text-green-900">Savatingiz hozircha bo‘sh</p>
+            <p className="mt-2 text-center text-ink-600">Yaproq’ning asosiy taomlaridan tanlashni boshlang:</p>
             <ul className="mt-8 grid gap-3">
               {suggestions.map((d) => {
                 const v = d.variants[0];
@@ -78,7 +78,7 @@ export default function CartDrawer() {
                       <p className="font-bold text-green-900">{d.name}</p>
                       <p className="tabular text-[14px] text-ink-600">{formatPrice(v.price)}{d.variants.length > 1 ? " dan" : ""}</p>
                     </div>
-                    <button type="button" onClick={() => add(v.id)} className="grid h-11 w-11 place-items-center rounded-full bg-green-800 text-white hover:bg-green-700" aria-label={`${d.name} — savatga qo‘shish`}>
+                    <button type="button" onClick={() => add(v.id)} className="grid h-11 w-11 place-items-center rounded-full bg-green-800 text-white hover:bg-green-700" aria-label={`${d.name}ni savatga qo‘shish`}>
                       <IconPlus className="h-5 w-5" />
                     </button>
                   </li>
@@ -107,7 +107,7 @@ export default function CartDrawer() {
                 ))}
               </ul>
               <p className="mt-5 rounded-2xl bg-green-800/[0.06] p-4 text-[14px] leading-relaxed text-ink-700">
-                Asosiy taomga salat va souslar sovg‘a. Yetkazib berish narxi manzilingizga bog‘liq, birinchi yetkazib berish — bepul.
+                Asosiy taomga salat va souslar sovg‘a tariqasida beriladi. Yetkazib berish narxi manzilingizga qarab belgilanadi, birinchi yetkazib berish esa mutlaqo bepul.
               </p>
             </div>
 
@@ -116,17 +116,17 @@ export default function CartDrawer() {
                 <span>Jami</span>
                 <span className="tabular">{formatPrice(subtotal)}</span>
               </div>
-              <p className="mt-1 text-[13.5px] text-ink-600">Buyurtmani YAPROQ operatori yoki rasmiy sayt orqali yakunlaysiz.</p>
+              <p className="mt-1 text-[13.5px] text-ink-600">Buyurtmangizni YAPROQ operatori yoki rasmiy saytimiz orqali rasmiylashtirishingiz mumkin.</p>
               <div className="mt-4 grid gap-2">
                 <a href={telHref(contacts.phone)} className="btn-primary tabular h-14 text-base">
-                  <IconPhone className="h-5 w-5" /> Qo‘ng‘iroq qilib buyurtma berish
+                  <IconPhone className="h-5 w-5" /> Qo‘ng‘iroq orqali buyurtma berish
                 </a>
                 <div className="grid grid-cols-2 gap-2">
                   <a href={contacts.orderUrl} target="_blank" rel="noopener noreferrer" className="btn-green text-[14px]">
                     Rasmiy sayt <IconArrowUpRight className="h-4 w-4" />
                   </a>
                   <button type="button" onClick={copy} className="btn-outline text-[14px]">
-                    {copied ? <><IconCheck className="h-4 w-4" /> Nusxalandi</> : <><IconCopy className="h-4 w-4" /> Ro‘yxatni nusxalash</>}
+                    {copied ? <><IconCheck className="h-4 w-4" /> Nusxalandi</> : <><IconCopy className="h-4 w-4" /> Buyurtma ro‘yxatini nusxalash</>}
                   </button>
                 </div>
               </div>

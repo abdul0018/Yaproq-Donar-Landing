@@ -5,16 +5,16 @@ import Valance from "./Valance";
 // Facts from the official About page (yaproq-donar.uz/en/pages/about). Nothing here is embellished.
 const pillars = [
   {
-    title: "Mahalliy mol go‘shti",
-    text: "Taomlarimizning aksariyatida 100% mahalliy, sifatli mol go‘shtidan tayyorlangan donar ishlatiladi.",
+    title: "100% mahalliy mol go‘shti",
+    text: "Taomlarimizning aksariyat qismida 100% mahalliy, yuqori sifatli mol go‘shtidan tayyorlangan donar ishlatiladi.",
   },
   {
     title: "Turk oshxonasi",
-    text: "Asosan turk taomlari va desertlari: Iskender kabob, beyti, pide, ezogelin sho‘rvasi, San Sebastyan va trileche.",
+    text: "Asosan turk taomlari va desertlari tortiq qilinadi: Iskender kabob, beyti, pide, ezogelin sho‘rvasi, San Sebastyan va trileche shular jumlasidandir.",
   },
   {
-    title: "Mehmonlar ishonchi",
-    text: "Asosiy qadriyatimiz — sifatli taom va mehmonlarimizning ishonchi. Shuning uchun asosiy taomga salat va souslar sovg‘a.",
+    title: "Mehmonlarimiz ishonchi",
+    text: "Asosiy qadriyatimiz — taomlar sifati va mehmonlarimizning ishonchini oqlash. Aynan shuning uchun har bir asosiy taomga salat va souslar sovg‘a sifatida beriladi.",
   },
 ];
 
@@ -26,10 +26,10 @@ export default function About() {
         <div className="lg:col-span-7">
           <Reveal>
             <h2 id="about-title" className="font-display text-display-lg text-green-900">
-              {facts.founded} yildan beri Toshkentda turkcha donar
+              {facts.founded}-yildan beri Toshkentda haqiqiy turkcha donar
             </h2>
             <p className="mt-6 max-w-[62ch] text-[18px] leading-relaxed text-ink-700">
-              YAPROQ — «Donar by Beshqozon». {facts.founded} yilda ochilganmiz va bugun Toshkentda uchta filialimiz bor: Kukcha, Nurafshon va Yunusobod. Filialga kelishingiz, olib ketishingiz yoki eng yaqin filialdan yetkazib berishni buyurtma qilishingiz mumkin.
+              YAPROQ — «Donar by Beshqozon». Biz {facts.founded}-yilda ochilganmiz va bugungi kunda Toshkentda uchta filialimiz mavjud: Kukcha, Nurafshon va Yunusobod. Filiallarimizda mehmon bo‘lishingiz, o‘zingiz bilan olib ketishingiz yoki eng yaqin filialdan uyingizgacha yetkazib berishni buyurtma qilishingiz mumkin.
             </p>
           </Reveal>
 

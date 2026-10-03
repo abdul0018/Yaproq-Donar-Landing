@@ -26,7 +26,7 @@ export default function Hero() {
             <span className="line-mask"><span className="line-rise [animation-delay:180ms]">yondashuv.</span></span>
           </h1>
           <p className="mt-6 max-w-[34rem] animate-fade-up text-[17px] leading-relaxed text-green-100 [animation-delay:320ms] sm:text-lg">
-            Turk taomlari va desertlari. Donarimiz 100% mahalliy mol go‘shtidan tayyorlanadi. Toshkentdagi uchta filialimizga keling yoki buyurtma bering — eng yaqin filialdan 1 soat ichida yetkazamiz.
+            Turk taomlari va desertlari. Donarimiz 100% mahalliy mol go‘shtidan tayyorlanadi. Toshkentdagi uchta filialimizdan biriga tashrif buyuring yoki eng yaqin filialdan uyingizgacha buyurtma bering.
           </p>
           <div className="mt-9 flex animate-fade-up flex-col gap-3 [animation-delay:400ms] sm:flex-row">
             <a href="#menyu" className="btn-primary h-14 px-8 text-base">

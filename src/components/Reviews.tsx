@@ -22,10 +22,10 @@ export default function Reviews() {
         <div className="grid gap-10 lg:grid-cols-12 lg:items-end">
           <Reveal className="lg:col-span-7">
             <h2 id="reviews-title" className="font-display text-display-lg text-green-900">
-              Mehmonlarimiz fikrini o‘qing
+              Mehmonlarimizning fikrlari bilan tanishing
             </h2>
             <p className="mt-4 max-w-[58ch] text-[17px] leading-relaxed text-ink-600">
-              Filiallarimiz haqidagi haqiqiy sharhlar Yandex Xaritalar va 2GIS’da. O‘zingiz ham tashrifdan so‘ng fikr qoldiring — har bir sharhni o‘qiymiz.
+              Filiallarimiz haqidagi haqiqiy sharhlarni Yandex Xaritalar va 2GIS orqali o‘qishingiz mumkin. Tashrifingizdan so‘ng o‘z fikringizni yozib qoldiring — biz har bir sharhni alohida e’tibor bilan o‘qiymiz.
             </p>
           </Reveal>
           <Reveal delay={100} className="flex flex-wrap gap-3 lg:col-span-5 lg:justify-end">

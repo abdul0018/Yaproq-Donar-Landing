@@ -25,7 +25,7 @@ export default function CartFeedback() {
         {toast && (
           <div className="pointer-events-auto flex max-w-full items-center gap-3 rounded-full bg-green-950 py-2 pl-2 pr-2 text-white shadow-2xl">
             <span className="grid h-8 w-8 place-items-center rounded-full bg-yellow text-green-950"><IconCheck className="h-4 w-4" /></span>
-            <span className="min-w-0 truncate text-[14px]"><b>{toast}</b> savatga qo‘shildi</span>
+            <span className="min-w-0 truncate text-[14px]"><b>{toast}</b> savatga muvaffaqiyatli qo‘shildi</span>
             <button type="button" onClick={() => setOpen(true)} className="shrink-0 rounded-full bg-white/10 px-4 py-2 text-[13px] font-bold hover:bg-white/20">Ochish</button>
           </div>
         )}

@@ -25,7 +25,7 @@ export default function Promotions() {
           <h2 id="promo-title" className="font-display text-display-lg text-green-900">
             Aksiyalar
           </h2>
-          <p className="max-w-md text-[17px] leading-relaxed text-green-950/80">Yangi tovuqli setlar chegirmada, birinchi yetkazib berish esa bepul.</p>
+          <p className="max-w-md text-[17px] leading-relaxed text-green-950/80">Yangi tovuqli setlarimiz chegirmada, shuningdek, birinchi yetkazib berish xizmati mutlaqo bepul.</p>
         </Reveal>
 
         <div className="mt-12 grid gap-5 lg:grid-cols-2 lg:gap-6">
@@ -61,8 +61,8 @@ export default function Promotions() {
           <Reveal as="li" className="grid items-center gap-4 py-7 md:grid-cols-[auto_1fr_auto] md:gap-8">
             <IconTruck className="h-10 w-10 text-green-800" />
             <div>
-              <h3 className="font-display text-[28px] leading-tight text-green-900 sm:text-[34px]">Birinchi yetkazib berish — bepul</h3>
-              <p className="mt-1 text-[15.5px] text-green-950/80">Buyurtma eng yaqin filialdan 1 soat ichida yetkaziladi. Keyingi buyurtmalarda narx manzilingizga bog‘liq.</p>
+              <h3 className="font-display text-[28px] leading-tight text-green-900 sm:text-[34px]">Birinchi yetkazib berish — mutlaqo bepul</h3>
+              <p className="mt-1 text-[15.5px] text-green-950/80">Buyurtmangiz eng yaqin filialdan 1 soat ichida yetkazib beriladi. Keyingi buyurtmalar uchun yetkazib berish narxi manzilingizga qarab hisoblanadi.</p>
             </div>
             <a href={contacts.orderUrl} target="_blank" rel="noopener noreferrer" className="btn-green w-fit">
               Buyurtma berish <IconArrowUpRight className="h-4 w-4" />
@@ -71,8 +71,8 @@ export default function Promotions() {
           <Reveal as="li" className="grid items-center gap-4 py-7 md:grid-cols-[auto_1fr_auto] md:gap-8">
             <IconDevice className="h-10 w-10 text-green-800" />
             <div>
-              <h3 className="font-display text-[28px] leading-tight text-green-900 sm:text-[34px]">Har bir buyurtmadan 2% keshbek</h3>
-              <p className="mt-1 text-[15.5px] text-green-950/80">YAPROQ ilovasida buyurtma bering: aksiyalar haqida birinchi bo‘lib bilasiz va filialga borishdan oldin buyurtma qila olasiz.</p>
+              <h3 className="font-display text-[28px] leading-tight text-green-900 sm:text-[34px]">Har bir buyurtmadan 2% keshbek oling</h3>
+              <p className="mt-1 text-[15.5px] text-green-950/80">YAPROQ ilovasi orqali buyurtma bering: aksiyalar haqida birinchilardan bo‘lib xabardor bo‘lasiz va filialga borishdan oldin buyurtmangizni tayyorlatib qo‘yishingiz mumkin.</p>
             </div>
             <div className="flex flex-wrap gap-2">
               <a href={contacts.appStore} target="_blank" rel="noopener noreferrer" className="btn-green">App Store</a>
@@ -83,7 +83,7 @@ export default function Promotions() {
             <IconGift className="h-10 w-10 text-green-800" />
             <div>
               <h3 className="font-display text-[28px] leading-tight text-green-900 sm:text-[34px]">Asosiy taomga salat va souslar — sovg‘a</h3>
-              <p className="mt-1 text-[15.5px] text-green-950/80">Asosiy taomlardan birini buyurtma qilsangiz, salat va souslarni bonus sifatida qo‘shib beramiz.</p>
+              <p className="mt-1 text-[15.5px] text-green-950/80">Asosiy taomlardan birini buyurtma qilsangiz, salat va souslarni sovg‘a sifatida qo‘shib beramiz.</p>
             </div>
             <button type="button" onClick={() => selectCategory("asosiy")} className="btn-green w-fit">Asosiy taomlar</button>
           </Reveal>

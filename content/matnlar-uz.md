@@ -14,7 +14,7 @@ Jami 262 ta qator. Tayyor javobni menga (Claude’ga) qaytarib yuboring — men 
 ## SEO (brauzer sarlavhasi va Google tavsifi)
 
 [SEO-01] YAPROQ DONAR — turk taomlari va donar, Toshkent
-[SEO-02] YAPROQ DONAR: 100% mahalliy mol go‘shtidan donar, Iskender kabob, pide, sho‘rvalar va turk desertlari. Toshkentda 3 filial, eng yaqin filialdan 1 soatda yetkazib berish.
+[SEO-02] YAPROQ DONAR: 100% mahalliy mol go‘shtidan tayyorlangan donar, Iskender kabob, pide, sho‘rvalar va turk desertlari. Toshkentda 3 ta filial mavjud, eng yaqin filialdan 1 soat ichida yetkazib beramiz.
 
 ## Yuqori menyu
 
@@ -34,92 +34,92 @@ Jami 262 ta qator. Tayyor javobni menga (Claude’ga) qaytarib yuboring — men 
 ## Bosh ekran (hero)
 
 [HERO-01] Ta’mga yangicha yondashuv.
-[HERO-02] Turk taomlari va desertlari. Donarimiz 100% mahalliy mol go‘shtidan tayyorlanadi. Toshkentdagi uchta filialimizga keling yoki eng yaqin filialdan uyingizga buyurtma bering.
+[HERO-02] Turk taomlari va desertlari. Donarimiz 100% mahalliy mol go‘shtidan tayyorlanadi. Toshkentdagi uchta filialimizdan biriga tashrif buyuring yoki eng yaqin filialdan uyingizgacha buyurtma bering.
 [HERO-03] Menyuni ko‘rish
 [HERO-04] Eng yaqin filial
 [HERO-05] Har bir asosiy taomga salat va souslar — sovg‘a
 [HERO-06] {taom}: tovuq go‘shti, kartoshka fri va lavash _(ko‘rinmas yozuv: ekran o‘quvchi uchun)_
 [HERO-07] {taom}, {o‘lcham} — savatga qo‘shish _(ko‘rinmas yozuv: ekran o‘quvchi uchun)_
-[HERO-08] Eng yaqin filialdan 1 soat ichida yetkazamiz
+[HERO-08] Buyurtmangizni eng yaqin filialdan 1 soat ichida yetkazib beramiz
 [HERO-09] Kukcha · Yunusobod · Nurafshon
-[HERO-10] Har kuni 10:00 – 03:00
+[HERO-10] Har kuni soat 10:00 dan 03:00 gacha xizmatingizdamiz
 
 ## “Yaproq’ning asosiylari” bo‘limi
 
-[TOP-01] Yaproq’ning asosiylari
-[TOP-02] Turk oshxonasining to‘rt klassikasi: donar, Iskender kabob, pilav ustu donar va pide.
+[TOP-01] Yaproq’ning asosiy taomlari
+[TOP-02] Turk oshxonasining to‘rt xil klassik taomi: donar, Iskender kabob, pilav ustu donar va pide.
 [TOP-03] To‘liq menyu
-[TOP-04] Brendimiz nomini olgan taom: lavash ustida yupqa kesilgan mol go‘shti donari va qovurilgan kartoshka. Asosiy taom bilan salat va souslar sovg‘a.
+[TOP-04] Brendimiz nomini olgan taom: lavash ustidagi yupqa kesilgan mol go‘shtli donar va qovurilgan kartoshka. Asosiy taomga qo‘shib salat va souslar sovg‘a qilinadi.
 [TOP-05] {taom}: o‘lchamni tanlang
-[TOP-06] {taom} — savatga qo‘shish _(ko‘rinmas yozuv: ekran o‘quvchi uchun)_
+[TOP-06] {taom}ni savatga qo‘shish _(ko‘rinmas yozuv: ekran o‘quvchi uchun)_
 [TOP-07] Savatga
 
 ## Menyu bo‘limi
 
-[MENU-01] Bugun nima yeymiz?
-[MENU-02] Kategoriyani tanlang yoki taom nomini yozing. Ko‘p taomlar bir necha o‘lchamda: go‘sht miqdorini o‘zingiz tanlaysiz.
+[MENU-01] Bugun nima tanovul qilamiz?
+[MENU-02] Kategoriyani tanlang yoki taom nomini kiriting. Aksariyat taomlarimiz bir necha o‘lchamda taqdim etiladi: go‘sht miqdorini o‘zingiz belgilashingiz mumkin.
 [MENU-03] Menyu kategoriyalari _(ko‘rinmas yozuv: ekran o‘quvchi uchun)_
 [MENU-04] Taom qidirish
 [MENU-05] {kategoriya} — {soni} ta taom
-[MENU-06] Asosiy taomga salat va souslar sovg‘a
+[MENU-06] Asosiy taomga salat va souslar sovg‘a tariqasida beriladi
 
 ## Menyu: qidiruv natija bermaganda
 
-[MENU-EMPTY-01] «{qidiruv}» topilmadi
-[MENU-EMPTY-02] Boshqacha yozib ko‘ring, masalan «donar» yoki «pide».
+[MENU-EMPTY-01] «{qidiruv}» bo‘yicha natija topilmadi
+[MENU-EMPTY-02] Boshqa so‘z kiritib ko‘ring, masalan, «donar» yoki «pide».
 [MENU-EMPTY-03] Qidiruvni tozalash
 
 ## Aksiyalar
 
-[PROMO-01] Yangi tovuqli setlar chegirmada, birinchi yetkazib berish esa bepul.
+[PROMO-01] Yangi tovuqli setlarimiz chegirmada, shuningdek, birinchi yetkazib berish xizmati mutlaqo bepul.
 [PROMO-02] Pita seti
 [PROMO-03] Yangi · tovuqli
 [PROMO-04] Durum seti
-[PROMO-05] Birinchi yetkazib berish — bepul
-[PROMO-06] Buyurtma eng yaqin filialdan 1 soat ichida yetkaziladi. Keyingi buyurtmalarda narx manzilingizga bog‘liq.
-[PROMO-07] Har bir buyurtmadan 2% keshbek
-[PROMO-08] YAPROQ ilovasida buyurtma bering: aksiyalar haqida birinchi bo‘lib bilasiz va filialga borishdan oldin buyurtma qila olasiz.
+[PROMO-05] Birinchi yetkazib berish — mutlaqo bepul
+[PROMO-06] Buyurtmangiz eng yaqin filialdan 1 soat ichida yetkazib beriladi. Keyingi buyurtmalar uchun yetkazib berish narxi manzilingizga qarab hisoblanadi.
+[PROMO-07] Har bir buyurtmadan 2% keshbek oling
+[PROMO-08] YAPROQ ilovasi orqali buyurtma bering: aksiyalar haqida birinchilardan bo‘lib xabardor bo‘lasiz va filialga borishdan oldin buyurtmangizni tayyorlatib qo‘yishingiz mumkin.
 [PROMO-09] Asosiy taomga salat va souslar — sovg‘a
-[PROMO-10] Asosiy taomlardan birini buyurtma qilsangiz, salat va souslarni bonus sifatida qo‘shib beramiz.
+[PROMO-10] Asosiy taomlardan birini buyurtma qilsangiz, salat va souslarni sovg‘a sifatida qo‘shib beramiz.
 
 ## Biz haqimizda
 
-[ABOUT-01] 2021 yildan beri Toshkentda turkcha donar
-[ABOUT-02] YAPROQ — «Donar by Beshqozon». 2021 yilda ochilganmiz va bugun Toshkentda uchta filialimiz bor: Kukcha, Nurafshon va Yunusobod. Filialga kelishingiz, olib ketishingiz yoki eng yaqin filialdan yetkazib berishni buyurtma qilishingiz mumkin.
-[ABOUT-03] Mahalliy mol go‘shti
-[ABOUT-04] Taomlarimizning aksariyatida 100% mahalliy, sifatli mol go‘shtidan tayyorlangan donar ishlatiladi.
+[ABOUT-01] 2021-yildan beri Toshkentda haqiqiy turkcha donar
+[ABOUT-02] YAPROQ — «Donar by Beshqozon». Biz 2021-yilda ochilganmiz va bugungi kunda Toshkentda uchta filialimiz mavjud: Kukcha, Nurafshon va Yunusobod. Filiallarimizda mehmon bo‘lishingiz, o‘zingiz bilan olib ketishingiz yoki eng yaqin filialdan uyingizgacha yetkazib berishni buyurtma qilishingiz mumkin.
+[ABOUT-03] 100% mahalliy mol go‘shti
+[ABOUT-04] Taomlarimizning aksariyat qismida 100% mahalliy, yuqori sifatli mol go‘shtidan tayyorlangan donar ishlatiladi.
 [ABOUT-05] Turk oshxonasi
-[ABOUT-06] Asosan turk taomlari va desertlari: Iskender kabob, beyti, pide, ezogelin sho‘rvasi, San Sebastyan va trileche.
-[ABOUT-07] Mehmonlar ishonchi
-[ABOUT-08] Asosiy qadriyatimiz — sifatli taom va mehmonlarimizning ishonchi. Shuning uchun asosiy taomga salat va souslar sovg‘a.
+[ABOUT-06] Asosan turk taomlari va desertlari tortiq qilinadi: Iskender kabob, beyti, pide, ezogelin sho‘rvasi, San Sebastyan va trileche shular jumlasidandir.
+[ABOUT-07] Mehmonlarimiz ishonchi
+[ABOUT-08] Asosiy qadriyatimiz — taomlar sifati va mehmonlarimizning ishonchini oqlash. Aynan shuning uchun har bir asosiy taomga salat va souslar sovg‘a sifatida beriladi.
 [ABOUT-09] {taom}: mol go‘shti, tomat qaylasi va suzma _(ko‘rinmas yozuv: ekran o‘quvchi uchun)_
 [ABOUT-10] {taom} — mol go‘shti, tomat qaylasi, iskender noni va suzma
 
 ## Qanday buyurtma berasiz?
 
-[ORDER-01] Qanday buyurtma berasiz?
-[ORDER-02] To‘lov: Naqd, Karta, Bank o‘tkazmasi, Click, Payme.
-[ORDER-03] Saytda buyurtma Yetkazib berish yoki olib ketish
-[ORDER-04] yaproq-donar.uz’da menyuni tanlab, yetkazib berish yoki filialdan olib ketishni rasmiylashtiring. Buyurtma eng yaqin filialdan 1 soat ichida yetkaziladi.
-[ORDER-05] Saytda buyurtma berish
-[ORDER-06] YAPROQ ilovasi 2% keshbek va oldindan buyurtma
-[ORDER-07] Restoranga bormasdan buyurtma bering yoki tashrifdan oldin buyurtmani tayyorlab qo‘ying. Aksiyalar haqida birinchi bo‘lib bilasiz, har buyurtmadan 2% keshbek.
-[ORDER-08] Telefon orqali +998 71 200 84 44
-[ORDER-09] Qo‘ng‘iroq qiling — buyurtmani qabul qilib, eng yaqin filialga yo‘naltiramiz. Har kuni 10:00 – 03:00.
-[ORDER-10] Filialga keling Kukcha, Nurafshon, Yunusobod
-[ORDER-11] Issiq donarni joyida tanovul qiling yoki olib keting. Eng yaqin filialni xaritadan toping.
+[ORDER-01] Buyurtmani qanday berasiz?
+[ORDER-02] To‘lov turlari: Naqd pul, Karta, Bank o‘tkazmasi, Click, Payme.
+[ORDER-03] Sayt orqali buyurtma berish. Yetkazib berish yoki olib ketish
+[ORDER-04] yaproq-donar.uz saytida menyudan o‘zingizga yoqqan taomlarni tanlab, yetkazib berish yoki filialdan olib ketishni rasmiylashtiring. Buyurtmangiz eng yaqin filialdan 1 soat ichida yetkazib beriladi.
+[ORDER-05] Sayt orqali buyurtma berish
+[ORDER-06] YAPROQ ilovasi: 2% keshbek va oldindan buyurtma berish imkoniyati
+[ORDER-07] Restoranga bormasdan turib buyurtma bering yoki tashrifingizdan oldin taomingizni tayyorlatib qo‘ying. Aksiyalar haqida birinchilardan bo‘lib xabardor bo‘lasiz, shuningdek, har bir buyurtmadan 2% keshbekka ega bo‘lasiz.
+[ORDER-08] Telefon orqali buyurtma: +998 71 200 84 44
+[ORDER-09] Bizga qo‘ng‘iroq qiling — buyurtmangizni qabul qilib, eng yaqin filialimizga yo‘naltiramiz. Har kuni soat 10:00 dan 03:00 gacha aloqadamiz.
+[ORDER-10] Filialimizga mehmon bo‘ling: Kukcha, Nurafshon, Yunusobod
+[ORDER-11] Issiqqina donarni joyining o‘zida tanovul qiling yoki o‘zingiz bilan olib keting. Eng yaqin filialni xaritadan topishingiz mumkin.
 [ORDER-12] Filiallarni ko‘rish
-[ORDER-13] Saytda buyurtma
-[ORDER-14] Naqd · Karta · Bank o‘tkazmasi · Click · Payme
+[ORDER-13] Sayt orqali buyurtma berish
+[ORDER-14] Naqd pul · Karta · Bank o‘tkazmasi · Click · Payme
 
 ## Filiallar
 
-[BRANCH-01] Sizga eng yaqin YAPROQ
-[BRANCH-02] Toshkentda uchta filial, har kuni 10:00 – 03:00. Joylashuvingizni ulashing — eng yaqinini o‘zimiz topamiz.
-[BRANCH-03] Eng yaqinini topish
+[BRANCH-01] Sizga eng yaqin YAPROQ filiali
+[BRANCH-02] Toshkentda uchta filialimiz mavjud, har kuni soat 10:00 dan 03:00 gacha ishlaydi. Joylashuvingizni biz bilan ulashing — sizga eng yaqin filialni o‘zimiz topib beramiz.
+[BRANCH-03] Eng yaqin filialni topish
 [BRANCH-04] {filial} filialini xaritada ko‘rsatish _(ko‘rinmas yozuv: ekran o‘quvchi uchun)_
 [BRANCH-05] Hozir yopiq
-[BRANCH-06] Yo‘lni ko‘rsatish
+[BRANCH-06] Yo‘nalishni ko‘rsatish
 [BRANCH-07] Batafsil
 [BRANCH-08] {filial} filiali joylashgan hudud xaritasi: {manzil} _(ko‘rinmas yozuv: ekran o‘quvchi uchun)_
 [BRANCH-09] Xaritadagi filial _(ko‘rinmas yozuv: ekran o‘quvchi uchun)_
@@ -129,59 +129,59 @@ Jami 262 ta qator. Tayyor javobni menga (Claude’ga) qaytarib yuboring — men 
 [BRANCH-POP-01] Yopish _(ko‘rinmas yozuv: ekran o‘quvchi uchun)_
 [BRANCH-POP-02] Manzil
 [BRANCH-POP-03] Ish vaqti
-[BRANCH-POP-04] Telefon
+[BRANCH-POP-04] Telefon raqami
 [BRANCH-POP-05] Yandex Xaritalar
-[BRANCH-POP-06] Shu filialdan buyurtma berish
+[BRANCH-POP-06] Ushbu filialdan buyurtma berish
 
 ## Sharhlar va “Menyudan”
 
-[REVIEWS-01] Mehmonlarimiz fikrini o‘qing
-[REVIEWS-02] Filiallarimiz haqidagi haqiqiy sharhlar Yandex Xaritalar va 2GIS’da. O‘zingiz ham tashrifdan so‘ng fikr qoldiring — har bir sharhni o‘qiymiz.
+[REVIEWS-01] Mehmonlarimizning fikrlari bilan tanishing
+[REVIEWS-02] Filiallarimiz haqidagi haqiqiy sharhlarni Yandex Xaritalar va 2GIS orqali o‘qishingiz mumkin. Tashrifingizdan so‘ng o‘z fikringizni yozib qoldiring — biz har bir sharhni alohida e’tibor bilan o‘qiymiz.
 [REVIEWS-03] Menyudan
 [REVIEWS-04] Tovuqli Iskender
 [REVIEWS-05] Havuch
 
 ## Yakuniy chaqiriq
 
-[CTA-01] Issiq donar sizni kutyapti.
-[CTA-02] Buyurtma bering — eng yaqin filialdan 1 soat ichida yetkazamiz. Yoki Kukcha, Nurafshon va Yunusobod filiallarimizga keling.
+[CTA-01] Issiqqina donar sizni kutmoqda.
+[CTA-02] Buyurtma bering — eng yaqin filialimizdan 1 soat ichida yetkazib beramiz. Yoki Kukcha, Nurafshon va Yunusobod filiallarimizga mehmon bo‘ling.
 [CTA-03] Filialni tanlash
-[CTA-04] Yoki qo‘ng‘iroq qiling: +998 71 200 84 44
+[CTA-04] Yoki bizga qo‘ng‘iroq qiling: +998 71 200 84 44
 
 ## Pastki qism (footer)
 
-[FOOTER-01] Turk taomlari va desertlari. Toshkentda 2021 yildan beri.
+[FOOTER-01] Turk taomlari va desertlari. 2021-yildan beri Toshkentda xizmatingizdamiz.
 [FOOTER-02] Sayt bo‘limlari _(ko‘rinmas yozuv: ekran o‘quvchi uchun)_
 [FOOTER-03] SAHIFA
 [FOOTER-04] FILIALLAR
 [FOOTER-05] BUYURTMA
-[FOOTER-06] Yetkazib berish: eng yaqin filialdan 1 soatda
-[FOOTER-07] To‘lov: Naqd, Karta, Bank o‘tkazmasi, Click, Payme
-[FOOTER-08] Ish o‘rinlari: +998 94 502 03 13 (10:00 – 18:00)
+[FOOTER-06] Yetkazib berish: eng yaqin filialdan 1 soat ichida
+[FOOTER-07] To‘lov turlari: Naqd pul, Karta, Bank o‘tkazmasi, Click, Payme
+[FOOTER-08] Ish o‘rinlari bo‘yicha: +998 94 502 03 13 (10:00 – 18:00)
 
 ## Savat: bo‘sh holat
 
 [CART-EMPTY-01] Savat
 [CART-EMPTY-02] Savatni yopish _(ko‘rinmas yozuv: ekran o‘quvchi uchun)_
-[CART-EMPTY-03] Savat hozircha bo‘sh
-[CART-EMPTY-04] Yaproq’ning asosiy taomlaridan boshlang:
+[CART-EMPTY-03] Savatingiz hozircha bo‘sh
+[CART-EMPTY-04] Yaproq’ning asosiy taomlaridan tanlashni boshlang:
 
 ## Savat: mahsulot bilan
 
-[CART-01] Savat · 1 ta
+[CART-01] Savat · 1 ta mahsulot
 [CART-02] Yaproq donar · Oddiy
 [CART-03] Yaproq donar · Oddiy: bittaga kamaytirish _(ko‘rinmas yozuv: ekran o‘quvchi uchun)_
 [CART-04] Yaproq donar · Oddiy: bittaga ko‘paytirish _(ko‘rinmas yozuv: ekran o‘quvchi uchun)_
-[CART-05] Asosiy taomga salat va souslar sovg‘a. Yetkazib berish narxi manzilingizga bog‘liq, birinchi yetkazib berish — bepul.
+[CART-05] Asosiy taomga salat va souslar sovg‘a tariqasida beriladi. Yetkazib berish narxi manzilingizga qarab belgilanadi, birinchi yetkazib berish esa mutlaqo bepul.
 [CART-06] Jami
-[CART-07] Buyurtmani YAPROQ operatori yoki rasmiy sayt orqali yakunlaysiz.
-[CART-08] Qo‘ng‘iroq qilib buyurtma berish
+[CART-07] Buyurtmangizni YAPROQ operatori yoki rasmiy saytimiz orqali rasmiylashtirishingiz mumkin.
+[CART-08] Qo‘ng‘iroq orqali buyurtma berish
 [CART-09] Rasmiy sayt
-[CART-10] Ro‘yxatni nusxalash
+[CART-10] Buyurtma ro‘yxatini nusxalash
 
 ## Savatga qo‘shilganda chiqadigan xabar
 
-[TOAST-01] Yaproq donar · Oddiy savatga qo‘shildi
+[TOAST-01] Yaproq donar · Oddiy savatga muvaffaqiyatli qo‘shildi
 [TOAST-02] Ochish
 
 ## Holatga qarab chiqadigan matnlar
@@ -189,10 +189,10 @@ Jami 262 ta qator. Tayyor javobni menga (Claude’ga) qaytarib yuboring — men 
 [STATE-01] Hozir ochiq   _(filial kartasida)_
 [STATE-03] Eng yaqin   _(eng yaqin filial belgisi)_
 [STATE-04] Aniqlanmoqda…   _(joylashuv aniqlanayotganda tugmada)_
-[STATE-05] Brauzeringiz joylashuvni aniqlay olmaydi. Filialni ro‘yxatdan tanlang.   _(xato xabari)_
-[STATE-06] Joylashuvga ruxsat berilmadi. Filialni ro‘yxatdan tanlang.   _(xato xabari)_
-[STATE-07] Manzil va yo‘lni telefon orqali aniqlashtiring   _(manzili noma’lum filial uchun)_
-[STATE-08] Ish vaqtini telefon orqali aniqlashtiring   _(ish vaqti noma’lum filial uchun)_
+[STATE-05] Brauzeringiz joylashuvingizni aniqlay olmadi. Iltimos, filialni ro‘yxatdan tanlang.   _(xato xabari)_
+[STATE-06] Joylashuvni aniqlashga ruxsat berilmadi. Iltimos, filialni ro‘yxatdan tanlang.   _(xato xabari)_
+[STATE-07] Manzil va yo‘nalishni telefon orqali aniqlashtirishingiz mumkin   _(manzili noma’lum filial uchun)_
+[STATE-08] Ish vaqtini telefon orqali aniqlashtirishingiz mumkin   _(ish vaqti noma’lum filial uchun)_
 [STATE-09] Qo‘ng‘iroq qilish   _(tugma)_
 [STATE-10] Nusxalandi   _(savat: ro‘yxat nusxalangandan keyin)_
 [STATE-11] Buyurtma ro‘yxati nusxalandi   _(ko‘rinmas yozuv)_
@@ -265,21 +265,21 @@ _Taom nomlari brend/retsept nomlari (Iskender, Tombik, Beyti, Pide, Ezogelin, Sa
 [DISH-22-NOM] Tovuq donar (vaznda)
 [DISH-22-TAVSIF] Tovuq go‘shtidan donar — uyga, oilaga yoki mehmonlarga.
 [DISH-23-NOM] Ezogelin sho‘rvasi
-[DISH-23-TAVSIF] Qizil yasmiq va kartoshkadan quyuq turk sho‘rvasi.
+[DISH-23-TAVSIF] Qizil yasmiq va kartoshkadan tayyorlangan quyuq turk sho‘rvasi.
 [DISH-24-NOM] Merjimek sho‘rvasi
-[DISH-24-TAVSIF] Yasmiqdan sho‘rva, limon bo‘lagi va krutonlar bilan.
+[DISH-24-TAVSIF] Yasmiqdan tayyorlangan sho‘rva, limon bo‘lagi va krutonlar bilan tortiq qilinadi.
 [DISH-25-NOM] Sirli pide
 [DISH-25-TAVSIF] Xamir, pishloq va tuxum.
 [DISH-26-NOM] Yaproq pide
 [DISH-26-TAVSIF] Xamir, pishloq va tuxum.
 [DISH-27-NOM] Choban salati
-[DISH-27-TAVSIF] Yangi sabzavotlardan turkcha salat.
+[DISH-27-TAVSIF] Yangi sabzavotlardan tayyorlangan turkcha salat.
 [DISH-28-NOM] Yaproq salati
-[DISH-28-TAVSIF] Avokado, apelsin, ko‘katlar aralashmasi, cherri pomidor, tovuq go‘shti va parmezan.
+[DISH-28-TAVSIF] Avokado, apelsin, ko‘katlar aralashmasi, cherri pomidori, tovuq go‘shti va parmezan pishlog‘i.
 [DISH-29-NOM] Motsarella salati
-[DISH-29-TAVSIF] Rukkola, cherri pomidor, mini motsarella, pesto sousi, kedr yong‘og‘i va krem.
+[DISH-29-TAVSIF] Rukkola, cherri pomidori, mini motsarella pishlog‘i, pesto sousi, kedr yong‘og‘i va krem.
 [DISH-30-NOM] Qarsildoq baqlajon salati
-[DISH-30-TAVSIF] Tempurada baqlajon, shirin chili va teriyaki souslari, kashnich, kunjut, krem-pishloq va qaymoq.
+[DISH-30-TAVSIF] Tempurada pishirilgan baqlajon, shirin chili va teriyaki souslari, kashnich, kunjut, krem-pishloq va qaymoq.
 [DISH-31-NOM] Suzma
 [DISH-31-TAVSIF] Qo‘shimcha sifatida.
 [DISH-32-NOM] Qalampir
@@ -293,17 +293,17 @@ _Taom nomlari brend/retsept nomlari (Iskender, Tombik, Beyti, Pide, Ezogelin, Sa
 [DISH-36-NOM] Sutlach
 [DISH-36-TAVSIF] Pechda pishirilgan sutli guruch.
 [DISH-37-NOM] Durum paxlava
-[DISH-37-TAVSIF] Paxlava. Narx bir dona uchun.
+[DISH-37-TAVSIF] Paxlava. Narx bir dona uchun ko‘rsatilgan.
 [DISH-38-NOM] Maraş paxlava
-[DISH-38-TAVSIF] Paxlava. Narx bir dona uchun.
+[DISH-38-TAVSIF] Paxlava. Narx bir dona uchun ko‘rsatilgan.
 [DISH-39-NOM] Ayron
 [DISH-39-TAVSIF] Bir stakan.
 [DISH-40-NOM] Mojito
 [DISH-40-TAVSIF] Laym va yalpizli salqin ichimlik.
 [DISH-41-NOM] Mango–marakuya
-[DISH-41-TAVSIF] Mango va marakuyadan salqin ichimlik.
+[DISH-41-TAVSIF] Mango va marakuyadan tayyorlangan salqin ichimlik.
 [DISH-42-NOM] Rezavorli ice tea
-[DISH-42-TAVSIF] O‘rmon rezavorlari ta’mi bilan salqin choy.
+[DISH-42-TAVSIF] O‘rmon rezavorlari ta’miga ega salqin choy.
 [DISH-43-NOM] Ice Americano
 [DISH-43-TAVSIF] Muzli klassik amerikano.
 [DISH-44-NOM] Ice Cappuccino
@@ -315,9 +315,9 @@ _Taom nomlari brend/retsept nomlari (Iskender, Tombik, Beyti, Pide, Ezogelin, Sa
 [DISH-47-NOM] Hydrolife suvi
 [DISH-47-TAVSIF] Ichimlik suvi.
 [DISH-48-NOM] Sarimsoqli sous
-[DISH-48-TAVSIF] Asosiy taomga bepul.
+[DISH-48-TAVSIF] Asosiy taomga bepul taqdim etiladi.
 [DISH-49-NOM] Tomatli sous
-[DISH-49-TAVSIF] Asosiy taomga bepul.
+[DISH-49-TAVSIF] Asosiy taomga bepul taqdim etiladi.
 
 ## O‘lcham nomlari (tugmalarda)
 

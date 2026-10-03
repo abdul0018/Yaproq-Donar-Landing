@@ -79,7 +79,7 @@ export const facts = {
   delivery: "Eng yaqin filialdan 1 soat ichida",
   /** Network-wide opening hours from the official About page; each branch card shows its own exact hours. */
   hours: "10:00 – 03:00",
-  payments: ["Naqd", "Karta", "Bank o‘tkazmasi", "Click", "Payme"],
+  payments: ["Naqd pul", "Karta", "Bank o‘tkazmasi", "Click", "Payme"],
 };
 
 export const navLinks = [
@@ -120,3 +120,9 @@ export function isOpenNow(b: Branch, date = new Date()) {
 
 export const formatNumber = (n: number) => String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 export const formatPrice = (n: number) => (n === 0 ? "Bepul" : `${formatNumber(n)} so‘m`);
+
+/** "10:00 – 03:00" → "soat 10:00 dan 03:00 gacha", for running text. */
+export const hoursPhrase = (hours: string) => {
+  const [from, to] = hours.split(/\s*[–-]\s*/);
+  return `soat ${from} dan ${to} gacha`;
+};

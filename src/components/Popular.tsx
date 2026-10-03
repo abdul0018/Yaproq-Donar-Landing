@@ -25,7 +25,7 @@ function LeadDish({ dish }: { dish: Dish }) {
           <div>
             <h3 className="font-display text-display-md">{dish.name}</h3>
             <p className="mt-3 text-[16px] leading-relaxed text-green-100">
-              Brendimiz nomini olgan taom: lavash ustida yupqa kesilgan mol go‘shti donari va qovurilgan kartoshka. Asosiy taom bilan salat va souslar sovg‘a.
+              Brendimiz nomini olgan taom: lavash ustidagi yupqa kesilgan mol go‘shtli donar va qovurilgan kartoshka. Asosiy taomga qo‘shib salat va souslar sovg‘a qilinadi.
             </p>
           </div>
           <SizeSwitch dish={dish} value={v} onChange={setV} tone="dark" />
@@ -72,8 +72,8 @@ export default function Popular() {
       <div className="container">
         <SectionHeading
           id="signature-title"
-          title="Yaproq’ning asosiylari"
-          lead="Turk oshxonasining to‘rt klassikasi: donar, Iskender kabob, pilav ustu donar va pide."
+          title="Yaproq’ning asosiy taomlari"
+          lead="Turk oshxonasining to‘rt xil klassik taomi: donar, Iskender kabob, pilav ustu donar va pide."
           action={
             <a href="#menyu" className="group inline-flex items-center gap-2 text-[15px] font-bold text-green-800 underline decoration-2 underline-offset-4 hover:text-green-500">
               To‘liq menyu <IconArrow className="h-4 w-4 transition-transform group-hover:translate-x-1" />

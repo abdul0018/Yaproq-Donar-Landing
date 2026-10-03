@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, type ReactNode } from "react";
-import { contacts, facts, telHref } from "@/data/site";
+import { contacts, facts, hoursPhrase, telHref } from "@/data/site";
 import SectionHeading from "./SectionHeading";
 import { IconArrowUpRight, IconCard, IconDevice, IconGlobe, IconPhone, IconStore } from "./icons";
 import Valance from "./Valance";
@@ -12,21 +12,21 @@ type Way = { id: string; title: string; short: string; text: string; icon: (p: {
 const ways: Way[] = [
   {
     id: "sayt",
-    title: "Saytda buyurtma",
+    title: "Sayt orqali buyurtma berish",
     short: "Yetkazib berish yoki olib ketish",
-    text: "yaproq-donar.uz’da menyuni tanlab, yetkazib berish yoki filialdan olib ketishni rasmiylashtiring. Buyurtma eng yaqin filialdan 1 soat ichida yetkaziladi.",
+    text: "yaproq-donar.uz saytida menyudan o‘zingizga yoqqan taomlarni tanlab, yetkazib berish yoki filialdan olib ketishni rasmiylashtiring. Buyurtmangiz eng yaqin filialdan 1 soat ichida yetkazib beriladi.",
     icon: IconGlobe,
     actions: (
       <a href={contacts.orderUrl} target="_blank" rel="noopener noreferrer" className="btn-primary">
-        Saytda buyurtma berish <IconArrowUpRight className="h-4 w-4" />
+        Sayt orqali buyurtma berish <IconArrowUpRight className="h-4 w-4" />
       </a>
     ),
   },
   {
     id: "ilova",
     title: "YAPROQ ilovasi",
-    short: "2% keshbek va oldindan buyurtma",
-    text: "Restoranga bormasdan buyurtma bering yoki tashrifdan oldin buyurtmani tayyorlab qo‘ying. Aksiyalar haqida birinchi bo‘lib bilasiz, har buyurtmadan 2% keshbek.",
+    short: "2% keshbek va oldindan buyurtma berish imkoniyati",
+    text: "Restoranga bormasdan turib buyurtma bering yoki tashrifingizdan oldin taomingizni tayyorlatib qo‘ying. Aksiyalar haqida birinchilardan bo‘lib xabardor bo‘lasiz, shuningdek, har bir buyurtmadan 2% keshbekka ega bo‘lasiz.",
     icon: IconDevice,
     actions: (
       <>
@@ -41,9 +41,9 @@ const ways: Way[] = [
   },
   {
     id: "telefon",
-    title: "Telefon orqali",
+    title: "Telefon orqali buyurtma",
     short: contacts.phone,
-    text: `Qo‘ng‘iroq qiling — buyurtmani qabul qilib, eng yaqin filialga yo‘naltiramiz. Har kuni ${facts.hours}.`,
+    text: `Bizga qo‘ng‘iroq qiling — buyurtmangizni qabul qilib, eng yaqin filialimizga yo‘naltiramiz. Har kuni ${hoursPhrase(facts.hours)} aloqadamiz.`,
     icon: IconPhone,
     actions: (
       <a href={telHref(contacts.phone)} className="btn-primary tabular">
@@ -53,9 +53,9 @@ const ways: Way[] = [
   },
   {
     id: "filial",
-    title: "Filialga keling",
+    title: "Filialimizga mehmon bo‘ling",
     short: "Kukcha, Nurafshon, Yunusobod",
-    text: "Issiq donarni joyida tanovul qiling yoki olib keting. Eng yaqin filialni xaritadan toping.",
+    text: "Issiqqina donarni joyining o‘zida tanovul qiling yoki o‘zingiz bilan olib keting. Eng yaqin filialni xaritadan topishingiz mumkin.",
     icon: IconStore,
     actions: (
       <a href="#filiallar" className="btn-primary">
@@ -82,8 +82,8 @@ export default function WhyUs() {
         <SectionHeading
           id="ways-title"
           tone="light"
-          title={<>Qanday <span className="text-yellow">buyurtma</span> berasiz?</>}
-          lead={`To‘lov: ${facts.payments.join(", ")}.`}
+          title={<><span className="text-yellow">Buyurtmani</span> qanday berasiz?</>}
+          lead={`To‘lov turlari: ${facts.payments.join(", ")}.`}
         />
 
         <div className="mt-12 grid gap-10 lg:mt-14 lg:grid-cols-12">

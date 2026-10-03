@@ -11,7 +11,7 @@ const sans = Figtree({ subsets: ["latin", "latin-ext"], variable: "--font-sans",
 export const metadata: Metadata = {
   title: "YAPROQ DONAR — turk taomlari va donar, Toshkent",
   description:
-    "YAPROQ DONAR: 100% mahalliy mol go‘shtidan donar, Iskender kabob, pide, sho‘rvalar va turk desertlari. Toshkentda 3 filial, eng yaqin filialdan 1 soatda yetkazib berish.",
+    "YAPROQ DONAR: 100% mahalliy mol go‘shtidan tayyorlangan donar, Iskender kabob, pide, sho‘rvalar va turk desertlari. Toshkentda 3 ta filial mavjud, eng yaqin filialdan 1 soat ichida yetkazib beramiz.",
   openGraph: {
     title: "YAPROQ DONAR",
     description: "Ta’mga yangicha yondashuv. Toshkentda 3 filial.",

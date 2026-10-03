@@ -112,8 +112,8 @@ export default function Menu() {
       <div className="container">
         <SectionHeading
           id="menu-title"
-          title={<>Bugun nima <span className="text-green-500">yeymiz?</span></>}
-          lead="Kategoriyani tanlang yoki taom nomini yozing. Ko‘p taomlar bir necha o‘lchamda: go‘sht miqdorini o‘zingiz tanlaysiz."
+          title={<>Bugun nima <span className="text-green-500">tanovul qilamiz?</span></>}
+          lead="Kategoriyani tanlang yoki taom nomini kiriting. Aksariyat taomlarimiz bir necha o‘lchamda taqdim etiladi: go‘sht miqdorini o‘zingiz belgilashingiz mumkin."
         />
       </div>
 
@@ -185,7 +185,7 @@ export default function Menu() {
             )}
           </p>
           <p className="hidden items-center gap-2 font-semibold text-green-800 sm:flex">
-            <IconGift className="h-4 w-4" /> Asosiy taomga salat va souslar sovg‘a
+            <IconGift className="h-4 w-4" /> Asosiy taomga salat va souslar sovg‘a tariqasida beriladi
           </p>
         </div>
 
@@ -198,8 +198,8 @@ export default function Menu() {
             </ul>
           ) : (
             <div className="rounded-3xl border-2 border-dashed border-green-800/15 px-6 py-16 text-center">
-              <p className="font-display text-2xl text-green-900">«{query}» topilmadi</p>
-              <p className="mt-2 text-ink-600">Boshqacha yozib ko‘ring, masalan «donar» yoki «pide».</p>
+              <p className="font-display text-2xl text-green-900">«{query}» bo‘yicha natija topilmadi</p>
+              <p className="mt-2 text-ink-600">Boshqa so‘z kiritib ko‘ring, masalan, «donar» yoki «pide».</p>
               <button type="button" onClick={() => setQuery("")} className="btn-outline mt-6">
                 <IconClose className="h-4 w-4" /> Qidiruvni tozalash
               </button>

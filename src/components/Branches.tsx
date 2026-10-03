@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { branches, contacts, facts, directionsUrl, distanceKm, hasLocation, isOpenNow, telHref, yandexUrl, type Branch } from "@/data/site";
+import { branches, contacts, facts, hoursPhrase, directionsUrl, distanceKm, hasLocation, isOpenNow, telHref, yandexUrl, type Branch } from "@/data/site";
 import SectionHeading from "./SectionHeading";
 import Reveal from "./Reveal";
 import { IconArrowUpRight, IconClock, IconClose, IconLocate, IconNavigate, IconPhone, IconPin } from "./icons";
@@ -65,7 +65,7 @@ function BranchMap({ selected, onSelect }: { selected: string; onSelect: (id: st
         })}
       </div>
       <a href={directionsUrl(b)} target="_blank" rel="noopener noreferrer" className="btn-primary absolute bottom-3 right-3 h-11 min-h-0 px-5 text-[14px]">
-        <IconNavigate className="h-4 w-4" /> Yo‘lni ko‘rsatish
+        <IconNavigate className="h-4 w-4" /> Yo‘nalishni ko‘rsatish
       </a>
       <p className="absolute bottom-0 left-0 rounded-tr-lg bg-white/85 px-2 py-0.5 text-[11px] text-ink-700">
         ©{" "}
@@ -114,11 +114,11 @@ function BranchDialog({ branch, onClose, mounted }: { branch: Branch | null; onC
             </div>
             <div className="flex gap-3">
               <IconClock className="mt-0.5 h-5 w-5 shrink-0 text-green-800" />
-              <div><dt className="sr-only">Ish vaqti</dt><dd className="tabular font-semibold">{branch.hours ? `Har kuni, ${branch.hours}` : "Ish vaqtini telefon orqali aniqlashtiring"}</dd></div>
+              <div><dt className="sr-only">Ish vaqti</dt><dd className="tabular font-semibold">{branch.hours ? `Har kuni, ${branch.hours}` : "Ish vaqtini telefon orqali aniqlashtirishingiz mumkin"}</dd></div>
             </div>
             <div className="flex gap-3">
               <IconPhone className="mt-0.5 h-5 w-5 shrink-0 text-green-800" />
-              <div><dt className="sr-only">Telefon</dt><dd><a href={telHref(branch.phone)} className="tabular font-semibold underline decoration-green-800/30 decoration-2 hover:decoration-green-800">{branch.phone}</a></dd></div>
+              <div><dt className="sr-only">Telefon raqami</dt><dd><a href={telHref(branch.phone)} className="tabular font-semibold underline decoration-green-800/30 decoration-2 hover:decoration-green-800">{branch.phone}</a></dd></div>
             </div>
           </dl>
           <div className="mt-8 grid gap-3 sm:grid-cols-2">
@@ -138,7 +138,7 @@ function BranchDialog({ branch, onClose, mounted }: { branch: Branch | null; onC
             )}
             {branch.onlineOrders && (
               <a href={contacts.orderUrl} target="_blank" rel="noopener noreferrer" className="btn-primary sm:col-span-2">
-                Shu filialdan buyurtma berish <IconArrowUpRight className="h-4 w-4" />
+                Ushbu filialdan buyurtma berish <IconArrowUpRight className="h-4 w-4" />
               </a>
             )}
           </div>
@@ -160,7 +160,7 @@ export default function Branches() {
 
   const locate = () => {
     if (!("geolocation" in navigator)) {
-      setGeo({ status: "error", message: "Brauzeringiz joylashuvni aniqlay olmaydi. Filialni ro‘yxatdan tanlang." });
+      setGeo({ status: "error", message: "Brauzeringiz joylashuvingizni aniqlay olmadi. Iltimos, filialni ro‘yxatdan tanlang." });
       return;
     }
     setGeo({ status: "loading" });
@@ -170,7 +170,7 @@ export default function Branches() {
         setGeo({ status: "ok", pos });
         setSelected([...located].sort((a, b) => distanceKm(pos, a) - distanceKm(pos, b))[0].id);
       },
-      () => setGeo({ status: "error", message: "Joylashuvga ruxsat berilmadi. Filialni ro‘yxatdan tanlang." }),
+      () => setGeo({ status: "error", message: "Joylashuvni aniqlashga ruxsat berilmadi. Iltimos, filialni ro‘yxatdan tanlang." }),
       { enableHighAccuracy: false, timeout: 10000, maximumAge: 300000 },
     );
   };
@@ -181,12 +181,12 @@ export default function Branches() {
       <div className="container">
         <SectionHeading
           id="branches-title"
-          title={<>Sizga eng yaqin <span className="text-green-500">YAPROQ</span></>}
-          lead={`Toshkentda uchta filial, har kuni ${facts.hours}. Joylashuvingizni ulashing — eng yaqinini o‘zimiz topamiz.`}
+          title={<>Sizga eng yaqin <span className="text-green-500">YAPROQ</span> filiali</>}
+          lead={`Toshkentda uchta filialimiz mavjud, har kuni ${hoursPhrase(facts.hours)} ishlaydi. Joylashuvingizni biz bilan ulashing — sizga eng yaqin filialni o‘zimiz topib beramiz.`}
           action={
             <button type="button" onClick={locate} disabled={geo.status === "loading"} className="btn-green h-14 px-6">
               <IconLocate className={`h-5 w-5 ${geo.status === "loading" ? "animate-spin" : ""}`} />
-              {geo.status === "loading" ? "Aniqlanmoqda…" : "Eng yaqinini topish"}
+              {geo.status === "loading" ? "Aniqlanmoqda…" : "Eng yaqin filialni topish"}
             </button>
           }
         />
@@ -212,14 +212,14 @@ export default function Branches() {
                       {distances?.[b.id] !== undefined && <span className="tabular shrink-0 text-[14px] font-bold text-green-800">{distances[b.id].toFixed(1).replace(".", ",")} km</span>}
                     </div>
                     <div className="pointer-events-none relative mt-4 grid gap-2 text-[15px] text-ink-700">
-                      <p className="flex gap-2.5"><IconPin className="mt-0.5 h-4 w-4 shrink-0 text-green-800" /> <span>{b.address ?? "Manzil va yo‘lni telefon orqali aniqlashtiring"}{b.landmark && <span className="block text-ink-500">{b.landmark}</span>}</span></p>
-                      <p className="flex gap-2.5"><IconClock className="mt-0.5 h-4 w-4 shrink-0 text-green-800" /> <span className="tabular">{b.hours ? `Har kuni, ${b.hours}` : "Ish vaqtini telefon orqali aniqlashtiring"}</span></p>
+                      <p className="flex gap-2.5"><IconPin className="mt-0.5 h-4 w-4 shrink-0 text-green-800" /> <span>{b.address ?? "Manzil va yo‘nalishni telefon orqali aniqlashtirishingiz mumkin"}{b.landmark && <span className="block text-ink-500">{b.landmark}</span>}</span></p>
+                      <p className="flex gap-2.5"><IconClock className="mt-0.5 h-4 w-4 shrink-0 text-green-800" /> <span className="tabular">{b.hours ? `Har kuni, ${b.hours}` : "Ish vaqtini telefon orqali aniqlashtirishingiz mumkin"}</span></p>
                       <p className="flex gap-2.5"><IconPhone className="mt-0.5 h-4 w-4 shrink-0 text-green-800" /> <a href={telHref(b.phone)} className="tabular pointer-events-auto underline decoration-green-800/30 decoration-2 hover:decoration-green-800">{b.phone}</a></p>
                     </div>
                     <div className="relative mt-5 flex flex-wrap gap-2">
                       {loc ? (
                         <a href={directionsUrl(b)} target="_blank" rel="noopener noreferrer" className={`btn h-11 min-h-0 px-5 text-[14px] ${on ? "bg-yellow text-green-950 hover:bg-yellow-300" : "bg-green-800 text-white hover:bg-green-700"}`}>
-                          <IconNavigate className="h-4 w-4" /> Yo‘lni ko‘rsatish
+                          <IconNavigate className="h-4 w-4" /> Yo‘nalishni ko‘rsatish
                         </a>
                       ) : (
                         <a href={telHref(b.phone)} className="btn h-11 min-h-0 bg-green-800 px-5 text-[14px] text-white hover:bg-green-700">

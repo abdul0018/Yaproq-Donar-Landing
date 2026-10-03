@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <Logo className="h-11 w-auto text-white" />
-            <p className="mt-5 max-w-xs text-[15px] leading-relaxed text-green-100">Turk taomlari va desertlari. Toshkentda {facts.founded} yildan beri.</p>
+            <p className="mt-5 max-w-xs text-[15px] leading-relaxed text-green-100">Turk taomlari va desertlari. {facts.founded}-yildan beri Toshkentda xizmatingizdamiz.</p>
             <a href={contacts.instagram} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex items-center gap-2 rounded-full border-2 border-white/15 px-4 py-2.5 text-[14px] font-bold transition hover:border-yellow hover:text-yellow">
               <IconInstagram className="h-5 w-5" /> {contacts.instagramHandle}
             </a>
@@ -46,24 +46,24 @@ export default function Footer() {
             <a href={telHref(contacts.phone)} className="tabular mt-5 flex items-center gap-2 font-display text-[26px] leading-none hover:text-yellow">
               <IconPhone className="h-5 w-5" /> {contacts.phone}
             </a>
-            <p className="mt-2 text-[14px] text-green-100">Yetkazib berish: eng yaqin filialdan 1 soatda</p>
+            <p className="mt-2 text-[14px] text-green-100">Yetkazib berish: eng yaqin filialdan 1 soat ichida</p>
             <div className="mt-6 grid gap-2">
               <a href={contacts.orderUrl} target="_blank" rel="noopener noreferrer" className="btn h-12 min-h-0 w-full bg-yellow text-green-950 hover:bg-yellow-300">
-                Saytda buyurtma <IconArrowUpRight className="h-4 w-4" />
+                Sayt orqali buyurtma berish <IconArrowUpRight className="h-4 w-4" />
               </a>
               <div className="grid grid-cols-2 gap-2">
                 <a href={contacts.appStore} target="_blank" rel="noopener noreferrer" className="btn h-11 min-h-0 border-2 border-white/20 px-3 text-[14px] hover:border-white">App Store</a>
                 <a href={contacts.googlePlay} target="_blank" rel="noopener noreferrer" className="btn h-11 min-h-0 border-2 border-white/20 px-3 text-[14px] hover:border-white">Google Play</a>
               </div>
             </div>
-            <p className="mt-6 text-[14px] text-green-100">To‘lov: {facts.payments.join(", ")}</p>
+            <p className="mt-6 text-[14px] text-green-100">To‘lov turlari: {facts.payments.join(", ")}</p>
           </div>
         </div>
 
         <div className="mt-14 flex flex-col gap-3 border-t border-white/10 pt-6 text-[13.5px] text-green-200 sm:flex-row sm:justify-between">
           <p>© {new Date().getFullYear()} YAPROQ DONAR · Donar by Beshqozon</p>
           <p className="tabular">
-            Ish o‘rinlari: <a href={telHref(contacts.vacancyPhone)} className="underline underline-offset-4 hover:text-white">{contacts.vacancyPhone}</a> (10:00 – 18:00)
+            Ish o‘rinlari bo‘yicha: <a href={telHref(contacts.vacancyPhone)} className="underline underline-offset-4 hover:text-white">{contacts.vacancyPhone}</a> (10:00 – 18:00)
           </p>
         </div>
       </div>
