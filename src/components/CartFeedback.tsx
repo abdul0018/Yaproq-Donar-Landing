@@ -21,7 +21,7 @@ export default function CartFeedback() {
 
   return (
     <>
-      <div aria-live="polite" className={`pointer-events-none fixed inset-x-0 bottom-24 z-50 flex justify-center px-4 transition-all duration-500 lg:bottom-8 ${toast && !open ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
+      <div aria-live="polite" className={`pointer-events-none fixed inset-x-0 bottom-[calc(6rem+env(safe-area-inset-bottom))] z-50 flex justify-center px-4 transition-all duration-500 lg:bottom-8 ${toast && !open ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
         {toast && (
           <div className="pointer-events-auto flex max-w-full items-center gap-3 rounded-full bg-green-950 py-2 pl-2 pr-2 text-white shadow-2xl">
             <span className="grid h-8 w-8 place-items-center rounded-full bg-yellow text-green-950"><IconCheck className="h-4 w-4" /></span>
@@ -31,7 +31,7 @@ export default function CartFeedback() {
         )}
       </div>
 
-      <div className={`fixed inset-x-0 bottom-0 z-40 p-3 transition-transform duration-500 ease-out lg:hidden ${count > 0 && !open ? "visible translate-y-0" : "invisible translate-y-full"}`}>
+      <div className={`fixed inset-x-0 bottom-0 z-40 p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] transition-transform duration-500 ease-out lg:hidden ${count > 0 && !open ? "visible translate-y-0" : "invisible translate-y-full"}`}>
         <button type="button" onClick={() => setOpen(true)} className="flex h-16 w-full items-center justify-between rounded-2xl bg-green-800 px-5 text-white shadow-[0_20px_40px_-15px_rgba(7,40,19,0.7)]" tabIndex={count > 0 ? 0 : -1}>
           <span className="flex items-center gap-3">
             <span className="grid h-8 min-w-8 place-items-center rounded-full bg-yellow px-2 text-[14px] font-bold text-green-950 tabular">{count}</span>

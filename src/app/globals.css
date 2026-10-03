@@ -45,6 +45,17 @@
   a {
     text-underline-offset: 0.2em;
   }
+  /* Notched phones: content clears the sensor housing in landscape. */
+  .container {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+  @media (min-width: 640px) {
+    .container { padding-left: max(1.5rem, env(safe-area-inset-left)); padding-right: max(1.5rem, env(safe-area-inset-right)); }
+  }
+  @media (min-width: 1024px) {
+    .container { padding-left: max(2.5rem, env(safe-area-inset-left)); padding-right: max(2.5rem, env(safe-area-inset-right)); }
+  }
   .tabular {
     font-variant-numeric: tabular-nums;
   }
@@ -56,6 +67,15 @@
 }
 
 @layer components {
+  /* A text link keeps its look but gets a 44px-tall touch area. */
+  .tap {
+    position: relative;
+  }
+  .tap::after {
+    content: "";
+    position: absolute;
+    inset: max(-12px, calc((100% - 44px) / 2)) -6px;
+  }
   .btn {
     @apply relative inline-flex min-h-[48px] select-none items-center justify-center gap-2 whitespace-nowrap rounded-full px-6 text-[15px] font-bold transition-[background-color,color,box-shadow,transform] duration-300 ease-out active:scale-[0.97] disabled:pointer-events-none disabled:opacity-50;
   }

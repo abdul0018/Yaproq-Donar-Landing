@@ -44,12 +44,12 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow,color] duration-500 ${
+      className={`fixed inset-x-0 top-0 z-50 pt-[env(safe-area-inset-top)] transition-[background-color,box-shadow,color] duration-500 ${
         light ? "bg-transparent text-white" : "bg-paper/95 text-ink shadow-[0_1px_0_rgba(15,36,23,0.08)] backdrop-blur-md"
       }`}
     >
       <div className="container flex h-[72px] items-center justify-between gap-6">
-        <a href="#asosiy" aria-label="YAPROQ — bosh sahifa" onClick={() => setMenuOpen(false)} className={light ? "text-white" : "text-green-800"}>
+        <a href="#asosiy" aria-label="YAPROQ — bosh sahifa" onClick={() => setMenuOpen(false)} className={`tap ${light ? "text-white" : "text-green-800"}`}>
           <Logo className="h-8 w-auto sm:h-9" />
         </a>
 
@@ -62,7 +62,7 @@ export default function Header() {
                   <a
                     href={l.href}
                     aria-current={isActive ? "true" : undefined}
-                    className={`relative rounded-full px-4 py-2 text-[15px] font-semibold transition-colors ${
+                    className={`relative inline-flex min-h-11 items-center rounded-full px-4 text-[15px] font-semibold transition-colors ${
                       isActive ? (light ? "bg-white/15" : "bg-green-800/10 text-green-800") : light ? "hover:bg-white/10" : "hover:bg-green-800/5"
                     }`}
                   >
@@ -107,7 +107,7 @@ export default function Header() {
       {/* Mobile navigation */}
       <div
         id="mobile-nav"
-        className={`fixed inset-x-0 bottom-0 top-[72px] origin-top bg-paper transition-all duration-500 ease-out lg:hidden ${
+        className={`fixed inset-x-0 bottom-0 top-[calc(72px+env(safe-area-inset-top))] origin-top bg-paper transition-all duration-500 ease-out lg:hidden ${
           menuOpen ? "visible opacity-100" : "invisible -translate-y-2 opacity-0"
         }`}
       >

@@ -45,15 +45,15 @@ function LeadDish({ dish }: { dish: Dish }) {
 function SideDish({ dish, delay }: { dish: Dish; delay: number }) {
   const [v, setV] = useState(dish.variants[0]);
   return (
-    <Reveal as="li" delay={delay} className="group grid grid-cols-[112px_1fr] items-start gap-5 rounded-3xl bg-white p-4 sm:grid-cols-[180px_1fr] lg:rounded-none lg:bg-transparent lg:px-0 lg:py-6 lg:first:pt-0 lg:last:pb-0">
-      <div className={`aspect-square overflow-hidden rounded-2xl screen-tile sm:aspect-[4/3]`}>
+    <Reveal as="li" delay={delay} className="group grid grid-cols-[96px_1fr] items-start gap-x-4 gap-y-4 rounded-3xl bg-white p-4 sm:grid-cols-[180px_1fr] lg:rounded-none lg:bg-transparent lg:px-0 lg:py-6 lg:first:pt-0 lg:last:pb-0">
+      <div className={`aspect-square overflow-hidden rounded-2xl screen-tile sm:row-span-2 sm:aspect-[4/3]`}>
         <DishVisual dish={dish} onTile className="transition-transform duration-700 ease-out group-hover:scale-110" />
       </div>
-      <div className="flex min-w-0 flex-col gap-3">
-        <div>
-          <h3 className="font-display text-[24px] leading-tight text-green-900 sm:text-[26px]">{dish.name}</h3>
-          <p className="mt-1 text-[14.5px] leading-snug text-ink-600">{dish.description}</p>
-        </div>
+      <div className="min-w-0 self-center sm:self-start">
+        <h3 className="font-display text-[24px] leading-tight text-green-900 sm:text-[26px]">{dish.name}</h3>
+        <p className="mt-1 text-[14.5px] leading-snug text-ink-600">{dish.description}</p>
+      </div>
+      <div className="col-span-2 flex min-w-0 flex-col gap-3 sm:col-span-1 sm:col-start-2">
         <SizeSwitch dish={dish} value={v} onChange={setV} />
         <div className="flex flex-wrap items-center justify-between gap-3">
           <p className="tabular text-[17px] font-extrabold text-green-900"><Price value={v.price} /></p>
@@ -75,7 +75,7 @@ export default function Popular() {
           title="Yaproq’ning asosiy taomlari"
           lead="Turk oshxonasining to‘rt xil klassik taomi: donar, Iskender kabob, pilav ustu donar va pide."
           action={
-            <a href="#menyu" className="group inline-flex items-center gap-2 text-[15px] font-bold text-green-800 underline decoration-2 underline-offset-4 hover:text-green-500">
+            <a href="#menyu" className="tap group inline-flex items-center gap-2 text-[15px] font-bold text-green-800 underline decoration-2 underline-offset-4 hover:text-green-500">
               To‘liq menyu <IconArrow className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
           }

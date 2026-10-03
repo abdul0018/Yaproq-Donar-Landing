@@ -57,7 +57,7 @@ function BranchMap({ selected, onSelect }: { selected: string; onSelect: (id: st
               type="button"
               onClick={() => onSelect(x.id)}
               aria-pressed={on}
-              className={`flex items-center gap-1.5 rounded-full px-3.5 py-2 text-[13px] font-bold shadow-[0_8px_20px_-10px_rgba(0,0,0,0.5)] transition-colors ${on ? "bg-yellow text-green-950" : "bg-white text-green-900 hover:bg-green-50"}`}
+              className={`flex min-h-11 items-center gap-1.5 rounded-full px-4 py-2 text-[13px] font-bold shadow-[0_8px_20px_-10px_rgba(0,0,0,0.5)] transition-colors ${on ? "bg-yellow text-green-950" : "bg-white text-green-900 hover:bg-green-50"}`}
             >
               <IconPin className="h-3.5 w-3.5" /> {x.name}
             </button>
@@ -118,7 +118,7 @@ function BranchDialog({ branch, onClose, mounted }: { branch: Branch | null; onC
             </div>
             <div className="flex gap-3">
               <IconPhone className="mt-0.5 h-5 w-5 shrink-0 text-green-800" />
-              <div><dt className="sr-only">Telefon raqami</dt><dd><a href={telHref(branch.phone)} className="tabular font-semibold underline decoration-green-800/30 decoration-2 hover:decoration-green-800">{branch.phone}</a></dd></div>
+              <div><dt className="sr-only">Telefon raqami</dt><dd><a href={telHref(branch.phone)} className="tap tabular font-semibold underline decoration-green-800/30 decoration-2 hover:decoration-green-800">{branch.phone}</a></dd></div>
             </div>
           </dl>
           <div className="mt-8 grid gap-3 sm:grid-cols-2">
@@ -214,7 +214,7 @@ export default function Branches() {
                     <div className="pointer-events-none relative mt-4 grid gap-2 text-[15px] text-ink-700">
                       <p className="flex gap-2.5"><IconPin className="mt-0.5 h-4 w-4 shrink-0 text-green-800" /> <span>{b.address ?? "Manzil va yo‘nalishni telefon orqali aniqlashtirishingiz mumkin"}{b.landmark && <span className="block text-ink-500">{b.landmark}</span>}</span></p>
                       <p className="flex gap-2.5"><IconClock className="mt-0.5 h-4 w-4 shrink-0 text-green-800" /> <span className="tabular">{b.hours ? `Har kuni, ${b.hours}` : "Ish vaqtini telefon orqali aniqlashtirishingiz mumkin"}</span></p>
-                      <p className="flex gap-2.5"><IconPhone className="mt-0.5 h-4 w-4 shrink-0 text-green-800" /> <a href={telHref(b.phone)} className="tabular pointer-events-auto underline decoration-green-800/30 decoration-2 hover:decoration-green-800">{b.phone}</a></p>
+                      <p className="flex gap-2.5"><IconPhone className="mt-0.5 h-4 w-4 shrink-0 text-green-800" /> <a href={telHref(b.phone)} className="tap tabular pointer-events-auto underline decoration-green-800/30 decoration-2 hover:decoration-green-800">{b.phone}</a></p>
                     </div>
                     <div className="relative mt-5 flex flex-wrap gap-2">
                       {loc ? (

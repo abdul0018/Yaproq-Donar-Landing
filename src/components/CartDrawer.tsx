@@ -111,7 +111,7 @@ export default function CartDrawer() {
               </p>
             </div>
 
-            <div className="border-t border-green-800/10 bg-white px-5 pb-5 pt-4 sm:px-6">
+            <div className="border-t border-green-800/10 bg-white px-5 pb-[max(1.25rem,env(safe-area-inset-bottom))] pt-4 sm:px-6">
               <div className="flex items-baseline justify-between font-display text-[24px] text-green-900">
                 <span>Jami</span>
                 <span className="tabular">{formatPrice(subtotal)}</span>
