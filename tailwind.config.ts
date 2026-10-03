@@ -29,14 +29,14 @@ const config: Config = {
           600: "#B8961A",
         },
         ink: { DEFAULT: "#0F2417", 700: "#2B3D31", 600: "#45574B", 500: "#5E6E63", 400: "#83918A" },
-        // Warm paper ground from the user's reference posters.
+        // Warm paper ground: the lit rooms between the dark green hall.
         paper: "#F6F0E1",
         "paper-deep": "#ECE1C8",
         sage: "#DCE5D0",
         // Backdrop of the official studio product photos.
         studio: "#ECEBE7",
         // The lamp-lit Karagöz screen and the dyed-leather figures on it.
-        lamp: { light: "#FFF3B8", DEFAULT: "#F5DB6A", deep: "#D9AE2A" },
+        lamp: { light: "#FFF3B8", DEFAULT: "#F8E486", deep: "#DDB236" },
         hide: { red: "#A3241A", tan: "#C98A4B", rod: "#3A2410" },
       },
       fontFamily: {
@@ -53,12 +53,10 @@ const config: Config = {
       keyframes: {
         "fade-up": { "0%": { opacity: "0", transform: "translateY(22px)" }, "100%": { opacity: "1", transform: "none" } },
         marquee: { to: { transform: "translateX(-50%)" } },
-        "leaf-in": { "0%": { opacity: "0", transform: "scale(.92) rotate(-6deg)" }, "100%": { opacity: "1", transform: "none" } },
       },
       animation: {
         "fade-up": "fade-up .8s cubic-bezier(0.16,1,0.3,1) both",
         marquee: "marquee 45s linear infinite",
-        "leaf-in": "leaf-in 1.2s cubic-bezier(0.16,1,0.3,1) both",
       },
     },
   },

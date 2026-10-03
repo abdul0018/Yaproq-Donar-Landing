@@ -2,7 +2,7 @@ import type { CSSProperties, ElementType, ReactNode } from "react";
 
 /**
  * Layout wrapper kept for structure. Scroll-triggered entrances were removed on purpose:
- * the hero's leaf-in is the page's single authored entrance.
+ * the hero's lamp-and-puppets show is the page's single authored entrance.
  */
 export default function Reveal({
   as: Tag = "div",

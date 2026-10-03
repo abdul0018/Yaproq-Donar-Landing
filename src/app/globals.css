@@ -151,6 +151,14 @@
 .perde-wait .puppet,
 .perde-wait .puppet-ride { animation-play-state: paused; }
 
+/* Hero H1: each line rises out of its own mask, in reading order. */
+.line-mask { display: inline-block; overflow: hidden; vertical-align: bottom; padding-bottom: 0.08em; margin-bottom: -0.08em; }
+@keyframes line-rise {
+  from { transform: translateY(105%); }
+  to { transform: none; }
+}
+.line-rise { display: inline-block; animation: line-rise 0.7s cubic-bezier(0.16, 1, 0.3, 1) both; }
+
 /* Dish photos sit on a pale lamp-lit screen: warm centre, woven cloth. */
 .screen-tile {
   background-color: #f8e7a6;
@@ -165,14 +173,6 @@
     repeating-linear-gradient(0deg, rgba(17, 90, 46, 0.07) 0 1px, transparent 1px 6px),
     repeating-linear-gradient(90deg, rgba(17, 90, 46, 0.07) 0 1px, transparent 1px 6px),
     radial-gradient(ellipse at 50% 42%, #f1f6ee 0%, #dce5d0 70%, #c5d9ba 100%);
-}
-
-/* Punched-hole rule, like the perforations in the leather figures. */
-.perf-rule {
-  height: 6px;
-  background-image: radial-gradient(circle, currentColor 2px, transparent 2.4px);
-  background-size: 14px 6px;
-  background-repeat: repeat-x;
 }
 
 /* Price changes when a size is picked. */

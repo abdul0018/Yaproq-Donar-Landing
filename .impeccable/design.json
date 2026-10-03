@@ -1,11 +1,57 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-02T19:10:13+00:00",
+  "generatedAt": "2026-10-03T01:58:15+00:00",
   "title": "Design System: YAPROQ DONAR",
   "extensions": {
     "colorMeta": {
-      "logo-green": {
+      "brand-yellow": {
         "role": "primary",
+        "displayName": "Lamp Yellow",
+        "canonical": "#EDCD49",
+        "tonalRamp": [
+          "#B8961A",
+          "#DDB92C",
+          "#EDCD49",
+          "#F2D86E",
+          "#F6E39A",
+          "#FBF3CF",
+          "#FFF3B8",
+          "#FFF8D9"
+        ],
+        "ownerPinned": true
+      },
+      "yellow-hover": {
+        "role": "primary",
+        "displayName": "Lamp Yellow Hover",
+        "canonical": "#F2D86E",
+        "tonalRamp": [
+          "#B8961A",
+          "#DDB92C",
+          "#EDCD49",
+          "#F2D86E",
+          "#F6E39A",
+          "#FBF3CF",
+          "#FFF3B8",
+          "#FFF8D9"
+        ]
+      },
+      "yellow-shade": {
+        "role": "primary",
+        "displayName": "Lamp Shade",
+        "canonical": "#B8961A",
+        "tonalRamp": [
+          "#B8961A",
+          "#DDB92C",
+          "#EDCD49",
+          "#F2D86E",
+          "#F6E39A",
+          "#FBF3CF",
+          "#FFF3B8",
+          "#FFF8D9"
+        ]
+      },
+      "logo-green": {
+        "role": "secondary",
         "displayName": "Logo Green",
         "canonical": "#115A2E",
         "tonalRamp": [
@@ -18,42 +64,26 @@
           "#E2ECDC",
           "#F1F6EE"
         ],
-        "purpose": "Workhorse action green, active tab and size segment, lead card, map pin, closing photo ring, focus ring on paper."
+        "ownerPinned": true
       },
-      "forest-deep": {
-        "role": "primary",
-        "displayName": "Forest Deep",
-        "canonical": "#0B3D1F",
+      "brand-olive": {
+        "role": "secondary",
+        "displayName": "Brand Olive",
+        "canonical": "#3E5F21",
         "tonalRamp": [
-          "#072813",
-          "#0B3D1F",
-          "#115A2E",
-          "#1A6B39",
-          "#2E7A45",
-          "#C5D9BA",
-          "#E2ECDC",
-          "#F1F6EE"
+          "#253914",
+          "#406222",
+          "#5B8C31",
+          "#77B63F",
+          "#93C964",
+          "#B0D88D",
+          "#D0E7BB",
+          "#F2F8EC"
         ],
-        "purpose": "Hero and ways-to-order fields, promo cards, headlines on paper and yellow."
-      },
-      "forest-night": {
-        "role": "primary",
-        "displayName": "Forest Night",
-        "canonical": "#072813",
-        "tonalRamp": [
-          "#072813",
-          "#0B3D1F",
-          "#115A2E",
-          "#1A6B39",
-          "#2E7A45",
-          "#C5D9BA",
-          "#E2ECDC",
-          "#F1F6EE"
-        ],
-        "purpose": "Footer field and all text on yellow."
+        "ownerPinned": true
       },
       "leaf-hover": {
-        "role": "primary",
+        "role": "secondary",
         "displayName": "Leaf Hover",
         "canonical": "#1A6B39",
         "tonalRamp": [
@@ -65,29 +95,12 @@
           "#C5D9BA",
           "#E2ECDC",
           "#F1F6EE"
-        ],
-        "purpose": "Hover of every green fill."
+        ]
       },
-      "brand-olive": {
-        "role": "primary",
-        "displayName": "Brand Olive (owner-pinned)",
-        "canonical": "#3E5F21",
-        "tonalRamp": [
-          "#17240C",
-          "#22350F",
-          "#2E4718",
-          "#3E5F21",
-          "#5A7A3B",
-          "#86A06B",
-          "#B9CBA6",
-          "#E6EDDE"
-        ],
-        "purpose": "Accent word in headlines on paper; hover for ribbon items and text links."
-      },
-      "sprout-green": {
-        "role": "primary",
-        "displayName": "Sprout Green",
-        "canonical": "#2E7A45",
+      "forest-deep": {
+        "role": "secondary",
+        "displayName": "Forest Deep",
+        "canonical": "#0B3D1F",
         "tonalRamp": [
           "#072813",
           "#0B3D1F",
@@ -97,11 +110,25 @@
           "#C5D9BA",
           "#E2ECDC",
           "#F1F6EE"
-        ],
-        "purpose": "Open-now dot only."
+        ]
+      },
+      "hall-night": {
+        "role": "secondary",
+        "displayName": "Hall Night",
+        "canonical": "#072813",
+        "tonalRamp": [
+          "#072813",
+          "#0B3D1F",
+          "#115A2E",
+          "#1A6B39",
+          "#2E7A45",
+          "#C5D9BA",
+          "#E2ECDC",
+          "#F1F6EE"
+        ]
       },
       "pale-sage": {
-        "role": "primary",
+        "role": "neutral",
         "displayName": "Pale Sage",
         "canonical": "#E2ECDC",
         "tonalRamp": [
@@ -113,330 +140,335 @@
           "#C5D9BA",
           "#E2ECDC",
           "#F1F6EE"
-        ],
-        "purpose": "Secondary copy on green fields."
+        ]
       },
-      "brand-yellow": {
-        "role": "secondary",
-        "displayName": "Brand Yellow (owner-pinned)",
-        "canonical": "#EDCD49",
-        "tonalRamp": [
-          "#5E4C0B",
-          "#B8961A",
-          "#DDB92C",
-          "#EDCD49",
-          "#F2D86E",
-          "#F6E39A",
-          "#FBF3CF",
-          "#FDF9E8"
-        ],
-        "purpose": "Primary action, accent word on green, ribbon/promo/closing fields, drop backing, tags, hand notes on green, focus ring."
-      },
-      "yellow-hover": {
-        "role": "secondary",
-        "displayName": "Yellow Hover",
-        "canonical": "#F2D86E",
-        "tonalRamp": [
-          "#5E4C0B",
-          "#B8961A",
-          "#DDB92C",
-          "#EDCD49",
-          "#F2D86E",
-          "#F6E39A",
-          "#FBF3CF",
-          "#FDF9E8"
-        ],
-        "purpose": "Hover of every yellow fill."
-      },
-      "yellow-shade": {
-        "role": "secondary",
-        "displayName": "Yellow Shade",
-        "canonical": "#B8961A",
-        "tonalRamp": [
-          "#5E4C0B",
-          "#B8961A",
-          "#DDB92C",
-          "#EDCD49",
-          "#F2D86E",
-          "#F6E39A",
-          "#FBF3CF",
-          "#FDF9E8"
-        ],
-        "purpose": "Tint of the primary button glow only."
-      },
-      "paper": {
+      "sage-line": {
         "role": "neutral",
-        "displayName": "Paper",
-        "canonical": "#F6F0E1",
+        "displayName": "Sage Line",
+        "canonical": "#C5D9BA",
         "tonalRamp": [
-          "#3D3220",
-          "#6B5A3A",
-          "#9A8660",
-          "#C4B28C",
-          "#ECE1C8",
-          "#F1E8D4",
-          "#F6F0E1",
-          "#FBF8F0"
-        ],
-        "purpose": "Grained page ground; display colour on green."
-      },
-      "paper-deep": {
-        "role": "neutral",
-        "displayName": "Paper Deep",
-        "canonical": "#ECE1C8",
-        "tonalRamp": [
-          "#3D3220",
-          "#6B5A3A",
-          "#9A8660",
-          "#C4B28C",
-          "#ECE1C8",
-          "#F1E8D4",
-          "#F6F0E1",
-          "#FBF8F0"
-        ],
-        "purpose": "Alternate food tile."
+          "#072813",
+          "#0B3D1F",
+          "#115A2E",
+          "#1A6B39",
+          "#2E7A45",
+          "#C5D9BA",
+          "#E2ECDC",
+          "#F1F6EE"
+        ]
       },
       "sage-tile": {
-        "role": "neutral",
+        "role": "tertiary",
         "displayName": "Sage Tile",
         "canonical": "#DCE5D0",
         "tonalRamp": [
-          "#26301E",
-          "#3F4D33",
-          "#5E6F50",
-          "#869878",
-          "#B3C2A4",
-          "#DCE5D0",
-          "#EAF0E2",
-          "#F5F8F1"
-        ],
-        "purpose": "Alternate food tile; About splash."
+          "#28311B",
+          "#45552F",
+          "#627943",
+          "#7F9E57",
+          "#9BB578",
+          "#B6C99C",
+          "#D3DEC4",
+          "#F3F6EF"
+        ]
+      },
+      "lamp-light": {
+        "role": "tertiary",
+        "displayName": "Lamp Light",
+        "canonical": "#FFF3B8",
+        "tonalRamp": [
+          "#4C4000",
+          "#856E00",
+          "#BD9D00",
+          "#F5CB00",
+          "#FFDC2E",
+          "#FFE566",
+          "#FFEFA3",
+          "#FFFBE5"
+        ]
+      },
+      "screen-tile-yellow": {
+        "role": "tertiary",
+        "displayName": "Screen Tile Yellow",
+        "canonical": "#F8E7A6",
+        "tonalRamp": [
+          "#473906",
+          "#7B630A",
+          "#AF8E0E",
+          "#E3B812",
+          "#F0CB3D",
+          "#F4D971",
+          "#F8E8AA",
+          "#FDF9E7"
+        ]
+      },
+      "hide-red": {
+        "role": "tertiary",
+        "displayName": "Dyed Hide Red",
+        "canonical": "#A3241A",
+        "tonalRamp": [
+          "#420F0B",
+          "#721912",
+          "#A3241A",
+          "#D32F22",
+          "#E2564B",
+          "#EA837B",
+          "#F2B5B0",
+          "#FBEAE9"
+        ]
+      },
+      "hide-tan": {
+        "role": "tertiary",
+        "displayName": "Hide Tan",
+        "canonical": "#C98A4B",
+        "tonalRamp": [
+          "#3B2612",
+          "#66421F",
+          "#915E2C",
+          "#BC7A38",
+          "#CF965E",
+          "#DCB289",
+          "#EAD1B8",
+          "#F9F2EB"
+        ]
+      },
+      "hide-rod": {
+        "role": "tertiary",
+        "displayName": "Rod Brown",
+        "canonical": "#3A2410",
+        "tonalRamp": [
+          "#3C2511",
+          "#68411D",
+          "#945C29",
+          "#C07735",
+          "#D2945B",
+          "#DEB087",
+          "#EBD0B7",
+          "#F9F2EB"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Cream Paper",
+        "canonical": "#F6F0E1",
+        "tonalRamp": [
+          "#3B2F12",
+          "#66521F",
+          "#91742C",
+          "#BC9738",
+          "#CFAF5E",
+          "#DCC489",
+          "#EADCB8",
+          "#F9F5EB"
+        ]
       },
       "studio-grey": {
         "role": "neutral",
         "displayName": "Studio Grey",
         "canonical": "#ECEBE7",
         "tonalRamp": [
-          "#2A2926",
-          "#4A4945",
-          "#6E6D68",
-          "#94938E",
-          "#BAB9B4",
-          "#D6D5D0",
-          "#ECEBE7",
-          "#F7F6F4"
-        ],
-        "purpose": "Well behind uncut studio photos."
+          "#2B2922",
+          "#4A473B",
+          "#696553",
+          "#89836C",
+          "#A39E8A",
+          "#BBB8AA",
+          "#D6D4CC",
+          "#F4F3F1"
+        ]
       },
       "ink": {
         "role": "neutral",
         "displayName": "Ink",
         "canonical": "#0F2417",
         "tonalRamp": [
-          "#0F2417",
-          "#2B3D31",
-          "#45574B",
-          "#5E6E63",
-          "#83918A",
-          "#C9D1CC",
-          "#E8ECE9",
-          "#F6F8F6"
-        ],
-        "purpose": "Body text on light grounds."
-      },
-      "ink-soft": {
-        "role": "neutral",
-        "displayName": "Ink Soft",
-        "canonical": "#2B3D31",
-        "tonalRamp": [
-          "#0F2417",
-          "#2B3D31",
-          "#45574B",
-          "#5E6E63",
-          "#83918A",
-          "#C9D1CC",
-          "#E8ECE9",
-          "#F6F8F6"
-        ],
-        "purpose": "Secondary body text."
+          "#173622",
+          "#275E3C",
+          "#388555",
+          "#48AD6E",
+          "#6BC28C",
+          "#93D2AB",
+          "#BEE4CD",
+          "#EDF8F1"
+        ]
       },
       "ink-muted": {
         "role": "neutral",
         "displayName": "Ink Muted",
         "canonical": "#45574B",
         "tonalRamp": [
-          "#0F2417",
-          "#2B3D31",
-          "#45574B",
-          "#5E6E63",
-          "#83918A",
-          "#C9D1CC",
-          "#E8ECE9",
-          "#F6F8F6"
-        ],
-        "purpose": "Leads and descriptions."
+          "#222B25",
+          "#3B4A40",
+          "#53695B",
+          "#6C8976",
+          "#8AA392",
+          "#AABBB0",
+          "#CCD6CF",
+          "#F1F4F2"
+        ]
       },
       "ink-quiet": {
         "role": "neutral",
         "displayName": "Ink Quiet",
         "canonical": "#5E6E63",
         "tonalRamp": [
-          "#0F2417",
-          "#2B3D31",
-          "#45574B",
-          "#5E6E63",
-          "#83918A",
-          "#C9D1CC",
-          "#E8ECE9",
-          "#F6F8F6"
-        ],
-        "purpose": "Counts, placeholders, portion weights."
+          "#232925",
+          "#3D4840",
+          "#57665C",
+          "#718477",
+          "#8E9F93",
+          "#ACB8B0",
+          "#CDD5D0",
+          "#F1F3F2"
+        ]
       },
       "white": {
         "role": "neutral",
         "displayName": "White",
         "canonical": "#FFFFFF",
         "tonalRamp": [
-          "#0F2417",
-          "#2B3D31",
-          "#45574B",
-          "#5E6E63",
-          "#83918A",
-          "#C9D1CC",
-          "#E8ECE9",
-          "#F6F8F6"
-        ],
-        "purpose": "Raised surfaces only: price chip, selected branch card, dialogs, cart rows, search, map chips."
+          "#262626",
+          "#424242",
+          "#5E5E5E",
+          "#7A7A7A",
+          "#969696",
+          "#B2B2B2",
+          "#D1D1D1",
+          "#F2F2F2"
+        ]
       }
     },
     "typographyMeta": {
       "display": {
         "displayName": "Display",
-        "purpose": "Hero H1 only; cream on forest with one yellow word."
+        "purpose": "Hero H1 only; Yeseva One, single weight, synthesis off."
       },
       "headline": {
         "displayName": "Headline",
-        "purpose": "Every section H2; one accent word: Brand Olive on paper, Brand Yellow on green."
-      },
-      "title-lg": {
-        "displayName": "Title Large",
-        "purpose": "Lead dish name."
+        "purpose": "Section titles and the closing panel title."
       },
       "title": {
         "displayName": "Title",
-        "purpose": "Branch and set names, large prices, offer rows, ribbon categories, ordering channels (26 to 40px)."
+        "purpose": "Lead dish name; Yeseva also at 26-40px for side dishes, ordering ways, offers and lead prices."
       },
-      "title-sm": {
-        "displayName": "Title Small",
-        "purpose": "Dish names on tiles, About pillars, hero price chip (20 to 26px)."
-      },
-      "hand": {
-        "displayName": "Hand",
-        "purpose": "Caveat margin notes in exactly three places: hero perk line, set tag, About caption."
-      },
-      "lead": {
-        "displayName": "Lead",
-        "purpose": "Paragraph under a headline, max 60ch."
+      "dish-name": {
+        "displayName": "Dish Name",
+        "purpose": "Menu tile names (20px mobile); price ticket at 19px."
       },
       "body": {
         "displayName": "Body",
-        "purpose": "Card copy, branch details."
+        "purpose": "Section leads (max 60ch) and hero copy."
       },
       "body-sm": {
         "displayName": "Body Small",
-        "purpose": "Dish descriptions, meta."
+        "purpose": "Dish descriptions."
       },
       "label": {
         "displayName": "Label",
-        "purpose": "Buttons, nav links, chips; sentence case."
+        "purpose": "Buttons, nav (600), links."
       },
       "price": {
         "displayName": "Price",
-        "purpose": "Prices, weights, phones, counts; tabular figures."
+        "purpose": "List prices and counts, tabular figures."
       }
     },
     "shadows": [
       {
-        "name": "plate-shadow",
-        "value": "drop-shadow(0 14px 14px rgba(60,45,20,0.22))",
-        "purpose": "Filter on every cutout on a food tile."
+        "name": "screen-float",
+        "value": "drop-shadow(0 40px 50px rgba(0,0,0,0.45))",
+        "purpose": "The hero perde over the hall."
       },
       {
-        "name": "plate-shadow-lg",
-        "value": "drop-shadow(0 22px 20px rgba(60,45,20,0.3))",
-        "purpose": "About plate on the sage splash."
+        "name": "ticket-float",
+        "value": "0 24px 50px -24px rgba(0,0,0,0.6)",
+        "purpose": "Cream price ticket overlapping the screen foot."
       },
       {
-        "name": "yellow-glow",
+        "name": "lamp-glow",
         "value": "0 10px 24px -12px rgba(184,150,26,0.9)",
-        "purpose": "Primary yellow button only."
+        "purpose": "Under primary yellow buttons."
       },
       {
-        "name": "photo-drop",
-        "value": "0 40px 70px -30px rgba(0,0,0,0.6)",
-        "purpose": "Hero drop photo on green."
-      },
-      {
-        "name": "ochre-drop",
-        "value": "0 34px 60px -30px rgba(150,110,10,0.55)",
-        "purpose": "Closing drop photo on yellow."
-      },
-      {
-        "name": "card-selected",
+        "name": "selected-card",
         "value": "0 22px 44px -30px rgba(11,61,31,0.55)",
-        "purpose": "Selected branch card."
-      },
-      {
-        "name": "floating-chip",
-        "value": "0 24px 50px -24px rgba(0,0,0,0.55)",
-        "purpose": "Hero price chip."
+        "purpose": "Active branch card."
       },
       {
         "name": "map-chip",
-        "value": "0 10px 24px -8px rgba(0,0,0,0.5)",
-        "purpose": "Map pin and branch chips."
+        "value": "0 8px 20px -10px rgba(0,0,0,0.5)",
+        "purpose": "Branch chips over the map."
+      },
+      {
+        "name": "plate-on-cloth",
+        "value": "drop-shadow(0 14px 14px rgba(60,45,20,0.22))",
+        "purpose": "Cut-out dishes on screen tiles."
       },
       {
         "name": "header-hairline",
         "value": "0 1px 0 rgba(15,36,23,0.08)",
-        "purpose": "Scrolled header edge."
+        "purpose": "Scrolled header on paper."
       }
     ],
     "motion": [
       {
-        "name": "ease-out-expo",
+        "name": "ease-out",
         "value": "cubic-bezier(0.16, 1, 0.3, 1)",
-        "purpose": "The single easing for transitions, reveals and entrances."
+        "purpose": "Default easing for reveals, rises and state changes."
       },
       {
-        "name": "control-transition",
-        "value": "300ms",
-        "purpose": "Buttons, tabs, segments."
+        "name": "lamp-catch",
+        "value": "1s ease-out, opacity flicker 0 to .55 to .2 to .85 to .6 to 1",
+        "purpose": "The perde lamp lighting once."
+      },
+      {
+        "name": "lamp-breathe",
+        "value": "5s ease-in-out 1s infinite, opacity .55 to .4",
+        "purpose": "The perde hotspot."
+      },
+      {
+        "name": "puppet-rise",
+        "value": "0.9s cubic-bezier(0.16, 1, 0.3, 1), translateY(70%) to none, delays 0.7/0.85/1s",
+        "purpose": "Cast rising on rods."
+      },
+      {
+        "name": "puppet-sway",
+        "value": "3.8-5.4s ease-in-out infinite, rotate ±1.6deg from the rod foot",
+        "purpose": "Hand-held ambient sway."
+      },
+      {
+        "name": "puppet-slice",
+        "value": "1.4s ease-in-out 1.8s infinite, rotate 0 to 9deg",
+        "purpose": "The cook's knife arm."
       },
       {
         "name": "reveal",
-        "value": "opacity + translateY(24px), 900ms",
-        "purpose": "Section reveal; content visible by default."
+        "value": "0.9s cubic-bezier(0.16, 1, 0.3, 1), translateY(24px) and opacity",
+        "purpose": "Section content entrance, only after JS marks it pending."
       },
       {
-        "name": "fade-up",
-        "value": "800ms, translateY(22px)",
-        "purpose": "Hero copy stagger, dialogs, tile entrance (40ms stagger, capped at 8)."
+        "name": "price-tick",
+        "value": "0.22s cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Price changes on size pick."
       },
       {
-        "name": "leaf-in",
-        "value": "1200ms, scale(.92) rotate(-6deg) to none",
-        "purpose": "Hero drop photo only; the one authored entrance."
+        "name": "pop",
+        "value": "0.45s cubic-bezier(0.16, 1, 0.3, 1), scale 1 to 1.25 to 1",
+        "purpose": "Cart count after add; with a yellow fly-dot to the cart."
       },
       {
         "name": "marquee",
-        "value": "45s linear infinite, pauses on hover and focus",
-        "purpose": "Yellow category ribbon."
+        "value": "45s linear infinite",
+        "purpose": "Category ribbon; paused on hover, focus or off-screen."
+      },
+      {
+        "name": "button-press",
+        "value": "scale(0.97), 300ms",
+        "purpose": "Every .btn on active."
       },
       {
         "name": "reduced-motion",
-        "value": "durations 0.001ms",
-        "purpose": "All motion collapses under prefers-reduced-motion."
+        "value": "all animation off; lit, still perde; reveals visible",
+        "purpose": "prefers-reduced-motion: reduce."
       }
     ],
     "breakpoints": [
@@ -464,23 +496,35 @@
     "textures": [
       {
         "name": "paper-grain",
-        "value": "SVG feTurbulence fractalNoise, baseFrequency .85, 2 octaves, warm brown at 9% alpha, 180px tile",
-        "purpose": "Every .bg-paper ground."
+        "value": "SVG feTurbulence fractalNoise, baseFrequency .85, 2 octaves, 180px tile, alpha .09 warm brown",
+        "purpose": "Cream paper sections."
       },
       {
-        "name": "torn-edge",
-        "value": "/images/paint/edge-{1,2,3}.png alpha masks over currentColor, 40px / 64px from 640px, mirrored on even seeds",
-        "purpose": "Every change of field colour."
+        "name": "screen-tile",
+        "value": "background-color:#f8e7a6;background-image:repeating-linear-gradient(0deg,rgba(201,161,42,.13) 0 1px,transparent 1px 6px),repeating-linear-gradient(90deg,rgba(201,161,42,.13) 0 1px,transparent 1px 6px),radial-gradient(ellipse at 50% 42%,#fff8d9 0%,#f8e7a6 62%,#efd27a 100%);",
+        "purpose": "Yellow lamp-lit tile under dish photos."
       },
       {
-        "name": "sage-splash",
-        "value": "/images/paint/splash-sage.png, rotated -6deg, 132% of frame",
-        "purpose": "Behind the About plate only."
+        "name": "screen-tile-green",
+        "value": "background-color:#dce5d0; 6px weave rgba(17,90,46,.07); radial #f1f6ee 0% / #dce5d0 70% / #c5d9ba 100% at 50% 42%",
+        "purpose": "Sage tile, alternating with yellow."
+      },
+      {
+        "name": "perde-weave",
+        "value": "6px pattern, M0 3h6M3 0v6, #C9A12A .5px at 20%",
+        "purpose": "Weave on the perde screen."
+      },
+      {
+        "name": "valance",
+        "value": "22px mask, scallop widths 44/56/50px, one 2.6px-radius hole per scallop",
+        "purpose": "Section-top seams."
       }
     ],
     "focus": {
-      "default": "3px solid #EDCD49, offset 3px",
-      "onLight": "3px solid #115A2E, offset 3px"
+      "default": "3px solid #EDCD49, offset 3px, radius 8px",
+      "onPaper": "outline-color #115A2E",
+      "selection": "background #EDCD49, color #072813",
+      "accent": "#115A2E (form accent, scrollbar thumb on #E2ECDC)"
     }
   },
   "components": [
@@ -488,171 +532,145 @@
       "name": "Primary Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "The next action: yellow pill, Forest Night text, yellow glow.",
-      "html": "<button class=\"ds-btn ds-btn-primary\">Menyuni ko‘rish <svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></button>",
-      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 24px;border-radius:9999px;font:700 15px/1 Figtree,system-ui,sans-serif;border:0;cursor:pointer;white-space:nowrap;transition:background-color .3s cubic-bezier(.16,1,.3,1),color .3s cubic-bezier(.16,1,.3,1),transform .3s cubic-bezier(.16,1,.3,1)}.ds-btn:active{transform:scale(.97)}.ds-btn:focus-visible{outline:3px solid #115A2E;outline-offset:3px}.ds-btn-primary{background:#EDCD49;color:#072813;box-shadow:0 10px 24px -12px rgba(184,150,26,.9)}.ds-btn-primary:hover{background:#F2D86E}"
+      "description": "Brand-yellow pill for every primary action; hall-night text on a soft lamp glow.",
+      "html": "<div class=\"ds-hall\"><button class=\"ds-btn-primary\">Menyuni ko‘rish <svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></button></div>",
+      "css": ".ds-hall{background:#072813;padding:24px}.ds-btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 24px;border-radius:9999px;font:700 15px/1 Figtree,system-ui,sans-serif;border:0;cursor:pointer;transition:background-color .3s cubic-bezier(0.16, 1, 0.3, 1),color .3s cubic-bezier(0.16, 1, 0.3, 1),box-shadow .3s cubic-bezier(0.16, 1, 0.3, 1),transform .3s cubic-bezier(0.16, 1, 0.3, 1);background:#EDCD49;color:#072813;min-height:56px;padding:0 32px;font-size:16px;box-shadow:0 10px 24px -12px rgba(184,150,26,.9)}.ds-btn-primary:hover{background:#F2D86E}.ds-btn-primary:active{transform:scale(.97)}.ds-btn-primary:focus-visible{outline:3px solid #EDCD49;outline-offset:3px;}"
     },
     {
       "name": "Green Button",
       "kind": "button",
       "refersTo": "button-green",
-      "description": "Secondary action on paper; primary action on yellow fields.",
-      "html": "<button class=\"ds-btn ds-btn-green\">Buyurtma berish</button>",
-      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 24px;border-radius:9999px;font:700 15px/1 Figtree,system-ui,sans-serif;border:0;cursor:pointer;white-space:nowrap;transition:background-color .3s cubic-bezier(.16,1,.3,1),color .3s cubic-bezier(.16,1,.3,1),transform .3s cubic-bezier(.16,1,.3,1)}.ds-btn:active{transform:scale(.97)}.ds-btn:focus-visible{outline:3px solid #115A2E;outline-offset:3px}.ds-btn-green{background:#115A2E;color:#fff}.ds-btn-green:hover{background:#1A6B39}"
+      "description": "Logo-green Savatga pill on paper; becomes a quantity stepper once added.",
+      "html": "<button class=\"ds-btn-green\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\"><path d=\"M12 5v14M5 12h14\"/></svg> Savatga</button>",
+      "css": ".ds-btn-green{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 24px;border-radius:9999px;font:700 15px/1 Figtree,system-ui,sans-serif;border:0;cursor:pointer;transition:background-color .3s cubic-bezier(0.16, 1, 0.3, 1),color .3s cubic-bezier(0.16, 1, 0.3, 1),box-shadow .3s cubic-bezier(0.16, 1, 0.3, 1),transform .3s cubic-bezier(0.16, 1, 0.3, 1);height:44px;min-height:0;padding:0 20px;background:#115A2E;color:#fff}.ds-btn-green:hover{background:#1A6B39}.ds-btn-green:active{transform:scale(.97)}.ds-btn-green:focus-visible{outline:3px solid #EDCD49;outline-offset:3px;outline-color:#115A2E}"
     },
     {
-      "name": "Outline Button",
+      "name": "Outline Button (dark)",
       "kind": "button",
-      "refersTo": "button-outline",
-      "description": "Tertiary action on paper; fills green on hover.",
-      "html": "<button class=\"ds-btn ds-btn-outline\">Batafsil</button>",
-      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 24px;border-radius:9999px;font:700 15px/1 Figtree,system-ui,sans-serif;border:0;cursor:pointer;white-space:nowrap;transition:background-color .3s cubic-bezier(.16,1,.3,1),color .3s cubic-bezier(.16,1,.3,1),transform .3s cubic-bezier(.16,1,.3,1)}.ds-btn:active{transform:scale(.97)}.ds-btn:focus-visible{outline:3px solid #115A2E;outline-offset:3px}.ds-btn-outline{background:transparent;color:#0B3D1F;border:2px solid rgba(17,90,46,.2)}.ds-btn-outline:hover{background:#115A2E;border-color:#115A2E;color:#fff}"
-    },
-    {
-      "name": "Size Switch",
-      "kind": "custom",
-      "refersTo": "size-switch",
-      "description": "Signature segmented control: weight first, official size name second.",
-      "html": "<div class=\"ds-size\" role=\"radiogroup\"><button class=\"ds-size-opt is-on\" role=\"radio\" aria-checked=\"true\">110 g<span>Oddiy</span></button><button class=\"ds-size-opt\" role=\"radio\" aria-checked=\"false\">160 g<span>1,0</span></button><button class=\"ds-size-opt\" role=\"radio\" aria-checked=\"false\">200 g<span>1,5</span></button></div>",
-      "css": ".ds-size{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:4px;padding:4px;border-radius:20px;background:rgba(17,90,46,.07);width:280px}.ds-size-opt{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:44px;border:0;border-radius:14px;background:transparent;color:#45574B;font:800 14px/1.2 Figtree,system-ui,sans-serif;cursor:pointer;transition:background-color .2s,color .2s}.ds-size-opt span{font-size:12px;font-weight:600;opacity:.7;font-variant-numeric:tabular-nums}.ds-size-opt:hover{background:rgba(17,90,46,.1)}.ds-size-opt.is-on{background:#115A2E;color:#fff}.ds-size-opt.is-on span{opacity:.9}.ds-size-opt:focus-visible{outline:2px solid #115A2E;outline-offset:2px}"
-    },
-    {
-      "name": "Food Tile",
-      "kind": "card",
-      "refersTo": "food-tile-sage",
-      "description": "No card: a dish cutout on a flat sage (or paper-deep) tile with a warm plate shadow, then serif name, description, tabular price and add-to-cart on the paper ground.",
-      "html": "<div class=\"ds-ground\"><article class=\"ds-dish\"><div class=\"ds-dish-tile\"><div class=\"ds-plate\"></div><span class=\"ds-tag\">Yangi</span></div><h3>Yaproq donar</h3><p class=\"ds-dish-desc\">Mol go‘shti, kartoshka fri, lavash.</p><div class=\"ds-dish-row\"><b>79 000 so‘m</b><button class=\"ds-add\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M12 5v14M5 12h14\"/></svg> Savatga</button></div></article></div>",
-      "css": ".ds-ground{background-color:#F6F0E1;background-image:url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .45  0 0 0 0 .36  0 0 0 0 .2  0 0 0 .09 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>\");padding:24px;font-family:Figtree,system-ui,sans-serif}.ds-dish{width:260px}.ds-dish-tile{position:relative;aspect-ratio:4/3;border-radius:22px;background:#DCE5D0;display:grid;place-items:center;overflow:hidden}.ds-plate{width:70%;aspect-ratio:1.4;border-radius:50%;background:radial-gradient(circle at 50% 45%,#C98A4B 0 38%,#F4EFE6 39% 100%);filter:drop-shadow(0 14px 14px rgba(60,45,20,.22));transition:transform .7s cubic-bezier(.16,1,.3,1)}.ds-dish:hover .ds-plate{transform:scale(1.05)}.ds-tag{position:absolute;left:8px;top:8px;background:#EDCD49;color:#072813;border-radius:9999px;padding:4px 10px;font:700 12px/1 Figtree,system-ui,sans-serif}.ds-dish h3{margin:12px 0 0;font:400 22px/1.25 'Young Serif',Georgia,serif;letter-spacing:-.005em;font-synthesis:none;color:#0B3D1F}.ds-dish-desc{margin:6px 0 0;font-size:14px;line-height:1.375;color:#45574B}.ds-dish-row{margin-top:12px;display:flex;align-items:center;justify-content:space-between}.ds-dish-row b{font-weight:800;font-size:17px;color:#0B3D1F;font-variant-numeric:tabular-nums}.ds-add{display:inline-flex;align-items:center;gap:6px;height:44px;padding:0 20px;border:0;border-radius:9999px;background:#115A2E;color:#fff;font:700 14px/1 Figtree,system-ui,sans-serif;cursor:pointer}.ds-add:hover{background:#1A6B39}.ds-add:focus-visible{outline:3px solid #115A2E;outline-offset:3px}"
-    },
-    {
-      "name": "Torn Edge Seam",
-      "kind": "custom",
-      "refersTo": "category-ribbon",
-      "description": "Painted brush edge in the lower section's colour, rising into the section above; here the yellow ribbon tearing into the forest hero. The shipped edge is a raster mask (/images/paint/edge-1.png); the snippet references it by URL.",
-      "html": "<div class=\"ds-seam\"><div class=\"ds-seam-top\">Ta’mga <span>yangicha</span> yondashuv.</div><div class=\"ds-seam-low\"><div class=\"ds-edge\"></div><span>Tovuqli donar</span><span>Sho‘rvalar</span><span>Pide</span></div></div>",
-      "css": ".ds-seam{width:520px}.ds-seam-top{background:#0B3D1F;color:#F6F0E1;padding:32px 24px 72px;font:400 40px/1 'Young Serif',Georgia,serif;letter-spacing:-.005em}.ds-seam-top span{color:#EDCD49}.ds-seam-low{position:relative;background:#EDCD49;color:#EDCD49;display:flex;gap:28px;padding:18px 24px}.ds-seam-low span{color:#0B3D1F;font:400 26px/1 'Young Serif',Georgia,serif;transition:color .2s}.ds-seam-low span:hover{color:#3E5F21}.ds-edge{position:absolute;left:0;right:0;bottom:100%;height:64px;background:currentColor;-webkit-mask:url(/images/paint/edge-1.png) 0 0/100% 100% no-repeat;mask:url(/images/paint/edge-1.png) 0 0/100% 100% no-repeat}"
-    },
-    {
-      "name": "Hand Note",
-      "kind": "custom",
-      "refersTo": "tag-new",
-      "description": "Caveat 24px/700 margin note; one of three sanctioned uses (hero perk line).",
-      "html": "<div class=\"ds-hand-ground\"><p class=\"ds-hand\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"4\" y=\"9\" width=\"16\" height=\"11\" rx=\"1.5\"/><path d=\"M3 9h18M12 9v11M12 9c-2-4-6-4-6-1.5S10 9 12 9Zm0 0c2-4 6-4 6-1.5S14 9 12 9Z\"/></svg> Har bir asosiy taomga salat va souslar — sovg‘a</p></div>",
-      "css": ".ds-hand-ground{background:#0B3D1F;padding:24px}.ds-hand{display:flex;align-items:center;gap:10px;margin:0;font:700 24px/1.25 Caveat,cursive;color:#EDCD49}"
-    },
-    {
-      "name": "Category Tabs",
-      "kind": "nav",
-      "refersTo": "category-tab-on",
-      "description": "Sticky pill tabs; active is Logo Green with a yellow count.",
-      "html": "<div class=\"ds-tabs\" role=\"tablist\"><button class=\"ds-tab is-on\" role=\"tab\" aria-selected=\"true\">Asosiy <span>12</span></button><button class=\"ds-tab\" role=\"tab\" aria-selected=\"false\">Sho‘rvalar <span>4</span></button><button class=\"ds-tab\" role=\"tab\" aria-selected=\"false\">Desertlar <span>6</span></button></div>",
-      "css": ".ds-tabs{display:flex;gap:6px;padding:12px;background:#F6F0E1;border-block:1px solid rgba(17,90,46,.1)}.ds-tab{display:flex;align-items:center;gap:8px;height:44px;padding:0 16px;border:0;border-radius:9999px;background:transparent;color:#45574B;font:600 15px/1 Figtree,system-ui,sans-serif;cursor:pointer;transition:background-color .3s,color .3s}.ds-tab span{font-size:12px;font-weight:700;color:#5E6E63;font-variant-numeric:tabular-nums}.ds-tab:hover{background:rgba(17,90,46,.05)}.ds-tab.is-on{background:#115A2E;color:#fff}.ds-tab.is-on span{color:#EDCD49}.ds-tab:focus-visible{outline:3px solid #115A2E;outline-offset:3px}"
+      "refersTo": "button-outline-light",
+      "description": "Secondary action on the dark hall; fills white on hover.",
+      "html": "<div class=\"ds-hall\"><a href=\"#\" class=\"ds-btn-outline-light\">Eng yaqin filial</a></div>",
+      "css": ".ds-hall{background:#072813;padding:24px}.ds-btn-outline-light{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 24px;border-radius:9999px;font:700 15px/1 Figtree,system-ui,sans-serif;border:0;cursor:pointer;transition:background-color .3s cubic-bezier(0.16, 1, 0.3, 1),color .3s cubic-bezier(0.16, 1, 0.3, 1),box-shadow .3s cubic-bezier(0.16, 1, 0.3, 1),transform .3s cubic-bezier(0.16, 1, 0.3, 1);min-height:56px;padding:0 28px;font-size:16px;background:transparent;color:#fff;border:2px solid rgba(255,255,255,.3);text-decoration:none}.ds-btn-outline-light:hover{border-color:#fff;background:#fff;color:#0B3D1F}.ds-btn-outline-light:focus-visible{outline:3px solid #EDCD49;outline-offset:3px;}"
     },
     {
       "name": "Search Field",
       "kind": "input",
-      "refersTo": "search-input",
-      "description": "White pill search; border turns Logo Green and widens on focus.",
-      "html": "<label class=\"ds-search\"><span class=\"ds-search-icon\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" aria-hidden=\"true\"><circle cx=\"11\" cy=\"11\" r=\"6.5\"/><path d=\"m20 20-4-4\"/></svg></span><input type=\"search\" placeholder=\"Qidirish…\"></label>",
-      "css": ".ds-search{position:relative;display:inline-block}.ds-search-icon{position:absolute;left:16px;top:50%;transform:translateY(-50%);color:#83918A;display:flex}.ds-search input{height:44px;width:192px;padding:0 16px 0 40px;border:1px solid rgba(17,90,46,.15);border-radius:9999px;background:#fff;color:#0F2417;font:400 15px Figtree,system-ui,sans-serif;outline:none;transition:width .3s,border-color .3s}.ds-search input::placeholder{color:#5E6E63}.ds-search input:focus{width:256px;border-color:#115A2E}"
+      "refersTo": "input-search",
+      "description": "White pill search on the menu; border turns solid logo green and widens on focus.",
+      "html": "<label class=\"ds-search\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\"><circle cx=\"11\" cy=\"11\" r=\"6.5\"/><path d=\"m20 20-4-4\"/></svg><input placeholder=\"Qidirish…\"></label>",
+      "css": ".ds-search{position:relative;display:inline-flex;align-items:center;color:#5E6E63}.ds-search svg{position:absolute;left:14px}.ds-search input{height:44px;width:192px;border-radius:9999px;border:1px solid rgba(17,90,46,.15);background:#fff;padding:0 16px 0 40px;font:15px Figtree,system-ui,sans-serif;color:#0F2417;outline:none;transition:width .3s,border-color .3s}.ds-search input::placeholder{color:#5E6E63}.ds-search input:focus{width:256px;border-color:#115A2E}"
     },
     {
-      "name": "Drop Photo Frame",
+      "name": "Size Switch",
+      "kind": "chip",
+      "refersTo": "size-switch-option-selected",
+      "description": "Segmented radio for official sizes: weight leads, size name beneath.",
+      "html": "<div class=\"ds-size\" role=\"radiogroup\"><button class=\"on\" role=\"radio\" aria-checked=\"true\">110 g<small>Oddiy</small></button><button role=\"radio\" aria-checked=\"false\">160 g<small>1,0</small></button><button role=\"radio\" aria-checked=\"false\">200 g<small>1,5</small></button></div>",
+      "css": ".ds-size{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:4px;padding:4px;border-radius:16px;background:rgba(17,90,46,.07);width:300px}.ds-size button{min-height:44px;border:0;border-radius:12px;background:transparent;color:#45574B;font:800 14px/1.2 Figtree,system-ui,sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;transition:background-color .2s}.ds-size small{font-weight:600;font-size:12px;opacity:.7}.ds-size button:hover{background:rgba(17,90,46,.1)}.ds-size button.on{background:#115A2E;color:#fff}.ds-size button:focus-visible{outline:2px solid #115A2E;outline-offset:2px}"
+    },
+    {
+      "name": "Header Navigation",
+      "kind": "nav",
+      "refersTo": null,
+      "description": "Pill nav links over the hall; in-view section marked with a translucent pill; yellow cart pill with count.",
+      "html": "<nav class=\"ds-nav\"><a class=\"on\" href=\"#\">Menyu</a><a href=\"#\">Aksiyalar</a><a href=\"#\">Filiallar</a><button class=\"ds-cart\">Buyurtma <span>0</span></button></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;gap:4px;background:#072813;padding:14px 20px}.ds-nav a{color:#fff;text-decoration:none;font:600 15px Figtree,system-ui,sans-serif;padding:8px 16px;border-radius:9999px;transition:background-color .2s}.ds-nav a:hover{background:rgba(255,255,255,.1)}.ds-nav a.on{background:rgba(255,255,255,.15)}.ds-nav a:focus-visible,.ds-cart:focus-visible{outline:3px solid #EDCD49;outline-offset:3px;}.ds-cart{margin-left:auto;display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 20px;border:0;border-radius:9999px;background:#EDCD49;color:#072813;font:700 15px Figtree,system-ui,sans-serif;cursor:pointer}.ds-cart:hover{background:#F2D86E}.ds-cart span{display:grid;place-items:center;min-width:24px;height:24px;border-radius:9999px;background:#0B3D1F;color:#fff;font-size:12px}"
+    },
+    {
+      "name": "Screen Tile Dish",
+      "kind": "card",
+      "refersTo": "dish-tile",
+      "description": "Menu tile: official photo on a woven lamp-lit screen tile, Yeseva name, tabular price, Savatga.",
+      "html": "<article class=\"ds-dish\"><div class=\"ds-tile\"><div class=\"ds-plate\"></div></div><h3>Iskender kabob</h3><p>Mol go‘shti, tomat qaylasi, iskender noni va suzma.</p><div class=\"ds-row\"><b>109 000 so‘m</b><button><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\"><path d=\"M12 5v14M5 12h14\"/></svg> Savatga</button></div></article>",
+      "css": ".ds-dish{width:260px;font-family:Figtree,system-ui,sans-serif;background:#F6F0E1;padding:12px}.ds-tile{aspect-ratio:4/3;border-radius:22px;overflow:hidden;display:grid;place-items:center;background-color:#f8e7a6;background-image:repeating-linear-gradient(0deg,rgba(201,161,42,.13) 0 1px,transparent 1px 6px),repeating-linear-gradient(90deg,rgba(201,161,42,.13) 0 1px,transparent 1px 6px),radial-gradient(ellipse at 50% 42%,#fff8d9 0%,#f8e7a6 62%,#efd27a 100%);}.ds-plate{width:62%;aspect-ratio:2/1;border-radius:50%;background:#8E3B12;box-shadow:0 14px 14px rgba(60,45,20,.22);transition:transform .7s cubic-bezier(0.16, 1, 0.3, 1)}.ds-dish:hover .ds-plate{transform:scale(1.05)}.ds-dish h3{font:400 22px/1.2 \"Yeseva One\",Georgia,serif;color:#0B3D1F;margin:12px 0 4px}.ds-dish p{font-size:14px;line-height:1.375;color:#45574B;margin:0 0 12px}.ds-row{display:flex;justify-content:space-between;align-items:center}.ds-row b{font-weight:800;font-size:17px;color:#0B3D1F;font-variant-numeric:tabular-nums}.ds-row button{display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 20px;border:0;border-radius:9999px;background:#115A2E;color:#fff;font:700 15px Figtree,sans-serif;cursor:pointer}.ds-row button:hover{background:#1A6B39}.ds-row button:focus-visible{outline:3px solid #115A2E;outline-offset:3px}"
+    },
+    {
+      "name": "Valance Seam",
       "kind": "custom",
-      "refersTo": "studio-photo-well",
-      "description": "Brand drop (50% 0 50% 50%) framing a studio photo over a yellow drop on the forest field.",
-      "html": "<div class=\"ds-drop\"><div class=\"ds-drop-back\"></div><div class=\"ds-drop-photo\"></div></div>",
-      "css": ".ds-drop{position:relative;width:240px;aspect-ratio:1;background:#0B3D1F}.ds-drop-back{position:absolute;inset:3%;border-radius:50% 0 50% 50%;background:#EDCD49}.ds-drop-photo{position:absolute;inset:9%;border-radius:50% 0 50% 50%;background:#ECEBE7;box-shadow:0 40px 70px -30px rgba(0,0,0,.6)}"
+      "refersTo": null,
+      "description": "Scalloped, punched 22px edge in the lower section's own colour, opening every new colour field.",
+      "html": "<div class=\"ds-seam\"><div class=\"ds-valance\"></div><div class=\"ds-yellow\">Asosiy taomlar <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"#115A2E\"><path d=\"M11.2 21.5v-6.2C6.4 15 3.5 12 3.6 7.2c4.7-.1 7.4 2.4 7.9 6.4.5-5.3 3.6-9 9-9.4.3 6.4-3.2 10.2-8.3 10.9v6.4h-1Z\"/></svg> Tovuqli donar</div></div>",
+      "css": ".ds-seam{background:#072813;padding-top:40px}.ds-valance{height:22px;background:#EDCD49;-webkit-mask-image:url(\"data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='22'%3E%3Cpath fill-rule='evenodd' d='M0 22V12Q22 -6 44 12V22ZM19.4 13a2.6 2.6 0 1 0 5.2 0a2.6 2.6 0 1 0 -5.2 0Z'/%3E%3C/svg%3E\");mask-image:url(\"data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='22'%3E%3Cpath fill-rule='evenodd' d='M0 22V12Q22 -6 44 12V22ZM19.4 13a2.6 2.6 0 1 0 5.2 0a2.6 2.6 0 1 0 -5.2 0Z'/%3E%3C/svg%3E\");-webkit-mask-size:44px 22px;mask-size:44px 22px;-webkit-mask-repeat:repeat-x;mask-repeat:repeat-x;-webkit-mask-position:center bottom;mask-position:center bottom}.ds-yellow{background:#EDCD49;color:#0B3D1F;display:flex;align-items:center;gap:20px;padding:20px 24px;font:400 28px/1 \"Yeseva One\",Georgia,serif}"
+    },
+    {
+      "name": "Perde Screen",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "The lamp-lit Karagöz screen: lamp gradient, weave, scalloped frame, a pinned puppet on a rod. Full scenes are hand-built SVG in Perde.tsx.",
+      "html": "<svg class=\"ds-perde\" viewBox=\"0 0 360 280\" aria-hidden=\"true\"><defs><radialGradient id=\"dsl\" cx=\"50%\" cy=\"45%\" r=\"70%\"><stop offset=\"0\" stop-color=\"#FFF3B8\"/><stop offset=\".35\" stop-color=\"#F8E486\"/><stop offset=\"1\" stop-color=\"#DDB236\"/></radialGradient><pattern id=\"dsw\" width=\"6\" height=\"6\" patternUnits=\"userSpaceOnUse\"><path d=\"M0 3h6M3 0v6\" stroke=\"#C9A12A\" stroke-width=\".5\" opacity=\".2\"/></pattern></defs><rect width=\"360\" height=\"280\" rx=\"12\" fill=\"#0B3D1F\"/><rect x=\"20\" y=\"28\" width=\"320\" height=\"224\" rx=\"4\" fill=\"url(#dsl)\"/><rect x=\"20\" y=\"28\" width=\"320\" height=\"224\" rx=\"4\" fill=\"url(#dsw)\"/><g fill=\"none\" stroke=\"#EDCD49\" stroke-width=\"2\" opacity=\".9\"><path d=\"M18 17q9-7 18 0q9 7 18 0q9-7 18 0q9 7 18 0q9-7 18 0q9 7 18 0q9-7 18 0q9 7 18 0q9-7 18 0q9 7 18 0q9-7 18 0q9 7 18 0q9-7 18 0q9 7 18 0q9-7 18 0q9 7 18 0q9-7 18 0q9 7 18 0\"/></g><g class=\"ds-puppet\"><path d=\"M160 70q15-4 22 9l-3 9h-23z\" fill=\"#A3241A\"/><circle cx=\"171\" cy=\"101\" r=\"15\" fill=\"#C98A4B\"/><path d=\"M154 118h36l6 75h-48z\" fill=\"#115A2E\" opacity=\".92\"/><circle cx=\"172\" cy=\"118\" r=\"2.5\" fill=\"#3A2410\"/><circle cx=\"172\" cy=\"118\" r=\"1\" fill=\"#D9B25A\"/><rect x=\"169\" y=\"193\" width=\"3\" height=\"60\" rx=\"1\" fill=\"#3A2410\"/></g><rect x=\"20\" y=\"28\" width=\"320\" height=\"224\" rx=\"4\" fill=\"none\" stroke=\"#072813\" stroke-width=\"2\"/></svg>",
+      "css": ".ds-perde{width:360px;display:block}.ds-puppet{transform-box:fill-box;transform-origin:50% 100%;animation:ds-sway 4.6s ease-in-out infinite}@keyframes ds-sway{0%,100%{rotate:-1.6deg}50%{rotate:1.6deg}}@media (prefers-reduced-motion:reduce){.ds-puppet{animation:none}}"
     }
   ],
   "narrative": {
-    "northStar": "The Painted Menu Board",
-    "overview": "The site reads like a set of painted restaurant posters, the kind the user brought as references, re-inked in YAPROQ's own pinned colours. Deep green fields carry big, soft serif headlines in cream; where a field ends it does not stop on a ruler line but tears into the next colour along a dry-brush edge. Below the fold the ground is warm, finely grained paper, and the food sits on flat sage and deeper-paper tiles as clean cutouts with a soft warm shadow, like plates set down on a coloured board. Brand yellow is the ink of action and of offers.\n\nThe page is a sequence of colour fields: forest hero, yellow category ribbon, paper menu, yellow offers, paper story, forest \"ways to order\", paper branches and reviews, a yellow closing panel, a night-green footer. Density is generous between sections (80px mobile, 112px desktop) and compact inside commerce: tiles, size switches and cart rows keep weight, price and action together. Motion is quiet and eased on one expo-out curve; the hero's leaf-in is the single authored entrance.\n\nThe world replaces a flat, plain-sans template pass that the user rejected as \"simple fonts\". The display voice is always the soft serif; sans is for reading and tapping only.",
+    "northStar": "The Lamp-Lit Perde",
+    "overview": "YAPROQ is staged as a Karagöz shadow-theatre restaurant. The brand's darkest green is the darkened hall; cream paper is the lit room around it; and the food story is played on a woven, radially lit yellow screen (the perde) inside a scalloped frame, by translucent, pin-jointed leather puppets on rods: the cook slicing at the spit, the plate, the delivery rider. It is Turkish food told in Turkish theatre's own illustrated form, in the owner's pinned yellow and greens.\n\nThe page alternates hall and room. Dark green fields (hero, ordering ways, closing panel, footer) hold the lit screens and the yellow actions; cream paper fields with a fine grain hold the menu, branches and story; a full yellow field carries offers and the category ribbon. Where two fields meet, the upper field's colour is cut as a scalloped valance with a punched hole in every scallop, like the frame of a Karagöz screen and the perforations in the leather figures. Real, official dish photos never become illustration: they sit on pale lamp-lit screen tiles (woven yellow or woven sage cloth), so every plate is itself on a small perde.\n\nAll illustration is hand-built SVG in code: the perde, the puppets, the valance mask, the icon set. There is no generated or painted raster art. The only rasters are the official studio product photos and their cut-outs. The previous painted-poster world (brush-torn edges, watercolour splashes, Young Serif, Caveat) is retired and must not return.",
     "keyCharacteristics": [
-      "Forest-green and yellow fields meet warm grained paper along painted, brush-torn edges.",
-      "One soft, heavy serif (Young Serif 400) for every heading; cream on green, forest on paper and yellow.",
-      "Food as alpha cutouts on flat sage or paper-deep tiles; studio photos only for hero, lead card, promos and closing panel.",
-      "The brand drop shape (one square corner, three round) frames the hero and closing photos over yellow.",
-      "Pills for every control; large soft radii (20 to 36px) for every container.",
-      "Caveat hand-lettering appears as a rare margin note, never as a heading."
+      "Dark green hall, cream paper rooms, one yellow field: three grounds, never a fourth.",
+      "The perde: radially lit yellow screen, 6px weave, scalloped yellow frame, dark hall surround.",
+      "Puppets in dyed hide (red, tan, rod brown) with ring perforations and brass pins; they rise once, then sway.",
+      "Scalloped, punched valance on every coloured section top.",
+      "Official dish photos on woven lamp-lit tiles, never on raw grey.",
+      "Yeseva One for everything a visitor reads as a name or a price headline; Figtree for reading.",
+      "Brand yellow is the action colour."
     ],
     "rules": [
       {
-        "name": "The Pinned Palette Rule",
-        "body": "#EDCD49, #115A2E and #3E5F21 are owner-pinned. Never shift, desaturate or substitute them; derive states only from the defined hover steps.",
+        "name": "The Yellow Means Act Rule",
+        "body": "Brand yellow fills only what the visitor can press, the offer badge, or a field-wide ground. Yellow text is reserved for one accent word in a dark heading and the gift line.",
         "section": "colors"
       },
       {
-        "name": "The Yellow Means Go Rule",
-        "body": "Yellow fills mark the next action, an offer, or the drop behind a photo. Text on yellow is always Forest Night, never white.",
+        "name": "The Text On Yellow Is Hall Night Rule",
+        "body": "Anything on a yellow fill is hall-night (contrast about 11:1), never white.",
         "section": "colors"
       },
       {
-        "name": "The Cream On Green Rule",
-        "body": "Display type on a green field is Paper (#F6F0E1), not pure white; body copy on green is Pale Sage.",
-        "section": "colors"
-      },
-      {
-        "name": "The Alternating Tiles Rule",
-        "body": "Food tiles alternate Sage Tile and Paper Deep in sequence; never a third tile colour, never white.",
+        "name": "The Hide Stays On Stage Rule",
+        "body": "Hide red, tan and rod brown appear only inside the perde. They never colour UI.",
         "section": "colors"
       },
       {
         "name": "The One Weight Rule",
-        "body": "Young Serif ships one weight. Every display element is set at 400 with font synthesis off, -0.005em tracking and kerning on; never fake bold or italic, and never bring in a sans as a display face.",
+        "body": "Yeseva One ships at 400 only. Synthesis is disabled; never request bold or italic display text.",
         "section": "typography"
       },
       {
-        "name": "The Three Notes Rule",
-        "body": "Caveat appears only as a short hand-lettered note: the hero perk line, the \"Yangi · tovuqli\" set tag, the About photo caption. It never carries a heading, a price, an action, or body copy.",
-        "section": "typography"
-      },
-      {
-        "name": "The Tabular Numbers Rule",
-        "body": "Prices, weights, phone numbers, hours and distances always use tabular figures.",
+        "name": "The Tabular Price Rule",
+        "body": "Every price, phone number, weight and count uses tabular figures.",
         "section": "typography"
       },
       {
         "name": "The No Eyebrow Rule",
-        "body": "Headlines carry their own weight. No small uppercase label above a section heading.",
+        "body": "Headings carry their own weight. No small label sits above a section title.",
         "section": "typography"
       },
       {
-        "name": "The Warm Shadow Rule",
-        "body": "Shadows on food are warm brown and follow the plate's outline; shadows on yellow are ochre; nothing on a coloured field gets a neutral grey shadow.",
+        "name": "The Valance Seam Rule",
+        "body": "A section whose colour differs from the one above it opens with a 22px scalloped valance of its own colour (scallop width 44, 56 or 50px by seed, one punched hole per scallop). No straight seams between colour fields, and no torn or brushed edges.",
+        "section": "layout"
+      },
+      {
+        "name": "The Light Not Lift Rule",
+        "body": "Never stack shadows to make cards feel raised. If a surface needs presence, give it lamp light or a darker field.",
         "section": "elevation"
-      },
-      {
-        "name": "The Torn Seam Rule",
-        "body": "Where two field colours meet, the boundary is a painted brush edge in the lower section's colour, never a straight line or a wave SVG. Same-colour neighbours get no edge.",
-        "section": "shapes"
-      },
-      {
-        "name": "The Drop Is For Food Rule",
-        "body": "The 50% 0 50% 50% drop frames real dish photography only, never empty decoration.",
-        "section": "shapes"
       }
     ],
     "dos": [
-      "**Do** set every heading in Young Serif 400 with -0.005em tracking and kerning on; cream on green, Forest Deep on paper and yellow.",
-      "**Do** put the next action in Brand Yellow (#EDCD49) with Forest Night text, and keep secondary actions green or outline.",
-      "**Do** close every change of field colour with a painted brush edge in the lower section's colour.",
-      "**Do** present menu food as cutouts on alternating Sage Tile (#DCE5D0) and Paper Deep (#ECE1C8) tiles with a warm plate shadow.",
-      "**Do** keep the paper ground grained and warm (#F6F0E1).",
-      "**Do** frame hero-level dish photography in the brand drop (50% 0 50% 50%).",
-      "**Do** use tabular figures for prices, weights, phone numbers and hours.",
-      "**Do** keep every interactive target at least 44px and use pills for controls."
+      "Do put every primary action in brand yellow with hall-night text, on a pill.",
+      "Do open each new colour field with the scalloped, punched valance in that field's colour.",
+      "Do show real dishes only as official photos, on a woven yellow or sage screen tile.",
+      "Do build any new illustration as hand-made SVG in the perde language: flat hide shapes, brass pin joints, ring perforations, rods, lit from behind.",
+      "Do give each perde one authored moment (lamp catches, cast rises) and only ambient sway after; hold below-fold screens until seen; show the lit still screen under reduced motion.",
+      "Do set prices, weights and phone numbers in tabular figures."
     ],
     "donts": [
-      "**Don't** set a heading in a sans or a synthesised bold or italic serif; that is the rejected \"simple fonts\" template.",
-      "**Don't** use Caveat beyond a short margin note: no hand-lettered headings, prices, buttons or paragraphs.",
-      "**Don't** alter or substitute the owner-pinned colours #EDCD49, #115A2E or #3E5F21.",
-      "**Don't** put white text on yellow, or yellow text on paper.",
-      "**Don't** separate colour fields with straight rules or generated wave shapes.",
-      "**Don't** add uppercase eyebrow labels above section headings.",
-      "**Don't** use hard, offset or neutral-grey shadows on food or coloured fields.",
-      "**Don't** replace official studio photography or its cutouts with illustrations, stock or generated food.",
-      "**Don't** redraw or recolour the official logo paths; only its currentColor fill changes with the ground."
+      "Don't bring back the painted-poster world: brush-torn edges, watercolour splashes, Young Serif or Caveat.",
+      "Don't use generated or painted raster illustration; the only rasters are official product photos.",
+      "Don't use generic flat food-delivery illustration; figures are Karagöz puppets or nothing.",
+      "Don't fake bold or italic Yeseva One.",
+      "Don't put white text on brand yellow, or use dyed-hide colours outside the perde.",
+      "Don't add eyebrow or kicker labels above headings.",
+      "Don't use hard offset shadows; depth is lamp light and soft negative-spread shadow."
     ]
   }
 }
