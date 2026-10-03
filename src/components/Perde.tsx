@@ -140,31 +140,35 @@ export default function Perde({ id, scene = "kitchen", className = "" }: Props) 
       <defs>
         <radialGradient id={lamp} cx="50%" cy="45%" r="70%">
           <stop offset="0" stopColor="#FFF3B8" />
-          <stop offset=".45" stopColor="#F5DB6A" />
-          <stop offset="1" stopColor="#D9AE2A" />
+          <stop offset=".35" stopColor="#F8E486" />
+          <stop offset="1" stopColor="#DDB236" />
         </radialGradient>
         <pattern id={weave} width="6" height="6" patternUnits="userSpaceOnUse">
-          <path d="M0 3h6M3 0v6" stroke="#C9A12A" strokeWidth=".5" opacity=".35" />
+          <path d="M0 3h6M3 0v6" stroke="#C9A12A" strokeWidth=".5" opacity=".2" />
         </pattern>
+        <filter id={`${id}-soft`} x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="50" />
+        </filter>
         <clipPath id={clip}>
-          <rect x="34" y="34" width="652" height="470" rx="6" />
+          <rect x="40" y="56" width="640" height="448" rx="6" />
         </clipPath>
       </defs>
-      <rect x="0" y="0" width="720" height="560" rx="18" fill="#072813" />
+      <rect x="0" y="0" width="720" height="560" rx="18" fill="#0B3D1F" />
       {/* the screen before the lamp is lit, then lit */}
-      <rect x="34" y="34" width="652" height="470" rx="6" fill="#5C4A14" />
-      <g className="perde-lamp">
-        <rect x="34" y="34" width="652" height="470" rx="6" fill={`url(#${lamp})`} />
+      <rect x="40" y="56" width="640" height="448" rx="6" fill="#5C4A14" />
+      <g className="perde-lamp" clipPath={`url(#${clip})`}>
+        <rect x="40" y="56" width="640" height="448" rx="6" fill={`url(#${lamp})`} />
+        <ellipse className="perde-hotspot" cx="360" cy="245" rx="230" ry="160" fill="#FFF6C8" opacity=".55" filter={`url(#${id}-soft)`} />
       </g>
-      <rect x="34" y="34" width="652" height="470" rx="6" fill={`url(#${weave})`} />
+      <rect x="40" y="56" width="640" height="448" rx="6" fill={`url(#${weave})`} />
       <g fill="none" stroke="#EDCD49" strokeWidth="3" opacity=".9">
-        {Array.from({ length: 19 }, (_, i) => <path key={`t${i}`} d={`M${34 + i * 36} 22 q18 -14 36 0`} />)}
-        {Array.from({ length: 19 }, (_, i) => <path key={`b${i}`} d={`M${34 + i * 36} 516 q18 14 36 0`} />)}
+        {Array.from({ length: 18 }, (_, i) => <path key={`t${i}`} d={`M${36 + i * 36} 34 q18 -14 36 0`} />)}
+        {Array.from({ length: 18 }, (_, i) => <path key={`b${i}`} d={`M${36 + i * 36} 526 q18 14 36 0`} />)}
       </g>
       <g clipPath={`url(#${clip})`} className="perde-cast">
         {scene === "kitchen" ? <Kitchen /> : <Delivery />}
       </g>
-      <rect x="34" y="34" width="652" height="470" rx="6" fill="none" stroke="#0B3D1F" strokeWidth="10" />
+      <rect x="40" y="56" width="640" height="448" rx="6" fill="none" stroke="#072813" strokeWidth="4" />
     </svg>
   );
 }

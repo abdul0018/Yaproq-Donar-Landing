@@ -106,10 +106,11 @@
   100% { opacity: 1; }
 }
 @keyframes lamp-breathe {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.9; }
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 0.4; }
 }
-.perde-lamp { animation: lamp-catch 1s ease-out both, lamp-breathe 5s ease-in-out 1s infinite; }
+.perde-lamp { animation: lamp-catch 1s ease-out both; }
+.perde-hotspot { animation: lamp-breathe 5s ease-in-out 1s infinite; }
 @keyframes puppet-rise {
   from { transform: translateY(70%); }
   to { transform: none; }
@@ -146,6 +147,7 @@
 .puppet-road { animation: road 0.9s linear infinite; }
 /* Shows below the fold wait for the screen to scroll into view (class set by JS). */
 .perde-wait .perde-lamp,
+.perde-wait .perde-hotspot,
 .perde-wait .puppet,
 .perde-wait .puppet-ride { animation-play-state: paused; }
 
@@ -207,5 +209,5 @@
     transition-duration: 0.001ms !important;
   }
   .reveal-pending { opacity: 1; transform: none; }
-  .line-rise, .perde-lamp, .puppet, .puppet-arm, .puppet-ride, .puppet-road { animation: none !important; }
+  .line-rise, .perde-lamp, .perde-hotspot, .puppet, .puppet-arm, .puppet-ride, .puppet-road { animation: none !important; }
 }

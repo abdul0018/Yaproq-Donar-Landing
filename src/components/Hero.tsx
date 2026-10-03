@@ -1,10 +1,10 @@
 "use client";
 
 import { getDish } from "@/data/menu";
-import { branches, facts, formatPrice } from "@/data/site";
+import { formatPrice } from "@/data/site";
 import { useCart } from "@/lib/cart";
 import { flyToCart } from "@/lib/fly";
-import { IconArrow, IconClock, IconGift, IconPin, IconPlus, IconTruck } from "./icons";
+import { IconArrow, IconGift, IconPin, IconPlus } from "./icons";
 import Perde from "./Perde";
 
 // The brand's own campaign pairing: "Ta’mga yangicha yondashuv" with the chicken Yaproq donar.
@@ -26,7 +26,7 @@ export default function Hero() {
             <span className="line-mask"><span className="line-rise [animation-delay:180ms]">yondashuv.</span></span>
           </h1>
           <p className="mt-6 max-w-[34rem] animate-fade-up text-[17px] leading-relaxed text-green-100 [animation-delay:320ms] sm:text-lg">
-            Turk taomlari va desertlari. Donarimiz 100% mahalliy mol go‘shtidan tayyorlanadi. Toshkentdagi uchta filialimizga keling yoki eng yaqin filialdan uyingizga buyurtma bering.
+            Turk taomlari va desertlari. Donarimiz 100% mahalliy mol go‘shtidan tayyorlanadi. Toshkentdagi uchta filialimizga keling yoki buyurtma bering — eng yaqin filialdan 1 soat ichida yetkazamiz.
           </p>
           <div className="mt-9 flex animate-fade-up flex-col gap-3 [animation-delay:400ms] sm:flex-row">
             <a href="#menyu" className="btn-primary h-14 px-8 text-base">
@@ -60,17 +60,6 @@ export default function Hero() {
           </div>
         </div>
 
-        <ul className="relative z-10 grid gap-3 border-t border-white/15 pt-6 text-[14.5px] text-green-100 sm:grid-cols-3 lg:col-span-12">
-          <li className="flex items-center gap-2.5">
-            <IconTruck className="h-5 w-5 shrink-0 text-yellow" /> Eng yaqin filialdan 1 soat ichida yetkazamiz
-          </li>
-          <li className="flex items-center gap-2.5">
-            <IconPin className="h-5 w-5 shrink-0 text-yellow" /> {branches.map((b) => b.name).join(" · ")}
-          </li>
-          <li className="flex items-center gap-2.5">
-            <IconClock className="h-5 w-5 shrink-0 text-yellow" /> Har kuni {facts.hours}
-          </li>
-        </ul>
       </div>
     </section>
   );

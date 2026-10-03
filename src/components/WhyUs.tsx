@@ -125,7 +125,7 @@ export default function WhyUs() {
           </ul>
 
           <div className="hidden lg:col-span-5 lg:block">
-            <div key={active} className={`sticky top-32 rounded-2xl bg-green-800 p-9 ring-2 ring-yellow/40 ring-offset-[6px] ring-offset-green-900 ${changed ? "animate-fade-up" : ""}`}>
+            <div key={active} className={`sticky top-32 rounded-2xl bg-green-800 p-9 ${changed ? "animate-fade-up" : ""}`}>
               <Icon className="h-12 w-12 text-yellow" />
               <p className="mt-6 font-display text-[40px] leading-none tracking-[-0.02em]">{w.title}</p>
               <p className="mt-5 text-[17px] leading-relaxed text-green-100">{w.text}</p>
