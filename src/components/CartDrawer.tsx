@@ -73,7 +73,7 @@ export default function CartDrawer() {
                 const v = d.variants[0];
                 return (
                   <li key={d.id} className="flex items-center gap-4 rounded-2xl bg-white p-3">
-                    <div className="h-16 w-16 shrink-0 overflow-hidden rounded-xl bg-studio"><DishVisual dish={d} /></div>
+                    <div className="h-16 w-16 shrink-0 overflow-hidden rounded-xl screen-tile"><DishVisual dish={d} onTile /></div>
                     <div className="min-w-0 flex-1">
                       <p className="font-bold text-green-900">{d.name}</p>
                       <p className="tabular text-[14px] text-ink-600">{formatPrice(v.price)}{d.variants.length > 1 ? " dan" : ""}</p>
@@ -93,7 +93,7 @@ export default function CartDrawer() {
               <ul className="grid gap-3">
                 {lines.map((l) => (
                   <li key={l.id} className="flex items-center gap-3 rounded-2xl bg-white p-3">
-                    <div className="h-16 w-16 shrink-0 overflow-hidden rounded-xl bg-studio"><DishVisual dish={l.dish} /></div>
+                    <div className="h-16 w-16 shrink-0 overflow-hidden rounded-xl screen-tile"><DishVisual dish={l.dish} onTile /></div>
                     <div className="min-w-0 flex-1">
                       <p className="font-bold leading-snug text-green-900">{l.name}</p>
                       <p className="tabular text-[14px] text-ink-600">{formatPrice(l.variant.price * l.qty)}</p>

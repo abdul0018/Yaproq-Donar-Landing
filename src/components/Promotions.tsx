@@ -34,8 +34,8 @@ export default function Promotions() {
             const v = dish.variants[0];
             return (
               <Reveal key={o.id} delay={i * 100} as="article" className="group grid overflow-hidden rounded-3xl bg-green-900 text-paper sm:grid-cols-[1fr_1.05fr]">
-                <div className="relative aspect-[4/3] overflow-hidden bg-studio sm:aspect-auto">
-                  <DishVisual dish={dish} className="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-105" />
+                <div className="relative aspect-[4/3] overflow-hidden screen-tile sm:aspect-auto">
+                  <DishVisual dish={dish} onTile className="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-105" />
                   <span className="tabular absolute left-4 top-4 rounded-full bg-yellow px-3.5 py-1.5 font-display text-[18px] text-green-950">{o.badge}</span>
                 </div>
                 <div className="flex flex-col gap-4 p-6 sm:p-7">

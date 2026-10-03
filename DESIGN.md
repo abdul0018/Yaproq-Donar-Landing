@@ -152,7 +152,7 @@ components:
 
 YAPROQ is staged as a Karagöz shadow-theatre restaurant. The brand's darkest green is the darkened hall; cream paper is the lit room around it; and the food story is played on a woven, radially lit yellow screen (the perde) inside a scalloped frame, by translucent, pin-jointed leather puppets on rods: the cook slicing at the spit, the plate, the delivery rider. It is Turkish food told in Turkish theatre's own illustrated form, in the owner's pinned yellow and greens.
 
-The page alternates hall and room. Dark green fields (hero, ordering ways, closing panel, footer) hold the lit screens and the yellow actions; cream paper fields with a fine grain hold the menu, branches and story; a full yellow field carries offers and the category ribbon. Where two fields meet, the upper field's colour is cut as a scalloped valance with a punched hole in every scallop, like the frame of a Karagöz screen and the perforations in the leather figures. Real, official dish photos never become illustration: they sit on pale lamp-lit screen tiles (woven yellow or woven sage cloth), so every plate is itself on a small perde.
+The page alternates hall and room. Dark green fields (hero, ordering ways, closing panel, footer) hold the lit screens and the yellow actions; cream paper fields with a fine grain hold the menu, branches and story; a full yellow field carries offers and the category ribbon. Where two fields meet, the upper field's colour is cut as a scalloped valance with a punched hole in every scallop, like the frame of a Karagöz screen and the perforations in the leather figures. Real, official dish photos never become illustration: they sit on pale lamp-lit screen tiles (one woven yellow cloth, the same under every dish), so every plate is itself on a small perde.
 
 All illustration is hand-built SVG in code: the perde, the puppets, the valance mask, the icon set. There is no generated or painted raster art. The only rasters are the official studio product photos and their cut-outs. The previous painted-poster world (brush-torn edges, watercolour splashes, Young Serif, Caveat) is retired and must not return.
 
@@ -183,7 +183,7 @@ Three owner-pinned brand colours (yellow #EDCD49, logo green #115A2E, olive #3E5
 
 ### Tertiary (theatre only)
 - **Lamp Light** (lamp-light): the hot centre of the perde's radial gradient (to #F8E486, then #DDB236 at the edge).
-- **Screen Tile Yellow** (screen-tile-yellow) and **Sage Tile** (sage-tile): the two woven tile grounds under dish photos, alternating by index.
+- **Screen Tile Yellow** (screen-tile-yellow): the single woven tile ground under every dish photo, everywhere (menu, signature dishes, offers, cart, gallery). Sage Tile (sage-tile) is retired: one ground keeps the dishes reading as one menu.
 - **Dyed Hide Red** (hide-red), **Hide Tan** (hide-tan), **Rod Brown** (hide-rod): puppet caps, faces and limbs, rods and pin bodies. Brass pin centres are #D9B25A.
 
 ### Neutral
@@ -267,7 +267,7 @@ Round, warm and tactile; they press down to 97% on click.
 
 ### Cards / Containers
 - **Lead dish:** logo-green card, 24px radius, photo inset 12 to 16px on studio grey at 22px radius, paper text, a white/15 hairline above price and action.
-- **Menu tile:** woven screen tile (yellow or sage, alternating), 16px radius (22px on desktop), photo multiplied onto the tile; name, description, size switch, price and Savatga below with no card chrome.
+- **Menu tile:** woven yellow screen tile (the same for every dish), 16px radius (22px on desktop), photo multiplied onto the tile; name, description, size switch, price and Savatga below with no card chrome.
 - **Offer card:** forest-deep card, 24px radius, studio-grey photo half, Yeseva name and price.
 - **Branch card:** white, 24px radius, 2px border; selected state takes the logo-green border and the selected-card shadow.
 
@@ -286,7 +286,7 @@ A 720 by 560 SVG: forest-deep surround, a screen that starts unlit (#5C4A14), th
 - **Reduced motion:** the lit, still screen with the cast in place.
 
 ### Screen Tile (signature)
-The dish's own small perde: a 6px weave of 1px lines over a radial glow from a warm centre (#FFF8D9 to #EFD27A in yellow; #F1F6EE to #C5D9BA in sage). Cut-outs sit at 9% padding with the plate-on-cloth shadow; uncut photos multiply onto it.
+The dish's own small perde: a 6px weave of 1px lines over a radial glow from a warm centre (#FFF8D9 to #EFD27A). Cut-outs sit at 9% padding with the plate-on-cloth shadow; uncut photos multiply onto it.
 
 ### Valance (signature)
 A 22px masked strip in the section's own colour, sitting just above the section edge, scallops repeating along the width with one punched hole each.

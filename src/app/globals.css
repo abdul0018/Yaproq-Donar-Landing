@@ -167,13 +167,6 @@
     repeating-linear-gradient(90deg, rgba(201, 161, 42, 0.13) 0 1px, transparent 1px 6px),
     radial-gradient(ellipse at 50% 42%, #fff8d9 0%, #f8e7a6 62%, #efd27a 100%);
 }
-.screen-tile-green {
-  background-color: #dce5d0;
-  background-image:
-    repeating-linear-gradient(0deg, rgba(17, 90, 46, 0.07) 0 1px, transparent 1px 6px),
-    repeating-linear-gradient(90deg, rgba(17, 90, 46, 0.07) 0 1px, transparent 1px 6px),
-    radial-gradient(ellipse at 50% 42%, #f1f6ee 0%, #dce5d0 70%, #c5d9ba 100%);
-}
 
 /* Price changes when a size is picked. */
 @keyframes tick {
