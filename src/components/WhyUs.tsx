@@ -4,7 +4,7 @@ import { useState, type ReactNode } from "react";
 import { contacts, facts, telHref } from "@/data/site";
 import SectionHeading from "./SectionHeading";
 import { IconArrowUpRight, IconCard, IconDevice, IconGlobe, IconPhone, IconStore } from "./icons";
-import TornEdge from "./TornEdge";
+import Valance from "./Valance";
 
 type Way = { id: string; title: string; short: string; text: string; icon: (p: { className?: string }) => ReactNode; actions: ReactNode };
 
@@ -77,7 +77,7 @@ export default function WhyUs() {
 
   return (
     <section aria-labelledby="ways-title" className="relative bg-green-900 py-20 text-paper sm:py-28">
-      <TornEdge className="text-green-900" seed={6} />
+      <Valance className="text-green-900" seed={6} />
       <div className="container">
         <SectionHeading
           id="ways-title"
@@ -125,7 +125,7 @@ export default function WhyUs() {
           </ul>
 
           <div className="hidden lg:col-span-5 lg:block">
-            <div key={active} className={`sticky top-32 rounded-[40px_0_40px_40px] bg-green-800 p-9 ${changed ? "animate-fade-up" : ""}`}>
+            <div key={active} className={`sticky top-32 rounded-2xl bg-green-800 p-9 ring-2 ring-yellow/40 ring-offset-[6px] ring-offset-green-900 ${changed ? "animate-fade-up" : ""}`}>
               <Icon className="h-12 w-12 text-yellow" />
               <p className="mt-6 font-display text-[40px] leading-none tracking-[-0.02em]">{w.title}</p>
               <p className="mt-5 text-[17px] leading-relaxed text-green-100">{w.text}</p>

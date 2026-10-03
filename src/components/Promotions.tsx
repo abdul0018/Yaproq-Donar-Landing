@@ -7,7 +7,7 @@ import DishVisual from "./DishVisual";
 import Reveal from "./Reveal";
 import { selectCategory } from "./CategoryStrip";
 import { IconArrowUpRight, IconDevice, IconGift, IconTruck } from "./icons";
-import TornEdge from "./TornEdge";
+import Valance from "./Valance";
 
 // Offers as published on yaproq-donar.uz (homepage slider and About page). Old prices are the
 // crossed-out prices from the official set banners.
@@ -19,7 +19,7 @@ const setOffers = [
 export default function Promotions() {
   return (
     <section id="aksiyalar" aria-labelledby="promo-title" className="relative bg-yellow py-20 text-green-950 sm:py-28">
-      <TornEdge className="text-yellow" seed={4} />
+      <Valance className="text-yellow" seed={4} />
       <div className="container">
         <Reveal className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <h2 id="promo-title" className="font-display text-display-lg text-green-900">
@@ -41,7 +41,7 @@ export default function Promotions() {
                 <div className="flex flex-col gap-4 p-6 sm:p-7">
                   <div>
                     <h3 className="font-display text-[30px] leading-none">{dish.name.replace(" (tovuqli)", "")}</h3>
-                    <p className="mt-1 font-hand text-[24px] font-bold leading-none text-yellow">Yangi · tovuqli</p>
+                    <p className="mt-2 font-display text-[19px] leading-none text-yellow">Yangi · tovuqli</p>
                   </div>
                   <p className="text-[15px] leading-relaxed text-green-100">{dish.description}</p>
                   <div className="mt-auto flex flex-wrap items-end justify-between gap-4 border-t border-white/15 pt-4">

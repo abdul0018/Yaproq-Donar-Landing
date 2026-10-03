@@ -35,10 +35,12 @@ const config: Config = {
         sage: "#DCE5D0",
         // Backdrop of the official studio product photos.
         studio: "#ECEBE7",
+        // The lamp-lit Karagöz screen and the dyed-leather figures on it.
+        lamp: { light: "#FFF3B8", DEFAULT: "#F5DB6A", deep: "#D9AE2A" },
+        hide: { red: "#A3241A", tan: "#C98A4B", rod: "#3A2410" },
       },
       fontFamily: {
         display: ["var(--font-display)", "Georgia", "serif"],
-        hand: ["var(--font-hand)", "cursive"],
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
       },
       fontSize: {

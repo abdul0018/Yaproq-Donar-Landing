@@ -1,11 +1,11 @@
 import type { Metadata, Viewport } from "next";
-import { Caveat, Figtree, Young_Serif } from "next/font/google";
+import { Figtree, Yeseva_One } from "next/font/google";
 import { CartProvider } from "@/lib/cart";
 import "./globals.css";
 
-// Soft, heavy serif for headlines (the user's reference look); Figtree for reading; Caveat for a few hand-lettered notes.
-const display = Young_Serif({ subsets: ["latin", "latin-ext"], weight: "400", variable: "--font-display", display: "swap" });
-const hand = Caveat({ subsets: ["latin", "latin-ext"], weight: ["600", "700"], variable: "--font-hand", display: "swap" });
+// Karagöz-theatre world: Yeseva One, a high-contrast display serif with the swell of a cut-leather
+// silhouette, for headlines and prices; Figtree for reading.
+const display = Yeseva_One({ subsets: ["latin", "latin-ext"], weight: "400", variable: "--font-display", display: "swap" });
 const sans = Figtree({ subsets: ["latin", "latin-ext"], variable: "--font-sans", display: "swap" });
 
 export const metadata: Metadata = {
@@ -24,7 +24,7 @@ export const viewport: Viewport = { themeColor: "#115A2E", width: "device-width"
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="uz" className={`${display.variable} ${sans.variable} ${hand.variable}`}>
+    <html lang="uz" className={`${display.variable} ${sans.variable}`}>
       <body className="bg-paper font-sans text-ink antialiased">
         <a href="#asosiy" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-yellow focus:px-4 focus:py-2 focus:font-bold focus:text-green-950">
           Asosiy kontentga o‘tish

@@ -9,7 +9,7 @@ import SectionHeading from "./SectionHeading";
 import SizeSwitch from "./SizeSwitch";
 import Price from "./Price";
 import { IconArrow } from "./icons";
-import TornEdge from "./TornEdge";
+import Valance from "./Valance";
 
 function LeadDish({ dish }: { dish: Dish }) {
   const [v, setV] = useState(dish.variants[0]);
@@ -46,7 +46,7 @@ function SideDish({ dish, delay }: { dish: Dish; delay: number }) {
   const [v, setV] = useState(dish.variants[0]);
   return (
     <Reveal as="li" delay={delay} className="group grid grid-cols-[112px_1fr] items-start gap-5 rounded-3xl bg-white p-4 sm:grid-cols-[180px_1fr] lg:rounded-none lg:bg-transparent lg:px-0 lg:py-6 lg:first:pt-0 lg:last:pb-0">
-      <div className={`aspect-square overflow-hidden rounded-2xl ${delay % 180 ? "bg-paper-deep" : "bg-sage"} sm:aspect-[4/3]`}>
+      <div className={`aspect-square overflow-hidden rounded-2xl ${delay % 180 ? "screen-tile-green" : "screen-tile"} sm:aspect-[4/3]`}>
         <DishVisual dish={dish} onTile className="transition-transform duration-700 ease-out group-hover:scale-110" />
       </div>
       <div className="flex min-w-0 flex-col gap-3">
@@ -68,7 +68,7 @@ export default function Popular() {
   const [lead, ...rest] = featuredIds.map((id) => getDish(id)!);
   return (
     <section aria-labelledby="signature-title" className="relative bg-paper pb-16 pt-20 sm:pb-20 sm:pt-28">
-      <TornEdge className="text-paper" seed={3} />
+      <Valance className="text-paper" seed={3} />
       <div className="container">
         <SectionHeading
           id="signature-title"

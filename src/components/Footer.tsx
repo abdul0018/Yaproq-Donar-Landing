@@ -1,12 +1,12 @@
 import Logo from "./Logo";
 import { branches, contacts, facts, navLinks, telHref } from "@/data/site";
 import { IconArrowUpRight, IconInstagram, IconPhone } from "./icons";
-import TornEdge from "./TornEdge";
+import Valance from "./Valance";
 
 export default function Footer() {
   return (
     <footer id="aloqa" className="relative bg-green-950 pb-28 pt-16 text-paper lg:pb-10">
-      <TornEdge className="text-green-950" seed={8} />
+      <Valance className="text-green-950" seed={8} />
       <div className="container">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">

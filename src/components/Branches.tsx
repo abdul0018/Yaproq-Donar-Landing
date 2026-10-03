@@ -5,7 +5,7 @@ import { branches, contacts, facts, directionsUrl, distanceKm, hasLocation, isOp
 import SectionHeading from "./SectionHeading";
 import Reveal from "./Reveal";
 import { IconArrowUpRight, IconClock, IconClose, IconLocate, IconNavigate, IconPhone, IconPin } from "./icons";
-import TornEdge from "./TornEdge";
+import Valance from "./Valance";
 
 type Geo = { status: "idle" | "loading" | "ok" | "error"; pos?: { lat: number; lng: number }; message?: string };
 
@@ -177,7 +177,7 @@ export default function Branches() {
 
   return (
     <section id="filiallar" aria-labelledby="branches-title" className="relative bg-paper py-20 sm:py-28">
-      <TornEdge className="text-paper" seed={7} />
+      <Valance className="text-paper" seed={7} />
       <div className="container">
         <SectionHeading
           id="branches-title"

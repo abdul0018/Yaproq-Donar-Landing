@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { categories, type CategoryId } from "@/data/menu";
 import { IconSprout } from "./icons";
-import TornEdge from "./TornEdge";
+import Valance from "./Valance";
 
 export const selectCategory = (id: CategoryId) => {
   window.dispatchEvent(new CustomEvent<CategoryId>("yaproq:category", { detail: id }));
@@ -41,7 +41,7 @@ export default function CategoryStrip() {
   );
   return (
     <nav ref={ref} aria-label="Taom turlari" className="group relative z-10 bg-yellow">
-      <TornEdge className="text-yellow" seed={2} />
+      <Valance className="text-yellow" seed={2} />
       <div className="overflow-hidden">
       <div className={`flex w-max animate-marquee group-hover:[animation-play-state:paused] group-focus-within:[animation-play-state:paused] ${visible ? "" : "[animation-play-state:paused]"}`}>
         {row(false)}

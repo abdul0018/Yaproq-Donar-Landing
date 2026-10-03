@@ -1,7 +1,6 @@
 import { facts } from "@/data/site";
 import Reveal from "./Reveal";
-import Bloom from "./Bloom";
-import TornEdge from "./TornEdge";
+import Valance from "./Valance";
 
 // Facts from the official About page (yaproq-donar.uz/en/pages/about). Nothing here is embellished.
 const pillars = [
@@ -22,7 +21,7 @@ const pillars = [
 export default function About() {
   return (
     <section id="biz-haqimizda" aria-labelledby="about-title" className="relative overflow-x-clip bg-paper py-20 sm:py-28">
-      <TornEdge className="text-paper" seed={5} />
+      <Valance className="text-paper" seed={5} />
       <div className="container grid gap-12 lg:grid-cols-12 lg:gap-10">
         <div className="lg:col-span-7">
           <Reveal>
@@ -46,12 +45,16 @@ export default function About() {
 
         <Reveal delay={120} className="lg:col-span-5">
           <figure className="mx-auto max-w-md lg:max-w-none">
-            <div className="relative aspect-[10/9]">
-              <Bloom />
+            <div className="relative mx-auto aspect-square max-w-[460px]">
+              {/* A round lamp-lit screen in a punched green frame, the dish set on it. */}
+              <div aria-hidden className="screen-tile absolute inset-[4%] rounded-full shadow-[0_30px_50px_-28px_rgba(11,61,31,0.7)] ring-[12px] ring-green-900" />
+              <div aria-hidden className="absolute inset-[4%] rounded-full p-[3%]">
+                <div className="h-full w-full rounded-full border-[3px] border-dotted border-green-800/50" />
+              </div>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/cut/iskender-kabob.webp" alt="Iskender kabob: mol go‘shti, tomat qaylasi va suzma" width={700} height={525} loading="lazy" className="absolute left-[19%] top-[24%] w-[62%] drop-shadow-[0_22px_20px_rgba(60,45,20,0.3)]" />
+              <img src="/images/cut/iskender-kabob.webp" alt="Iskender kabob: mol go‘shti, tomat qaylasi va suzma" width={700} height={525} loading="lazy" className="absolute left-[14%] top-[22%] w-[72%] drop-shadow-[0_22px_20px_rgba(60,45,20,0.35)]" />
             </div>
-            <figcaption className="relative z-10 mt-2 text-center font-hand text-[24px] font-bold leading-snug text-green-800">Iskender kabob — mol go‘shti, tomat qaylasi, iskender noni va suzma</figcaption>
+            <figcaption className="relative z-10 mt-5 text-center font-display text-[20px] leading-snug text-green-800">Iskender kabob — mol go‘shti, tomat qaylasi, iskender noni va suzma</figcaption>
           </figure>
         </Reveal>
       </div>
