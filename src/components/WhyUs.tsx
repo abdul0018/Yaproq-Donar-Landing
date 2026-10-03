@@ -99,11 +99,11 @@ export default function WhyUs() {
                     onMouseEnter={() => window.matchMedia("(hover: hover)").matches && pick(i)}
                     aria-expanded={on}
                     aria-controls={`way-${x.id}`}
-                    className="group flex w-full items-center gap-5 py-5 text-left sm:gap-7 sm:py-6"
+                    className="group flex w-full items-center gap-4 py-5 text-left sm:gap-7 sm:py-6"
                   >
                     <XIcon className={`h-7 w-7 shrink-0 transition-colors ${on ? "text-yellow" : "text-green-200"}`} />
                     <span className="min-w-0 flex-1">
-                      <span className={`block font-display text-[28px] leading-none transition-colors duration-300 sm:text-[38px] ${on ? "text-paper" : "text-green-100 group-hover:text-paper"}`}>
+                      <span className={`block font-display text-[24px] leading-none transition-colors duration-300 min-[400px]:text-[28px] sm:text-[38px] ${on ? "text-paper" : "text-green-100 group-hover:text-paper"}`}>
                         {x.title}
                       </span>
                       <span className="tabular mt-2 block text-[14.5px] text-green-100">{x.short}</span>
@@ -114,7 +114,7 @@ export default function WhyUs() {
                   </button>
                   {/* Mobile: details open in place */}
                   <div id={`way-${x.id}`} className={`grid transition-all duration-500 ease-out lg:hidden ${on ? "grid-rows-[1fr] pb-6 opacity-100" : "grid-rows-[0fr] opacity-0"}`}>
-                    <div className="overflow-hidden pl-12 sm:pl-14">
+                    <div className="overflow-hidden sm:pl-14">
                       <p className="text-[15.5px] leading-relaxed text-green-100">{x.text}</p>
                       <div className="mt-4 flex flex-wrap gap-2">{x.actions}</div>
                     </div>

@@ -92,7 +92,7 @@ function BranchDialog({ branch, onClose, mounted }: { branch: Branch | null; onC
       ref={ref}
       onClose={onClose}
       onClick={(e) => e.target === ref.current && onClose()}
-      className="on-light m-auto w-[min(540px,calc(100vw-2rem))] rounded-3xl bg-white p-0 text-ink backdrop:bg-green-950/60 backdrop:backdrop-blur-sm open:animate-fade-up"
+      className="on-light m-auto max-h-[calc(100dvh-2rem)] w-[min(540px,calc(100vw-2rem))] overflow-y-auto overscroll-contain rounded-3xl bg-white p-0 text-ink backdrop:bg-green-950/60 backdrop:backdrop-blur-sm open:animate-fade-up"
       aria-labelledby="branch-dialog-title"
     >
       {branch && (

@@ -45,7 +45,7 @@ const config: Config = {
       },
       fontSize: {
         "display-xl": ["clamp(2.8rem, 6.6vw, 5.6rem)", { lineHeight: "1", letterSpacing: "-0.015em" }],
-        "display-lg": ["clamp(2.1rem, 4.4vw, 3.6rem)", { lineHeight: "1.05", letterSpacing: "-0.01em" }],
+        "display-lg": ["clamp(1.75rem, 1rem + 3.6vw, 3.6rem)", { lineHeight: "1.05", letterSpacing: "-0.01em" }],
         "display-md": ["clamp(1.6rem, 2.6vw, 2.2rem)", { lineHeight: "1.1", letterSpacing: "-0.01em" }],
       },
       borderRadius: { xl: "14px", "2xl": "20px", "3xl": "28px" },

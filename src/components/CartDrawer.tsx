@@ -118,14 +118,14 @@ export default function CartDrawer() {
               </div>
               <p className="mt-1 text-[13.5px] text-ink-600">Buyurtmangizni YAPROQ operatori yoki rasmiy saytimiz orqali rasmiylashtirishingiz mumkin.</p>
               <div className="mt-4 grid gap-2">
-                <a href={telHref(contacts.phone)} className="btn-primary tabular h-14 text-base">
+                <a href={telHref(contacts.phone)} className="btn-primary tabular h-auto min-h-14 whitespace-normal py-3 text-center text-base">
                   <IconPhone className="h-5 w-5" /> Qo‘ng‘iroq orqali buyurtma berish
                 </a>
-                <div className="grid grid-cols-2 gap-2">
-                  <a href={contacts.orderUrl} target="_blank" rel="noopener noreferrer" className="btn-green text-[14px]">
+                <div className="flex flex-wrap gap-2">
+                  <a href={contacts.orderUrl} target="_blank" rel="noopener noreferrer" className="btn-green grow whitespace-normal py-2 text-center text-[14px]">
                     Rasmiy sayt <IconArrowUpRight className="h-4 w-4" />
                   </a>
-                  <button type="button" onClick={copy} className="btn-outline text-[14px]">
+                  <button type="button" onClick={copy} className="btn-outline grow whitespace-normal py-2 text-center text-[14px]">
                     {copied ? <><IconCheck className="h-4 w-4" /> Nusxalandi</> : <><IconCopy className="h-4 w-4" /> Buyurtma ro‘yxatini nusxalash</>}
                   </button>
                 </div>

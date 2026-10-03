@@ -32,6 +32,8 @@
   }
   h1, h2, h3 {
     text-wrap: balance;
+    /* Long Uzbek words ("Mehmonlarimizning") never push a phone layout sideways. */
+    overflow-wrap: break-word;
   }
   .font-display {
     /* Yeseva One ships one weight: never let the browser fake bold or italic. */
@@ -74,10 +76,10 @@
   .tap::after {
     content: "";
     position: absolute;
-    inset: max(-12px, calc((100% - 44px) / 2)) -6px;
+    inset: max(-12px, calc((100% - 44px) / 2)) 0;
   }
   .btn {
-    @apply relative inline-flex min-h-[48px] select-none items-center justify-center gap-2 whitespace-nowrap rounded-full px-6 text-[15px] font-bold transition-[background-color,color,box-shadow,transform] duration-300 ease-out active:scale-[0.97] disabled:pointer-events-none disabled:opacity-50;
+    @apply relative inline-flex min-h-[48px] max-w-full select-none items-center justify-center gap-2 rounded-full px-6 py-1.5 text-center leading-tight text-[15px] font-bold transition-[background-color,color,box-shadow,transform] duration-300 ease-out active:scale-[0.97] disabled:pointer-events-none disabled:opacity-50;
   }
   /* Primary action: brand yellow with deep green text (contrast ≈ 11:1). */
   .btn-primary {

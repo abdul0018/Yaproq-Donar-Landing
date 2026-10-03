@@ -43,6 +43,7 @@ export default function Header() {
   const light = !scrolled && !menuOpen;
 
   return (
+    <>
     <header
       className={`fixed inset-x-0 top-0 z-50 pt-[env(safe-area-inset-top)] transition-[background-color,box-shadow,color] duration-500 ${
         light ? "bg-transparent text-white" : "bg-paper/95 text-ink shadow-[0_1px_0_rgba(15,36,23,0.08)] backdrop-blur-md"
@@ -104,14 +105,16 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile navigation */}
+    </header>
+      {/* Mobile navigation: a sibling of the header, because the header's backdrop-filter would make it
+          the containing block for this fixed panel and collapse it to the header's height. */}
       <div
         id="mobile-nav"
-        className={`fixed inset-x-0 bottom-0 top-[calc(72px+env(safe-area-inset-top))] origin-top bg-paper transition-all duration-500 ease-out lg:hidden ${
+        className={`on-light fixed inset-x-0 bottom-0 top-[calc(72px+env(safe-area-inset-top))] z-[49] origin-top overflow-y-auto bg-paper transition-all duration-500 ease-out lg:hidden ${
           menuOpen ? "visible opacity-100" : "invisible -translate-y-2 opacity-0"
         }`}
       >
-        <nav aria-label="Mobil navigatsiya" className="container flex h-full flex-col pb-8 pt-6">
+        <nav aria-label="Mobil navigatsiya" className="container flex min-h-full flex-col pb-[max(2rem,env(safe-area-inset-bottom))] pt-6">
           <ul className="flex flex-col">
             {navLinks.map((l) => (
               <li key={l.href} className="border-b border-green-800/10">
@@ -132,6 +135,6 @@ export default function Header() {
           </div>
         </nav>
       </div>
-    </header>
+    </>
   );
 }
